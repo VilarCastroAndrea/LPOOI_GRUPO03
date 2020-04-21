@@ -26,23 +26,34 @@ namespace Vistas
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente(txtADNI.Text, txtANombre.Text, txtAApellido.Text, txtADireccion.Text,txtATelefono.Text);
-            DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" + 
-                                                   "DNI: " + cliente.Cli_DNI + "\n"+ 
-                                                   "Nombre: " + cliente.Cli_Nombre +"\n" + 
-                                                   "Apellido: " + cliente.Cli_Apellido + "\n" + 
-                                                   "Direccion: " + cliente.Cli_Direccion + "\n" + 
-                                                   "Telefono: " + cliente.Cli_Telefono, 
-                                                   "Agregar Cliente", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
+            if (txtADNI.Text.Length == 8)
             {
-                cliente = new Cliente();
+
+
+                Cliente cliente = new Cliente(txtADNI.Text, txtANombre.Text, txtAApellido.Text, txtADireccion.Text, txtATelefono.Text);
+                DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
+                                                       "DNI: " + cliente.Cli_DNI + "\n" +
+                                                       "Nombre: " + cliente.Cli_Nombre + "\n" +
+                                                       "Apellido: " + cliente.Cli_Apellido + "\n" +
+                                                       "Direccion: " + cliente.Cli_Direccion + "\n" +
+                                                       "Telefono: " + cliente.Cli_Telefono,
+                                                      "Agregar Cliente", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                {
+                    cliente = new Cliente();
+                }
+
+                else
+                {
+                    MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
+                    result = new DialogResult();
+                }
             }
             else
             {
-                MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
-                result = new DialogResult();
+                MessageBox.Show("DNI solo permite 8 digitos");
             }
+            
         }
 
         private void txtADNI_KeyPress(object sender, KeyPressEventArgs e)
