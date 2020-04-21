@@ -31,8 +31,6 @@
             this.txtAMatricula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblClinte = new System.Windows.Forms.Label();
-            this.txtAModelo = new System.Windows.Forms.TextBox();
-            this.txtAColor = new System.Windows.Forms.TextBox();
             this.txtALinea = new System.Windows.Forms.TextBox();
             this.txtAMarca = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAltaVeh = new System.Windows.Forms.Button();
-            this.txtAPuertas = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtATipo = new System.Windows.Forms.TextBox();
@@ -50,6 +47,9 @@
             this.txtAPrecio = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.checkGps = new System.Windows.Forms.CheckBox();
+            this.cmbCantPuert = new System.Windows.Forms.ComboBox();
+            this.cmbColor = new System.Windows.Forms.ComboBox();
+            this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtAMatricula
@@ -79,22 +79,6 @@
             this.lblClinte.Size = new System.Drawing.Size(177, 25);
             this.lblClinte.TabIndex = 21;
             this.lblClinte.Text = "Agregar Vehiculo";
-            // 
-            // txtAModelo
-            // 
-            this.txtAModelo.Location = new System.Drawing.Point(161, 129);
-            this.txtAModelo.Name = "txtAModelo";
-            this.txtAModelo.Size = new System.Drawing.Size(125, 20);
-            this.txtAModelo.TabIndex = 20;
-            this.txtAModelo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAModelo_KeyPress);
-            // 
-            // txtAColor
-            // 
-            this.txtAColor.Location = new System.Drawing.Point(16, 183);
-            this.txtAColor.Name = "txtAColor";
-            this.txtAColor.Size = new System.Drawing.Size(123, 20);
-            this.txtAColor.TabIndex = 19;
-            this.txtAColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAColor_KeyPress);
             // 
             // txtALinea
             // 
@@ -164,14 +148,6 @@
             this.btnAltaVeh.Text = "Agregar";
             this.btnAltaVeh.UseVisualStyleBackColor = false;
             this.btnAltaVeh.Click += new System.EventHandler(this.btnAltaVeh_Click);
-            // 
-            // txtAPuertas
-            // 
-            this.txtAPuertas.Location = new System.Drawing.Point(163, 183);
-            this.txtAPuertas.Name = "txtAPuertas";
-            this.txtAPuertas.Size = new System.Drawing.Size(123, 20);
-            this.txtAPuertas.TabIndex = 25;
-            this.txtAPuertas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAPuertas_KeyPress);
             // 
             // label6
             // 
@@ -258,12 +234,65 @@
             this.checkGps.Text = "Si";
             this.checkGps.UseVisualStyleBackColor = true;
             // 
+            // cmbCantPuert
+            // 
+            this.cmbCantPuert.FormattingEnabled = true;
+            this.cmbCantPuert.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbCantPuert.Location = new System.Drawing.Point(165, 182);
+            this.cmbCantPuert.Name = "cmbCantPuert";
+            this.cmbCantPuert.Size = new System.Drawing.Size(121, 21);
+            this.cmbCantPuert.TabIndex = 35;
+            // 
+            // cmbColor
+            // 
+            this.cmbColor.FormattingEnabled = true;
+            this.cmbColor.Items.AddRange(new object[] {
+            "Azul",
+            "Negro",
+            "Rojo",
+            "Verde",
+            "Gris",
+            "Blanco",
+            "Amarillo"});
+            this.cmbColor.Location = new System.Drawing.Point(15, 181);
+            this.cmbColor.Name = "cmbColor";
+            this.cmbColor.Size = new System.Drawing.Size(121, 21);
+            this.cmbColor.TabIndex = 36;
+            // 
+            // cmbModelo
+            // 
+            this.cmbModelo.FormattingEnabled = true;
+            this.cmbModelo.Items.AddRange(new object[] {
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010"});
+            this.cmbModelo.Location = new System.Drawing.Point(161, 127);
+            this.cmbModelo.Name = "cmbModelo";
+            this.cmbModelo.Size = new System.Drawing.Size(121, 21);
+            this.cmbModelo.TabIndex = 37;
+            // 
             // FrmAltaVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(308, 366);
+            this.Controls.Add(this.cmbModelo);
+            this.Controls.Add(this.cmbColor);
+            this.Controls.Add(this.cmbCantPuert);
             this.Controls.Add(this.checkGps);
             this.Controls.Add(this.txtAPrecio);
             this.Controls.Add(this.label10);
@@ -272,13 +301,10 @@
             this.Controls.Add(this.txtATipo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtAPuertas);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAMatricula);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblClinte);
-            this.Controls.Add(this.txtAModelo);
-            this.Controls.Add(this.txtAColor);
             this.Controls.Add(this.txtALinea);
             this.Controls.Add(this.txtAMarca);
             this.Controls.Add(this.label4);
@@ -298,8 +324,6 @@
         private System.Windows.Forms.TextBox txtAMatricula;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblClinte;
-        private System.Windows.Forms.TextBox txtAModelo;
-        private System.Windows.Forms.TextBox txtAColor;
         private System.Windows.Forms.TextBox txtALinea;
         private System.Windows.Forms.TextBox txtAMarca;
         private System.Windows.Forms.Label label4;
@@ -307,7 +331,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAltaVeh;
-        private System.Windows.Forms.TextBox txtAPuertas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtATipo;
@@ -317,5 +340,8 @@
         private System.Windows.Forms.TextBox txtAPrecio;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox checkGps;
+        private System.Windows.Forms.ComboBox cmbCantPuert;
+        private System.Windows.Forms.ComboBox cmbColor;
+        private System.Windows.Forms.ComboBox cmbModelo;
     }
 }
