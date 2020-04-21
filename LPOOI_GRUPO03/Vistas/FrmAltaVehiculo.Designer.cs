@@ -40,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAltaVeh = new System.Windows.Forms.Button();
-            this.txtAPuertas = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtATipo = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.txtAPrecio = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.checkGps = new System.Windows.Forms.CheckBox();
+            this.cmbCantPuert = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtAMatricula
@@ -165,14 +165,6 @@
             this.btnAltaVeh.UseVisualStyleBackColor = false;
             this.btnAltaVeh.Click += new System.EventHandler(this.btnAltaVeh_Click);
             // 
-            // txtAPuertas
-            // 
-            this.txtAPuertas.Location = new System.Drawing.Point(163, 183);
-            this.txtAPuertas.Name = "txtAPuertas";
-            this.txtAPuertas.Size = new System.Drawing.Size(123, 20);
-            this.txtAPuertas.TabIndex = 25;
-            this.txtAPuertas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAPuertas_KeyPress);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -258,12 +250,27 @@
             this.checkGps.Text = "Si";
             this.checkGps.UseVisualStyleBackColor = true;
             // 
+            // cmbCantPuert
+            // 
+            this.cmbCantPuert.FormattingEnabled = true;
+            this.cmbCantPuert.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbCantPuert.Location = new System.Drawing.Point(165, 182);
+            this.cmbCantPuert.Name = "cmbCantPuert";
+            this.cmbCantPuert.Size = new System.Drawing.Size(121, 21);
+            this.cmbCantPuert.TabIndex = 35;
+            // 
             // FrmAltaVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(308, 366);
+            this.Controls.Add(this.cmbCantPuert);
             this.Controls.Add(this.checkGps);
             this.Controls.Add(this.txtAPrecio);
             this.Controls.Add(this.label10);
@@ -272,7 +279,6 @@
             this.Controls.Add(this.txtATipo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtAPuertas);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAMatricula);
             this.Controls.Add(this.label5);
@@ -307,7 +313,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAltaVeh;
-        private System.Windows.Forms.TextBox txtAPuertas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtATipo;
@@ -317,5 +322,6 @@
         private System.Windows.Forms.TextBox txtAPrecio;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox checkGps;
+        private System.Windows.Forms.ComboBox cmbCantPuert;
     }
 }
