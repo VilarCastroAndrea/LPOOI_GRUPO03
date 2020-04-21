@@ -156,6 +156,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -175,6 +176,12 @@
       <Project>{feb20078-c12c-4447-97ea-4ef0a903cd66}</Project>
       <Name>ClasesBase</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\fondo.jpg" />
+    <Content Include="Img\logo1.png" />
+    <Content Include="Img\Recurso 1.png" />
+    <Content Include="Img\Recurso 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
