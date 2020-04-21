@@ -44,6 +44,25 @@ namespace Vistas
                 result = new DialogResult();
             }
         }
-        
+
+        private void txtADNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloNumeros(e);
+        }
+
+        private void txtANombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetra(e);
+        }
+
+        private void txtAApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetra(e);
+        }
+
+        private void txtATelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloNumeros(e);
+        }
     }
 }

@@ -94,6 +94,7 @@
             this.txtAColor.Name = "txtAColor";
             this.txtAColor.Size = new System.Drawing.Size(123, 20);
             this.txtAColor.TabIndex = 19;
+            this.txtAColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAColor_KeyPress);
             // 
             // txtALinea
             // 
@@ -108,6 +109,7 @@
             this.txtAMarca.Name = "txtAMarca";
             this.txtAMarca.Size = new System.Drawing.Size(125, 20);
             this.txtAMarca.TabIndex = 17;
+            this.txtAMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAMarca_KeyPress);
             // 
             // label4
             // 
@@ -197,6 +199,7 @@
             this.txtATipo.Name = "txtATipo";
             this.txtATipo.Size = new System.Drawing.Size(123, 20);
             this.txtATipo.TabIndex = 29;
+            this.txtATipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtATipo_KeyPress);
             // 
             // label8
             // 
@@ -214,6 +217,7 @@
             this.txtAClase.Name = "txtAClase";
             this.txtAClase.Size = new System.Drawing.Size(123, 20);
             this.txtAClase.TabIndex = 31;
+            this.txtAClase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAClase_KeyPress);
             // 
             // label9
             // 

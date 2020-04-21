@@ -62,6 +62,25 @@ namespace Vistas
                 result = new DialogResult();
             }
         }
-        
+
+        private void txtAMarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetra(e);
+        }
+
+        private void txtAColor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetra(e);
+        }
+
+        private void txtATipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetra(e);
+        }
+
+        private void txtAClase_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetra(e);
+        }
     }
 }

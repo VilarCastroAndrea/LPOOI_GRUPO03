@@ -102,6 +102,7 @@
             this.txtANombre.Name = "txtANombre";
             this.txtANombre.Size = new System.Drawing.Size(239, 20);
             this.txtANombre.TabIndex = 5;
+            this.txtANombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtANombre_KeyPress);
             // 
             // txtAApellido
             // 
@@ -109,6 +110,7 @@
             this.txtAApellido.Name = "txtAApellido";
             this.txtAApellido.Size = new System.Drawing.Size(239, 20);
             this.txtAApellido.TabIndex = 6;
+            this.txtAApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAApellido_KeyPress);
             // 
             // txtATelefono
             // 
@@ -116,6 +118,7 @@
             this.txtATelefono.Name = "txtATelefono";
             this.txtATelefono.Size = new System.Drawing.Size(239, 20);
             this.txtATelefono.TabIndex = 7;
+            this.txtATelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtATelefono_KeyPress);
             // 
             // txtADireccion
             // 
@@ -141,6 +144,7 @@
             this.txtADNI.Name = "txtADNI";
             this.txtADNI.Size = new System.Drawing.Size(239, 20);
             this.txtADNI.TabIndex = 11;
+            this.txtADNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtADNI_KeyPress);
             // 
             // label5
             // 
