@@ -45,7 +45,7 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuario.Location = new System.Drawing.Point(41, 128);
+            this.txtUsuario.Location = new System.Drawing.Point(41, 168);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(177, 20);
             this.txtUsuario.TabIndex = 2;
@@ -54,7 +54,7 @@
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(41, 165);
+            this.txtContra.Location = new System.Drawing.Point(41, 205);
             this.txtContra.Name = "txtContra";
             this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(177, 20);
@@ -66,14 +66,14 @@
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnIngresar.FlatAppearance.BorderSize = 25;
             this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(17, 203);
+            this.btnIngresar.Location = new System.Drawing.Point(17, 248);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(201, 23);
             this.btnIngresar.TabIndex = 4;
@@ -86,7 +86,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Vistas.Properties.Resources.logo1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(12, -6);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(215, 165);
             this.pictureBox1.TabIndex = 5;
@@ -97,7 +97,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Vistas.Properties.Resources.Recurso_1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 165);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 205);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 20);
             this.pictureBox2.TabIndex = 8;
@@ -108,7 +108,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::Vistas.Properties.Resources.Recurso_2;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 128);
+            this.pictureBox3.Location = new System.Drawing.Point(17, 168);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(18, 24);
             this.pictureBox3.TabIndex = 9;
@@ -119,7 +119,7 @@
             this.lblnfoUsu.AutoSize = true;
             this.lblnfoUsu.BackColor = System.Drawing.Color.Transparent;
             this.lblnfoUsu.ForeColor = System.Drawing.Color.White;
-            this.lblnfoUsu.Location = new System.Drawing.Point(41, 149);
+            this.lblnfoUsu.Location = new System.Drawing.Point(41, 189);
             this.lblnfoUsu.Name = "lblnfoUsu";
             this.lblnfoUsu.Size = new System.Drawing.Size(0, 13);
             this.lblnfoUsu.TabIndex = 10;
@@ -129,7 +129,7 @@
             this.lblInfoContra.AutoSize = true;
             this.lblInfoContra.BackColor = System.Drawing.Color.Transparent;
             this.lblInfoContra.ForeColor = System.Drawing.Color.White;
-            this.lblInfoContra.Location = new System.Drawing.Point(41, 187);
+            this.lblInfoContra.Location = new System.Drawing.Point(41, 227);
             this.lblInfoContra.Name = "lblInfoContra";
             this.lblInfoContra.Size = new System.Drawing.Size(0, 13);
             this.lblInfoContra.TabIndex = 11;
@@ -142,7 +142,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::Vistas.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(239, 239);
+            this.ClientSize = new System.Drawing.Size(240, 296);
             this.Controls.Add(this.lblInfoContra);
             this.Controls.Add(this.lblnfoUsu);
             this.Controls.Add(this.txtContra);
