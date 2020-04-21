@@ -28,5 +28,21 @@ namespace ClasesBase
         public string Veh_TipoVehiculo { get => veh_TipoVehiculo; set => veh_TipoVehiculo = value; }
         public string Veh_ClaseVehiculo { get => veh_ClaseVehiculo; set => veh_ClaseVehiculo = value; }
         public decimal Veh_Precio { get => veh_Precio; set => veh_Precio = value; }
+
+        public Vehiculo() { }
+
+        public Vehiculo(string matricula, string marca, string linea, int modelo, string color, int puertas, bool gps, string tipo, string clase, decimal precio)
+        {
+            Veh_Matricula = matricula;
+            Veh_Marca = marca;
+            Veh_Linea = linea;
+            Veh_Modelo = modelo;
+            Veh_Color = color;
+            Veh_Puertas = puertas;
+            Veh_GPS = gps;
+            Veh_TipoVehiculo = tipo;
+            Veh_ClaseVehiculo = clase;
+            Veh_Precio = precio;
+        }
     }
 }

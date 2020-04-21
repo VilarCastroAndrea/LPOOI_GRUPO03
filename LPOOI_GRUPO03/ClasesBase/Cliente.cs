@@ -19,5 +19,15 @@ namespace ClasesBase
         public string Cli_Direccion { get => cli_Direccion; set => cli_Direccion = value; }
         public string Cli_Telefono { get => cli_Telefono; set => cli_Telefono = value; }
 
+        public Cliente() { }
+
+        public Cliente (string dni, string nombre, string apellido, string direccion, string telefono)
+        {
+            Cli_DNI = dni;
+            Cli_Nombre = nombre;
+            Cli_Apellido = apellido;
+            Cli_Direccion = direccion;
+            Cli_Telefono = telefono;
+        }
     }
 }
