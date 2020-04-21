@@ -35,10 +35,10 @@ namespace Vistas
 
         private void btnAltaVeh_Click(object sender, EventArgs e)
         {
-            int m = Convert.ToInt32(txtAModelo.Text);
+            int m = Convert.ToInt32(cmbModelo.Text);
             int p = Convert.ToInt32(cmbCantPuert.Text);
             decimal pre = Convert.ToDecimal(txtAPrecio.Text);
-            Vehiculo vehiculo = new Vehiculo(txtAMatricula.Text,txtAMarca.Text,txtALinea.Text,m,txtAColor.Text,p,checkGps.Checked,txtATipo.Text,txtAClase.Text,pre);
+            Vehiculo vehiculo = new Vehiculo(txtAMatricula.Text,txtAMarca.Text,txtALinea.Text,m,cmbColor.Text,p,checkGps.Checked,txtATipo.Text,txtAClase.Text,pre);
 
 
             DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
