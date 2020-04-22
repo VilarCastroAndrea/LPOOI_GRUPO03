@@ -28,20 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataCliente = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCliente)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataCliente
+            // 
+            this.dataCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCliente.Location = new System.Drawing.Point(28, 51);
+            this.dataCliente.Name = "dataCliente";
+            this.dataCliente.RowTemplate.Height = 24;
+            this.dataCliente.Size = new System.Drawing.Size(332, 366);
+            this.dataCliente.TabIndex = 0;
             // 
             // FrmListaCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(292, 366);
+            this.ClientSize = new System.Drawing.Size(389, 450);
+            this.Controls.Add(this.dataCliente);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmListaCliente";
             this.Text = "FrmListaCliente";
+            ((System.ComponentModel.ISupportInitialize)(this.dataCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        public System.Windows.Forms.DataGridView dataCliente;
     }
 }

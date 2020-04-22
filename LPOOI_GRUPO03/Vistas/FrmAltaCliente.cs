@@ -18,7 +18,7 @@ namespace Vistas
         {
             InitializeComponent();
         }
-
+        public List<Cliente> listaDeClientes = new List<Cliente>();
         private void FrmAltaCliente_Load(object sender, EventArgs e)
         {
             
@@ -36,7 +36,20 @@ namespace Vistas
                                                    "Agregar Cliente", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                cliente = new Cliente();
+                txtADNI.Text = "";
+                txtANombre.Text = "";
+                txtADireccion.Text = "";
+                txtATelefono.Text = "";
+
+                listaDeClientes.Add(cliente);
+                Form frmListaCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaCliente);
+
+                if (frmListaCliente != null)
+                {
+                    ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = null;
+                    ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = listaDeClientes;
+                }
+
             }
             else
             {
