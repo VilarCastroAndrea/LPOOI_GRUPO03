@@ -36,20 +36,7 @@ namespace Vistas
                                                    "Agregar Cliente", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                txtADNI.Text = "";
-                txtANombre.Text = "";
-                txtADireccion.Text = "";
-                txtATelefono.Text = "";
-
-                listaDeClientes.Add(cliente);
-                Form frmListaCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaCliente);
-
-                if (frmListaCliente != null)
-                {
-                    ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = null;
-                    ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = listaDeClientes;
-                }
-
+                cliente = new Cliente();
             }
             else
             {
