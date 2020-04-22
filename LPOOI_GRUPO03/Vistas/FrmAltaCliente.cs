@@ -13,7 +13,7 @@ namespace Vistas
 {
     public partial class FrmAltaCliente : Form
     {
-        
+
         public FrmAltaCliente()
         {
             InitializeComponent();
@@ -21,31 +21,56 @@ namespace Vistas
         public List<Cliente> listaDeClientes = new List<Cliente>();
         private void FrmAltaCliente_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente(txtADNI.Text, txtANombre.Text, txtAApellido.Text, txtADireccion.Text,txtATelefono.Text);
-            DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" + 
-                                                   "DNI: " + cliente.Cli_DNI + "\n"+ 
-                                                   "Nombre: " + cliente.Cli_Nombre +"\n" + 
-                                                   "Apellido: " + cliente.Cli_Apellido + "\n" + 
-                                                   "Direccion: " + cliente.Cli_Direccion + "\n" + 
-                                                   "Telefono: " + cliente.Cli_Telefono, 
-                                                   "Agregar Cliente", MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
+            if (txtADNI.Text.Length == 8)
             {
-                cliente = new Cliente();
+
+                Cliente cliente = new Cliente(txtADNI.Text, txtANombre.Text, txtAApellido.Text, txtADireccion.Text, txtATelefono.Text);
+                DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
+                                                       "DNI: " + cliente.Cli_DNI + "\n" +
+                                                       "Nombre: " + cliente.Cli_Nombre + "\n" +
+                                                       "Apellido: " + cliente.Cli_Apellido + "\n" +
+                                                       "Direccion: " + cliente.Cli_Direccion + "\n" +
+                                                       "Telefono: " + cliente.Cli_Telefono,
+                                                      "Agregar Cliente", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                {
+                    listaDeClientes.Add(cliente);
+
+                    txtADNI.Text = "";
+                    txtANombre.Text = "";
+                    txtAApellido.Text = "";
+                    txtADireccion.Text = "";
+                    txtATelefono.Text = "";
+                    Form frmListaCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaCliente);
+
+                    if (frmListaCliente != null)
+                    {
+                        ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = null;
+                        ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = listaDeClientes;
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
+                    result = new DialogResult();
+                }
             }
             else
             {
-                MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
-                result = new DialogResult();
+                MessageBox.Show("DNI solo permite 8 digitos");
             }
+
         }
 
-        private void txtADNI_KeyPress(object sender, KeyPressEventArgs e)
+
+    private void txtADNI_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloNumeros(e);
         }
