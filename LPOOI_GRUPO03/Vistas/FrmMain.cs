@@ -72,7 +72,12 @@ namespace Vistas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("Desea salir?", "Atención", MessageBoxButtons.YesNo);
+            if (respuesta == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
