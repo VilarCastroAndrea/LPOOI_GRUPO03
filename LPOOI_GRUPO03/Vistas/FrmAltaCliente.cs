@@ -46,8 +46,8 @@ namespace Vistas
                     txtAApellido.Text = "";
                     txtADireccion.Text = "";
                     txtATelefono.Text = "";
-                    Form frmListaCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaCliente);
 
+                    Form frmListaCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaCliente);
                     if (frmListaCliente != null)
                     {
                         ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = null;

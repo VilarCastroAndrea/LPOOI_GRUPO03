@@ -13,6 +13,7 @@ namespace Vistas
 {
     public partial class FrmAltaVehiculo : Form
     {
+        private List<Vehiculo> listaDeVehiculos = new List<Vehiculo>();
         public FrmAltaVehiculo()
         {
             InitializeComponent();
@@ -54,7 +55,26 @@ namespace Vistas
                                                    "Precio: " + vehiculo.Veh_Precio, "Agregar Cliente", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                vehiculo = new Vehiculo();
+                listaDeVehiculos.Add(vehiculo);
+                txtAMatricula.Text = "";
+                txtAMarca.Text = "";
+                txtALinea.Text = "";
+                cmbModelo.Text = "";
+
+                cmbColor.Text = "";
+                cmbCantPuert.Text = "";
+                checkGps.Checked = false;
+                txtATipo.Text = "";
+                txtAClase.Text = "";
+                txtAPrecio.Text = "";
+
+
+                Form frmListaVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaVehiculo);
+                if (frmListaVehiculo != null)
+                {
+                    ((FrmListaVehiculo)frmListaVehiculo).dataVehiculos.DataSource = null;
+                    ((FrmListaVehiculo)frmListaVehiculo).dataVehiculos.DataSource = listaDeVehiculos;
+                }
             }
             else
             {
