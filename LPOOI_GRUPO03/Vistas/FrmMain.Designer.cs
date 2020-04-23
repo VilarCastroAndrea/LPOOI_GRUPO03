@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnVentas = new FontAwesome.Sharp.IconButton();
+            this.btnVehiculos = new FontAwesome.Sharp.IconButton();
+            this.btnCliente = new FontAwesome.Sharp.IconButton();
+            this.btnSistema = new FontAwesome.Sharp.IconButton();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.btnVehiculos = new System.Windows.Forms.Button();
-            this.btnCliente = new System.Windows.Forms.Button();
-            this.btnSistema = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -50,14 +50,14 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::Vistas.Properties.Resources.fondo;
             this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.lblHora);
-            this.panel1.Controls.Add(this.lblNom);
-            this.panel1.Controls.Add(this.lblFecha);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnVentas);
             this.panel1.Controls.Add(this.btnVehiculos);
             this.panel1.Controls.Add(this.btnCliente);
             this.panel1.Controls.Add(this.btnSistema);
+            this.panel1.Controls.Add(this.lblHora);
+            this.panel1.Controls.Add(this.lblNom);
+            this.panel1.Controls.Add(this.lblFecha);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-5, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(205, 474);
@@ -66,16 +66,102 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(-3, 372);
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnSalir.IconColor = System.Drawing.Color.White;
+            this.btnSalir.IconSize = 24;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(3, 369);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(218, 61);
-            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Rotation = 0D;
+            this.btnSalir.Size = new System.Drawing.Size(215, 61);
+            this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnVentas
+            // 
+            this.btnVentas.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnVentas.ForeColor = System.Drawing.Color.White;
+            this.btnVentas.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnVentas.IconColor = System.Drawing.Color.White;
+            this.btnVentas.IconSize = 24;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.Location = new System.Drawing.Point(3, 305);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Rotation = 0D;
+            this.btnVentas.Size = new System.Drawing.Size(215, 61);
+            this.btnVentas.TabIndex = 9;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
+            // btnVehiculos
+            // 
+            this.btnVehiculos.BackColor = System.Drawing.Color.Teal;
+            this.btnVehiculos.FlatAppearance.BorderSize = 0;
+            this.btnVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVehiculos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnVehiculos.ForeColor = System.Drawing.Color.White;
+            this.btnVehiculos.IconChar = FontAwesome.Sharp.IconChar.Car;
+            this.btnVehiculos.IconColor = System.Drawing.Color.White;
+            this.btnVehiculos.IconSize = 24;
+            this.btnVehiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVehiculos.Location = new System.Drawing.Point(3, 238);
+            this.btnVehiculos.Name = "btnVehiculos";
+            this.btnVehiculos.Rotation = 0D;
+            this.btnVehiculos.Size = new System.Drawing.Size(215, 61);
+            this.btnVehiculos.TabIndex = 8;
+            this.btnVehiculos.Text = "Vehículos";
+            this.btnVehiculos.UseVisualStyleBackColor = false;
+            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnCliente.FlatAppearance.BorderSize = 0;
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCliente.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCliente.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnCliente.IconColor = System.Drawing.Color.White;
+            this.btnCliente.IconSize = 24;
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCliente.Location = new System.Drawing.Point(3, 171);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Rotation = 0D;
+            this.btnCliente.Size = new System.Drawing.Size(215, 61);
+            this.btnCliente.TabIndex = 7;
+            this.btnCliente.Text = "Clientes";
+            this.btnCliente.UseVisualStyleBackColor = false;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // btnSistema
+            // 
+            this.btnSistema.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnSistema.FlatAppearance.BorderSize = 0;
+            this.btnSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSistema.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnSistema.ForeColor = System.Drawing.Color.White;
+            this.btnSistema.IconChar = FontAwesome.Sharp.IconChar.Desktop;
+            this.btnSistema.IconColor = System.Drawing.Color.White;
+            this.btnSistema.IconSize = 24;
+            this.btnSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSistema.Location = new System.Drawing.Point(3, 104);
+            this.btnSistema.Name = "btnSistema";
+            this.btnSistema.Rotation = 0D;
+            this.btnSistema.Size = new System.Drawing.Size(215, 61);
+            this.btnSistema.TabIndex = 0;
+            this.btnSistema.Text = "Sistema";
+            this.btnSistema.UseVisualStyleBackColor = false;
+            this.btnSistema.Click += new System.EventHandler(this.btnSistema_Click_1);
             // 
             // lblHora
             // 
@@ -121,63 +207,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // btnVentas
-            // 
-            this.btnVentas.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnVentas.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.ForeColor = System.Drawing.Color.White;
-            this.btnVentas.Location = new System.Drawing.Point(0, 305);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(218, 61);
-            this.btnVentas.TabIndex = 3;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = false;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
-            // 
-            // btnVehiculos
-            // 
-            this.btnVehiculos.BackColor = System.Drawing.Color.Teal;
-            this.btnVehiculos.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVehiculos.ForeColor = System.Drawing.Color.White;
-            this.btnVehiculos.Location = new System.Drawing.Point(0, 238);
-            this.btnVehiculos.Name = "btnVehiculos";
-            this.btnVehiculos.Size = new System.Drawing.Size(215, 61);
-            this.btnVehiculos.TabIndex = 2;
-            this.btnVehiculos.Text = "Vehiculos";
-            this.btnVehiculos.UseVisualStyleBackColor = false;
-            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnCliente.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCliente.Location = new System.Drawing.Point(0, 171);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(215, 61);
-            this.btnCliente.TabIndex = 1;
-            this.btnCliente.Text = "Clientes";
-            this.btnCliente.UseVisualStyleBackColor = false;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-            // 
-            // btnSistema
-            // 
-            this.btnSistema.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnSistema.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
-            this.btnSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btnSistema.ForeColor = System.Drawing.Color.White;
-            this.btnSistema.Location = new System.Drawing.Point(0, 104);
-            this.btnSistema.Name = "btnSistema";
-            this.btnSistema.Size = new System.Drawing.Size(215, 61);
-            this.btnSistema.TabIndex = 0;
-            this.btnSistema.Text = "Sistema";
-            this.btnSistema.UseVisualStyleBackColor = false;
-            this.btnSistema.Click += new System.EventHandler(this.btnSistema_Click_1);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -215,16 +244,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSistema;
-        private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button btnVehiculos;
-        private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Button btnSalir;
+        private FontAwesome.Sharp.IconButton btnSistema;
+        private FontAwesome.Sharp.IconButton btnCliente;
+        private FontAwesome.Sharp.IconButton btnVehiculos;
+        private FontAwesome.Sharp.IconButton btnVentas;
+        private FontAwesome.Sharp.IconButton btnSalir;
     }
 }
