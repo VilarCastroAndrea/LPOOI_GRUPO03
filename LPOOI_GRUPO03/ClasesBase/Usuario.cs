@@ -18,5 +18,13 @@ namespace ClasesBase
         public string Usu_Contraseña { get => usu_Contraseña; set => usu_Contraseña = value; }
         public string Usu_ApellidoNombre { get => usu_ApellidoNombre; set => usu_ApellidoNombre = value; }
         public string Rol_Codigo { get => rol_Codigo; set => rol_Codigo = value; }
+
+        public Usuario(string username, string password, string apellido, string codigo)
+        {
+            Usu_NombreUsuario = username;
+            Usu_Contraseña = password;
+            Usu_ApellidoNombre = apellido;
+            Rol_Codigo = codigo;
+        }
     }
 }
