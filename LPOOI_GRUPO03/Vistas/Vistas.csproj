@@ -186,6 +186,16 @@
     <Content Include="Img\logo1.png" />
     <Content Include="Img\Recurso 1.png" />
     <Content Include="Img\Recurso 2.png" />
+    <None Include="Resources\capcha1.png" />
+    <None Include="Resources\capcha.jpg" />
+    <None Include="Resources\listo1.png" />
+    <None Include="Resources\auto6-prueba.png" />
+    <None Include="Resources\auto5-prueba.png" />
+    <None Include="Resources\auto4-prueba.png" />
+    <None Include="Resources\auto3-prueba1.png" />
+    <None Include="Resources\auto3-prueba.png" />
+    <None Include="Resources\auto2-prueba.png" />
+    <None Include="Resources\auto1-prueba.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

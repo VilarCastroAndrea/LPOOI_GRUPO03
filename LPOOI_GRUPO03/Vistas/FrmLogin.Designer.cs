@@ -36,16 +36,21 @@
             this.lblInfoContra = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.lblCapcha = new System.Windows.Forms.Label();
+            this.txtResultadoCapcha = new System.Windows.Forms.TextBox();
+            this.lblInformacion = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuario.Location = new System.Drawing.Point(41, 168);
+            this.txtUsuario.Location = new System.Drawing.Point(41, 157);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(177, 20);
             this.txtUsuario.TabIndex = 2;
@@ -54,7 +59,7 @@
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(41, 205);
+            this.txtContra.Location = new System.Drawing.Point(41, 194);
             this.txtContra.Name = "txtContra";
             this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(177, 20);
@@ -73,7 +78,7 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(17, 248);
+            this.btnIngresar.Location = new System.Drawing.Point(17, 342);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(201, 23);
             this.btnIngresar.TabIndex = 4;
@@ -84,7 +89,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Vistas.Properties.Resources.logo1;
+            this.pictureBox1.BackgroundImage = global::Vistas.Properties.Resources.listo1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -118,7 +123,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconSize = 20;
-            this.iconPictureBox1.Location = new System.Drawing.Point(12, 168);
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 157);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(23, 20);
             this.iconPictureBox1.TabIndex = 12;
@@ -130,11 +135,52 @@
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconSize = 20;
-            this.iconPictureBox2.Location = new System.Drawing.Point(12, 205);
+            this.iconPictureBox2.Location = new System.Drawing.Point(12, 194);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(23, 20);
             this.iconPictureBox2.TabIndex = 13;
             this.iconPictureBox2.TabStop = false;
+            // 
+            // lblCapcha
+            // 
+            this.lblCapcha.AutoSize = true;
+            this.lblCapcha.BackColor = System.Drawing.Color.White;
+            this.lblCapcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapcha.Location = new System.Drawing.Point(86, 272);
+            this.lblCapcha.Name = "lblCapcha";
+            this.lblCapcha.Size = new System.Drawing.Size(70, 24);
+            this.lblCapcha.TabIndex = 14;
+            this.lblCapcha.Text = "prueba";
+            this.lblCapcha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtResultadoCapcha
+            // 
+            this.txtResultadoCapcha.Location = new System.Drawing.Point(41, 310);
+            this.txtResultadoCapcha.Name = "txtResultadoCapcha";
+            this.txtResultadoCapcha.Size = new System.Drawing.Size(177, 20);
+            this.txtResultadoCapcha.TabIndex = 15;
+            // 
+            // lblInformacion
+            // 
+            this.lblInformacion.AutoSize = true;
+            this.lblInformacion.BackColor = System.Drawing.Color.Transparent;
+            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblInformacion.Location = new System.Drawing.Point(56, 243);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(127, 18);
+            this.lblInformacion.TabIndex = 16;
+            this.lblInformacion.Text = "Complete Capcha";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Vistas.Properties.Resources.capcha1;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 307);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmLogin
             // 
@@ -144,7 +190,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::Vistas.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(240, 296);
+            this.ClientSize = new System.Drawing.Size(240, 383);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lblInformacion);
+            this.Controls.Add(this.txtResultadoCapcha);
+            this.Controls.Add(this.lblCapcha);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.lblInfoContra);
@@ -159,6 +209,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +224,9 @@
         private System.Windows.Forms.Label lblInfoContra;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.Label lblCapcha;
+        private System.Windows.Forms.TextBox txtResultadoCapcha;
+        private System.Windows.Forms.Label lblInformacion;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
