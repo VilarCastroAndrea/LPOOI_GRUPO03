@@ -149,9 +149,9 @@
             this.lblCapcha.ForeColor = System.Drawing.Color.White;
             this.lblCapcha.Location = new System.Drawing.Point(89, 233);
             this.lblCapcha.Name = "lblCapcha";
-            this.lblCapcha.Size = new System.Drawing.Size(98, 31);
+            this.lblCapcha.Size = new System.Drawing.Size(108, 31);
             this.lblCapcha.TabIndex = 14;
-            this.lblCapcha.Text = "prueba";
+            this.lblCapcha.Text = "Capcha";
             this.lblCapcha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblCapcha.Click += new System.EventHandler(this.lblCapcha_Click);
             // 

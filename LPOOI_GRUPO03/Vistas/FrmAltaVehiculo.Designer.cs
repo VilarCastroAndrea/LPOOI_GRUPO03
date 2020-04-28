@@ -238,8 +238,6 @@
             // 
             this.cmbCantPuert.FormattingEnabled = true;
             this.cmbCantPuert.Items.AddRange(new object[] {
-            "1",
-            "2",
             "3",
             "4",
             "5"});
