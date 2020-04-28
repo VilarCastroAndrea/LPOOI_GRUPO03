@@ -38,7 +38,6 @@
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.lblCapcha = new System.Windows.Forms.Label();
             this.txtResultadoCapcha = new System.Windows.Forms.TextBox();
-            this.lblInformacion = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -102,7 +101,7 @@
             this.lblnfoUsu.AutoSize = true;
             this.lblnfoUsu.BackColor = System.Drawing.Color.Transparent;
             this.lblnfoUsu.ForeColor = System.Drawing.Color.White;
-            this.lblnfoUsu.Location = new System.Drawing.Point(41, 189);
+            this.lblnfoUsu.Location = new System.Drawing.Point(41, 180);
             this.lblnfoUsu.Name = "lblnfoUsu";
             this.lblnfoUsu.Size = new System.Drawing.Size(0, 13);
             this.lblnfoUsu.TabIndex = 10;
@@ -112,7 +111,7 @@
             this.lblInfoContra.AutoSize = true;
             this.lblInfoContra.BackColor = System.Drawing.Color.Transparent;
             this.lblInfoContra.ForeColor = System.Drawing.Color.White;
-            this.lblInfoContra.Location = new System.Drawing.Point(41, 227);
+            this.lblInfoContra.Location = new System.Drawing.Point(41, 217);
             this.lblInfoContra.Name = "lblInfoContra";
             this.lblInfoContra.Size = new System.Drawing.Size(0, 13);
             this.lblInfoContra.TabIndex = 11;
@@ -145,39 +144,28 @@
             // 
             this.lblCapcha.AutoSize = true;
             this.lblCapcha.BackColor = System.Drawing.Color.White;
-            this.lblCapcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapcha.Location = new System.Drawing.Point(86, 272);
+            this.lblCapcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapcha.Location = new System.Drawing.Point(95, 254);
             this.lblCapcha.Name = "lblCapcha";
-            this.lblCapcha.Size = new System.Drawing.Size(70, 24);
+            this.lblCapcha.Size = new System.Drawing.Size(98, 31);
             this.lblCapcha.TabIndex = 14;
             this.lblCapcha.Text = "prueba";
             this.lblCapcha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtResultadoCapcha
             // 
-            this.txtResultadoCapcha.Location = new System.Drawing.Point(41, 310);
+            this.txtResultadoCapcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResultadoCapcha.Location = new System.Drawing.Point(63, 301);
             this.txtResultadoCapcha.Name = "txtResultadoCapcha";
-            this.txtResultadoCapcha.Size = new System.Drawing.Size(177, 20);
+            this.txtResultadoCapcha.Size = new System.Drawing.Size(130, 26);
             this.txtResultadoCapcha.TabIndex = 15;
-            // 
-            // lblInformacion
-            // 
-            this.lblInformacion.AutoSize = true;
-            this.lblInformacion.BackColor = System.Drawing.Color.Transparent;
-            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblInformacion.Location = new System.Drawing.Point(56, 243);
-            this.lblInformacion.Name = "lblInformacion";
-            this.lblInformacion.Size = new System.Drawing.Size(127, 18);
-            this.lblInformacion.TabIndex = 16;
-            this.lblInformacion.Text = "Complete Capcha";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Vistas.Properties.Resources.capcha1;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 307);
+            this.pictureBox2.Location = new System.Drawing.Point(63, 254);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(26, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -192,7 +180,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(240, 383);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.txtResultadoCapcha);
             this.Controls.Add(this.lblCapcha);
             this.Controls.Add(this.iconPictureBox2);
@@ -226,7 +213,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label lblCapcha;
         private System.Windows.Forms.TextBox txtResultadoCapcha;
-        private System.Windows.Forms.Label lblInformacion;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
