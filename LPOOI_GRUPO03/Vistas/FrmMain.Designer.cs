@@ -199,7 +199,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Vistas.Properties.Resources.logo1;
+            this.pictureBox1.BackgroundImage = global::Vistas.Properties.Resources.logoAuto;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(26, 3);
             this.pictureBox1.Name = "pictureBox1";
