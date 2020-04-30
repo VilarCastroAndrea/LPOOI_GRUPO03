@@ -73,9 +73,9 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo1 {
+        internal static System.Drawing.Bitmap logoAuto {
             get {
-                object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                object obj = ResourceManager.GetObject("logoAuto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +96,16 @@ namespace Vistas.Properties {
         internal static System.Drawing.Bitmap Recurso_2 {
             get {
                 object obj = ResourceManager.GetObject("Recurso 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reload {
+            get {
+                object obj = ResourceManager.GetObject("reload", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
