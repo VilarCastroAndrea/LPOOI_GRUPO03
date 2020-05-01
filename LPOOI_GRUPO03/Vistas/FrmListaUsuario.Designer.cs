@@ -40,7 +40,7 @@
             this.lblPass = new System.Windows.Forms.Label();
             this.lblNombreApellidoUsuario = new System.Windows.Forms.Label();
             this.lblRolUsuario = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +54,7 @@
             this.dgvListaUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaUsuarios.Size = new System.Drawing.Size(407, 150);
             this.dgvListaUsuarios.TabIndex = 0;
+            this.dgvListaUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaUsuarios_CellContentClick);
             this.dgvListaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaUsuarios_CellContentClick);
             // 
             // txtId
@@ -147,20 +148,20 @@
             this.lblRolUsuario.TabIndex = 12;
             this.lblRolUsuario.Text = "Rol";
             // 
-            // comboBox1
+            // cmbRol
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(196, 362);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 13;
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Location = new System.Drawing.Point(196, 362);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(121, 21);
+            this.cmbRol.TabIndex = 13;
             // 
             // FrmListaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 467);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.lblRolUsuario);
             this.Controls.Add(this.lblNombreApellidoUsuario);
             this.Controls.Add(this.lblPass);
@@ -195,6 +196,6 @@
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Label lblNombreApellidoUsuario;
         private System.Windows.Forms.Label lblRolUsuario;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbRol;
     }
 }
