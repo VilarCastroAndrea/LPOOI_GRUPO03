@@ -26,5 +26,11 @@ namespace ClasesBase
             Usu_ApellidoNombre = apellido;
             Rol_Codigo = codigo;
         }
+
+        public Usuario()
+        {
+
+        }
+
     }
 }
