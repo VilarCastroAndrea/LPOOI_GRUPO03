@@ -63,6 +63,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(121, 20);
             this.txtId.TabIndex = 1;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtPass
             // 
@@ -70,6 +71,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(121, 20);
             this.txtPass.TabIndex = 2;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // txtNombreUsuario
             // 
@@ -77,6 +79,7 @@
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtNombreUsuario.TabIndex = 3;
+            this.txtNombreUsuario.TextChanged += new System.EventHandler(this.txtNombreUsuario_TextChanged);
             // 
             // txtNombreApellidoUsuario
             // 
@@ -84,9 +87,11 @@
             this.txtNombreApellidoUsuario.Name = "txtNombreApellidoUsuario";
             this.txtNombreApellidoUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtNombreApellidoUsuario.TabIndex = 4;
+            this.txtNombreApellidoUsuario.TextChanged += new System.EventHandler(this.txtNombreApellidoUsuario_TextChanged);
             // 
             // btnActualizarUsuario
             // 
+            this.btnActualizarUsuario.Enabled = false;
             this.btnActualizarUsuario.Location = new System.Drawing.Point(196, 417);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Size = new System.Drawing.Size(100, 29);
@@ -155,6 +160,8 @@
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(121, 21);
             this.cmbRol.TabIndex = 13;
+            this.cmbRol.TextChanged += new System.EventHandler(this.cmbRol_TextChanged);
+            this.cmbRol.Click += new System.EventHandler(this.cmbRol_Click);
             // 
             // FrmListaUsuario
             // 

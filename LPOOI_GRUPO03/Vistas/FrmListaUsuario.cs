@@ -19,6 +19,7 @@ namespace Vistas
         {
             InitializeComponent();
             cargarListaUsuario();
+           
         }
     
 
@@ -91,12 +92,64 @@ namespace Vistas
             txtNombreApellidoUsuario.Text= dgvListaUsuarios.CurrentRow.Cells[3].Value.ToString();
             cmbRol.SelectedItem= dgvListaUsuarios.CurrentRow.Cells[4].Value.ToString();
             
-
+            
 
 
         }
 
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
+        {
+            
+                if (txtNombreUsuario.Text != dgvListaUsuarios.CurrentRow.Cells[1].Value.ToString())
+            {
+                btnActualizarUsuario.Enabled = true;
+            }
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPass.Text != dgvListaUsuarios.CurrentRow.Cells[2].Value.ToString())
+            {
+                btnActualizarUsuario.Enabled = true;
+            }
+        }
+
+        private void txtNombreApellidoUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombreApellidoUsuario.Text != dgvListaUsuarios.CurrentRow.Cells[3].Value.ToString())
+            {
+                btnActualizarUsuario.Enabled = true;
+            }
+        }
+
+        private void cmbRol_TextChanged(object sender, EventArgs e)
+        {
+            String auxiliar = cmbRol.SelectedText;
+            if (auxiliar!= dgvListaUsuarios.CurrentRow.Cells[4].Value.ToString())
+            {
 
 
+                btnActualizarUsuario.Enabled = true;
+            }
+        }
+
+        private void cmbRol_Click(object sender, EventArgs e)
+        {
+            String auxiliar = cmbRol.SelectedText;
+            if (auxiliar != dgvListaUsuarios.CurrentRow.Cells[4].Value.ToString())
+            {
+
+
+                cmbRol_TextChanged(sender, e);
+        
+                  
+            }
+        }
     }
 }
