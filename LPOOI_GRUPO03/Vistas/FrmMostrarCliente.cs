@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasesBase;
 
 namespace Vistas
 {
-    public partial class FrmListaCliente : Form
+    public partial class FrmMostrarCliente : Form
     {
-        public FrmListaCliente()
+       
+        public FrmMostrarCliente()
         {
             InitializeComponent();
         }

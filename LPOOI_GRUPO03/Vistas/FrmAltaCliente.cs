@@ -19,110 +19,96 @@ namespace Vistas
             InitializeComponent();
         }
         public List<Cliente> listaDeClientes = new List<Cliente>();
+
         private void FrmAltaCliente_Load(object sender, EventArgs e)
         {
 
         }
 
-
-        public Boolean validarCamposCliente(Cliente xCliente)
+        private void btnACliente_Click(object sender, EventArgs e)
         {
-            bool respuesta = false;
-
-            if (xCliente.Cli_DNI != "" && xCliente.Cli_Nombre != "" && xCliente.Cli_Apellido != "" && xCliente.Cli_Direccion != "" && xCliente.Cli_Telefono != "")
+            if (txtDni.Text.Length == 8)
             {
-                respuesta = true;
-            }
-     
-            return respuesta;
+                Cliente aCliente = new Cliente();
 
-        }
+                aCliente.Cli_DNI = txtDni.Text;
+                aCliente.Cli_Nombre = txtNombre.Text;
+                aCliente.Cli_Apellido = txtApellido.Text;
+                aCliente.Cli_Direccion = txtDireccion.Text;
+                aCliente.Cli_Telefono = txtTelefono.Text;
 
-
-        private void btnAlta_Click(object sender, EventArgs e)
-        {
-            if (txtADNI.Text.Length == 8 )
-            {
-
-                
-                Cliente cliente = new Cliente(txtADNI.Text, txtANombre.Text, txtAApellido.Text, txtADireccion.Text, txtATelefono.Text);
-
-
-                if (validarCamposCliente(cliente) == false)
+                if (validarCamposCliente(aCliente) == false)
                 {
                     MessageBox.Show("Complete todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Question);
-
-
-
-
                 }
-
                 else
                 {
-
-               
-                DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
-                                                       "DNI: " + cliente.Cli_DNI + "\n" +
-                                                       "Nombre: " + cliente.Cli_Nombre + "\n" +
-                                                       "Apellido: " + cliente.Cli_Apellido + "\n" +
-                                                       "Direccion: " + cliente.Cli_Direccion + "\n" +
-                                                       "Telefono: " + cliente.Cli_Telefono,
+                    DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
+                                                       "DNI: " + aCliente.Cli_DNI + "\n" +
+                                                       "Nombre: " + aCliente.Cli_Nombre + "\n" +
+                                                       "Apellido: " + aCliente.Cli_Apellido + "\n" +
+                                                       "Direccion: " + aCliente.Cli_Direccion + "\n" +
+                                                       "Telefono: " + aCliente.Cli_Telefono,
                                                       "Agregar Cliente", MessageBoxButtons.OKCancel);
-
-
-                if (result == DialogResult.OK)
-                {
-                    listaDeClientes.Add(cliente);
-
-                    txtADNI.Text = "";
-                    txtANombre.Text = "";
-                    txtAApellido.Text = "";
-                    txtADireccion.Text = "";
-                    txtATelefono.Text = "";
-
-                    Form frmListaCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaCliente);
-                    if (frmListaCliente != null)
+                    if (result == DialogResult.OK)
                     {
-                        ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = null;
-                        ((FrmListaCliente)frmListaCliente).dataCliente.DataSource = listaDeClientes;
+                        TrabajarCliente.InsertarCliente(aCliente);
+                        limpiarCampos();
+                        FrmCliente fcliente = new FrmCliente();
+                        fcliente.cargarCliente();
                     }
-
+                    else
+                    {
+                        MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
+                        result = new DialogResult();
+                    }
                 }
-
-                else
-                {
-                    MessageBox.Show("Se cancelo el alta del cliente", "Cancelado" );
-                    result = new DialogResult();
-                }
-            }
             }
             else
             {
                 MessageBox.Show("Ingrese un DNI valido");
             }
-
         }
 
+        public Boolean validarCamposCliente(Cliente xCliente)
+        {
+            bool respuesta = false;
+            if (xCliente.Cli_DNI != "" && xCliente.Cli_Nombre != "" && xCliente.Cli_Apellido != "" && xCliente.Cli_Direccion != "" && xCliente.Cli_Telefono != "")
+            {
+                respuesta = true;
+            }
+            return respuesta;
+        }
 
-    private void txtADNI_KeyPress(object sender, KeyPressEventArgs e)
+        private void limpiarCampos()
+        {
+            txtDni.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
+        }
+
+        private void txtDni_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             Validar.soloNumeros(e);
-            txtADNI.MaxLength = 8;
+            txtDni.MaxLength = 8;
         }
 
-        private void txtANombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloLetra(e);
         }
 
-        private void txtAApellido_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloLetra(e);
         }
 
-        private void txtATelefono_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloNumeros(e);
         }
     }
+
 }

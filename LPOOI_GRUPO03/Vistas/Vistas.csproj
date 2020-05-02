@@ -73,12 +73,6 @@
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmListaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmListaCliente.Designer.cs">
-      <DependentUpon>FrmListaCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmListaVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +90,12 @@
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrarCliente.Designer.cs">
+      <DependentUpon>FrmMostrarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSistema.cs">
       <SubType>Form</SubType>
@@ -135,9 +135,6 @@
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmListaCliente.resx">
-      <DependentUpon>FrmListaCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmListaVehiculo.resx">
       <DependentUpon>FrmListaVehiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrarCliente.resx">
+      <DependentUpon>FrmMostrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSistema.resx">
       <DependentUpon>FrmSistema.cs</DependentUpon>

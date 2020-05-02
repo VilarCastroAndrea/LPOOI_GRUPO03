@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class FrmAltaCliente
+    partial class FrmMostrarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnECliente = new System.Windows.Forms.Button();
+            this.btnMCliente = new System.Windows.Forms.Button();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -38,16 +40,40 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnACliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnECliente
+            // 
+            this.btnECliente.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnECliente.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnECliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnECliente.ForeColor = System.Drawing.Color.White;
+            this.btnECliente.Location = new System.Drawing.Point(18, 333);
+            this.btnECliente.Name = "btnECliente";
+            this.btnECliente.Size = new System.Drawing.Size(171, 23);
+            this.btnECliente.TabIndex = 38;
+            this.btnECliente.Text = "Eliminar Cliente";
+            this.btnECliente.UseVisualStyleBackColor = false;
+            // 
+            // btnMCliente
+            // 
+            this.btnMCliente.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnMCliente.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnMCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMCliente.ForeColor = System.Drawing.Color.White;
+            this.btnMCliente.Location = new System.Drawing.Point(18, 304);
+            this.btnMCliente.Name = "btnMCliente";
+            this.btnMCliente.Size = new System.Drawing.Size(171, 23);
+            this.btnMCliente.TabIndex = 37;
+            this.btnMCliente.Text = "Modificar Cliente";
+            this.btnMCliente.UseVisualStyleBackColor = false;
             // 
             // txtDni
             // 
             this.txtDni.Location = new System.Drawing.Point(18, 59);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(171, 20);
-            this.txtDni.TabIndex = 34;
-            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress_1);
+            this.txtDni.TabIndex = 35;
             // 
             // label5
             // 
@@ -56,7 +82,7 @@
             this.label5.Location = new System.Drawing.Point(15, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 33;
+            this.label5.TabIndex = 34;
             this.label5.Text = "DNI";
             // 
             // txtDireccion
@@ -64,31 +90,28 @@
             this.txtDireccion.Location = new System.Drawing.Point(18, 211);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(171, 20);
-            this.txtDireccion.TabIndex = 32;
+            this.txtDireccion.TabIndex = 33;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(18, 261);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(171, 20);
-            this.txtTelefono.TabIndex = 31;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+            this.txtTelefono.TabIndex = 32;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(18, 162);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(171, 20);
-            this.txtApellido.TabIndex = 30;
-            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
+            this.txtApellido.TabIndex = 31;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(18, 110);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(171, 20);
-            this.txtNombre.TabIndex = 29;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.TabIndex = 30;
             // 
             // label4
             // 
@@ -97,7 +120,7 @@
             this.label4.Location = new System.Drawing.Point(15, 245);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 28;
+            this.label4.TabIndex = 29;
             this.label4.Text = "Telefono";
             // 
             // label3
@@ -107,7 +130,7 @@
             this.label3.Location = new System.Drawing.Point(15, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 27;
+            this.label3.TabIndex = 28;
             this.label3.Text = "Apellido";
             // 
             // label2
@@ -117,7 +140,7 @@
             this.label2.Location = new System.Drawing.Point(15, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 26;
+            this.label2.TabIndex = 27;
             this.label2.Text = "Direccion";
             // 
             // label1
@@ -127,30 +150,17 @@
             this.label1.Location = new System.Drawing.Point(15, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 25;
+            this.label1.TabIndex = 26;
             this.label1.Text = "Nombre";
             // 
-            // btnACliente
-            // 
-            this.btnACliente.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnACliente.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnACliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnACliente.ForeColor = System.Drawing.Color.White;
-            this.btnACliente.Location = new System.Drawing.Point(18, 303);
-            this.btnACliente.Name = "btnACliente";
-            this.btnACliente.Size = new System.Drawing.Size(171, 23);
-            this.btnACliente.TabIndex = 38;
-            this.btnACliente.Text = "Agregar Cliente";
-            this.btnACliente.UseVisualStyleBackColor = false;
-            this.btnACliente.Click += new System.EventHandler(this.btnACliente_Click);
-            // 
-            // FrmAltaCliente
+            // FrmMostrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(209, 366);
-            this.Controls.Add(this.btnACliente);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(207, 389);
+            this.Controls.Add(this.btnECliente);
+            this.Controls.Add(this.btnMCliente);
             this.Controls.Add(this.txtDni);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDireccion);
@@ -161,15 +171,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FrmAltaCliente";
-            this.Text = "FrmAltaCliente";
-            this.Load += new System.EventHandler(this.FrmAltaCliente_Load);
+            this.Name = "FrmMostrarCliente";
+            this.Text = "FrmMostrarCliente";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnECliente;
+        private System.Windows.Forms.Button btnMCliente;
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDireccion;
@@ -180,6 +192,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnACliente;
     }
 }
