@@ -36,6 +36,7 @@
             this.panelCliente = new System.Windows.Forms.Panel();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.txtMuestra = new System.Windows.Forms.TextBox();
             this.panelListaCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCliente)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // panelListaCliente
             // 
             this.panelListaCliente.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelListaCliente.Controls.Add(this.txtMuestra);
             this.panelListaCliente.Controls.Add(this.btnBusacar);
             this.panelListaCliente.Controls.Add(this.label7);
             this.panelListaCliente.Controls.Add(this.txtBuscarC);
@@ -60,7 +62,7 @@
             this.btnBusacar.ForeColor = System.Drawing.Color.White;
             this.btnBusacar.Location = new System.Drawing.Point(427, 23);
             this.btnBusacar.Name = "btnBusacar";
-            this.btnBusacar.Size = new System.Drawing.Size(124, 22);
+            this.btnBusacar.Size = new System.Drawing.Size(85, 22);
             this.btnBusacar.TabIndex = 4;
             this.btnBusacar.Text = "Buscar";
             this.btnBusacar.UseVisualStyleBackColor = false;
@@ -93,6 +95,7 @@
             this.dataCliente.RowTemplate.Height = 24;
             this.dataCliente.Size = new System.Drawing.Size(598, 355);
             this.dataCliente.TabIndex = 1;
+            this.dataCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCliente_CellContentClick);
             this.dataCliente.CurrentCellChanged += new System.EventHandler(this.dataCliente_CurrentCellChanged);
             // 
             // panelCliente
@@ -106,7 +109,7 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
@@ -132,6 +135,13 @@
             this.btnMostrar.Text = "Mostrar";
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // txtMuestra
+            // 
+            this.txtMuestra.Location = new System.Drawing.Point(519, 23);
+            this.txtMuestra.Name = "txtMuestra";
+            this.txtMuestra.Size = new System.Drawing.Size(100, 20);
+            this.txtMuestra.TabIndex = 5;
             // 
             // FrmCliente
             // 
@@ -162,5 +172,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnBusacar;
+        private System.Windows.Forms.TextBox txtMuestra;
     }
 }

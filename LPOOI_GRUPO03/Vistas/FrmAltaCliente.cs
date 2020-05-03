@@ -56,6 +56,7 @@ namespace Vistas
                         limpiarCampos();
                         FrmCliente fcliente = new FrmCliente();
                         fcliente.cargarCliente();
+                        fcliente.Refresh();
                     }
                     else
                     {

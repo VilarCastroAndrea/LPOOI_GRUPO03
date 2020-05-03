@@ -72,14 +72,24 @@ namespace Vistas
 
         private void dataCliente_CurrentCellChanged(object sender, EventArgs e)
         {
-            if( dataCliente.CurrentRow != null)
+            if( dataCliente.CurrentRow != null )
             {
                 FrmMostrarCliente mc = new FrmMostrarCliente();
-
-                //mc.txtDni.SelectedValue = dataCliente.CurrentRow.Cells["CLI_DNI"].Value.ToString();
-                //mc.txtNombre.Text = dataCliente.CurrentRow.Cells["Nombre"].Value.ToString();
-                //mc.txtApellido.Text = dataCliente.CurrentRow.Cells["Apellido"].Value.ToString();
+                Cliente c = new Cliente();
+                c.Cli_DNI = dataCliente.CurrentRow.Cells["Dni"].Value.ToString();
+                c.Cli_Nombre = dataCliente.CurrentRow.Cells["Nombre"].Value.ToString();
+                c.Cli_Apellido = dataCliente.CurrentRow.Cells["Apellido"].Value.ToString();
+                c.Cli_Direccion = dataCliente.CurrentRow.Cells["Direccion"].Value.ToString();
+                c.Cli_Telefono = dataCliente.CurrentRow.Cells["Telefono"].Value.ToString();
+                mc.mostrarCliente(c);
+                txtMuestra.Text = dataCliente.CurrentRow.Cells["Dni"].Value.ToString();
+                this.Refresh();
             }
+        }
+
+        private void dataCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
