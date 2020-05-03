@@ -53,17 +53,17 @@ namespace Vistas
                     if (dataTable.Rows[0][1].ToString() == "admin")
                     {
                         formMain.Show();
-                        formMain.lblNom.Text = "Bienvenido:"+ dataTable.Rows[0][0].ToString();
+                        formMain.lblNom.Text = dataTable.Rows[0][0].ToString();
                     }
                     else if (dataTable.Rows[0][1].ToString() == "vendedor")
                     {
                         formMain.Show();
-                        formMain.lblNom.Text = "Bienvenido:" + dataTable.Rows[0][0].ToString();
+                        formMain.lblNom.Text =  dataTable.Rows[0][0].ToString();
                     }
                     else if (dataTable.Rows[0][1].ToString() == "auditor")
                     {
                         formMain.Show();
-                        formMain.lblNom.Text = "Bienvenido:" + dataTable.Rows[0][0].ToString();
+                        formMain.lblNom.Text =  dataTable.Rows[0][0].ToString();
                     }
                 }
                 else

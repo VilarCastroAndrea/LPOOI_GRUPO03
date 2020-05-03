@@ -179,7 +179,7 @@
             // 
             this.lblNom.AutoSize = true;
             this.lblNom.ForeColor = System.Drawing.Color.White;
-            this.lblNom.Location = new System.Drawing.Point(87, 88);
+            this.lblNom.Location = new System.Drawing.Point(63, 88);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(50, 13);
             this.lblNom.TabIndex = 5;

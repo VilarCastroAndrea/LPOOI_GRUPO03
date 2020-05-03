@@ -22,6 +22,17 @@ namespace Vistas
             var form = Application.OpenForms.OfType<FrmSistema>().FirstOrDefault();
             FrmSistema frmSistema = form ?? new FrmSistema();
             AddFormInPanel(frmSistema);
+            if (lblNom.Text == "admin")
+            {
+                btnCliente.Enabled = true;
+            }
+            else if(lblNom.Text=="vendedor")
+            {
+                btnVehiculos.Enabled = true;
+            } 
+
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
