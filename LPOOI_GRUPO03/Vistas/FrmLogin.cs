@@ -84,7 +84,7 @@ namespace Vistas
 
 
 
-
+       // */
 
 
 
@@ -112,7 +112,7 @@ namespace Vistas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            ingresar(this.txtUsuario.Text, this.txtContra.Text);
+           ingresar(this.txtUsuario.Text, this.txtContra.Text);
 
 
 
