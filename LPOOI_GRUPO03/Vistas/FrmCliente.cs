@@ -75,15 +75,15 @@ namespace Vistas
             if( dataCliente.CurrentRow != null )
             {
                 FrmMostrarCliente mc = new FrmMostrarCliente();
-                Cliente c = new Cliente();
-                c.Cli_DNI = dataCliente.CurrentRow.Cells["Dni"].Value.ToString();
-                c.Cli_Nombre = dataCliente.CurrentRow.Cells["Nombre"].Value.ToString();
-                c.Cli_Apellido = dataCliente.CurrentRow.Cells["Apellido"].Value.ToString();
-                c.Cli_Direccion = dataCliente.CurrentRow.Cells["Direccion"].Value.ToString();
-                c.Cli_Telefono = dataCliente.CurrentRow.Cells["Telefono"].Value.ToString();
-                mc.mostrarCliente(c);
-                txtMuestra.Text = dataCliente.CurrentRow.Cells["Dni"].Value.ToString();
-                this.Refresh();
+                Form frmMostrarCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmMostrarCliente);
+                if (frmMostrarCliente != null)
+                {
+                    ((FrmMostrarCliente)frmMostrarCliente).txtDni.Text = dataCliente.CurrentRow.Cells["Dni"].Value.ToString();
+                    ((FrmMostrarCliente)frmMostrarCliente).txtNombre.Text = dataCliente.CurrentRow.Cells["Nombre"].Value.ToString();
+                    ((FrmMostrarCliente)frmMostrarCliente).txtApellido.Text = dataCliente.CurrentRow.Cells["Apellido"].Value.ToString();
+                    ((FrmMostrarCliente)frmMostrarCliente).txtDireccion.Text = dataCliente.CurrentRow.Cells["Direccion"].Value.ToString();
+                    ((FrmMostrarCliente)frmMostrarCliente).txtTelefono.Text = dataCliente.CurrentRow.Cells["Telefono"].Value.ToString();
+                }
             }
         }
 

@@ -36,7 +36,6 @@
             this.panelCliente = new System.Windows.Forms.Panel();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.txtMuestra = new System.Windows.Forms.TextBox();
             this.panelListaCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCliente)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +43,6 @@
             // panelListaCliente
             // 
             this.panelListaCliente.BackColor = System.Drawing.Color.DarkCyan;
-            this.panelListaCliente.Controls.Add(this.txtMuestra);
             this.panelListaCliente.Controls.Add(this.btnBusacar);
             this.panelListaCliente.Controls.Add(this.label7);
             this.panelListaCliente.Controls.Add(this.txtBuscarC);
@@ -136,13 +134,6 @@
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
-            // txtMuestra
-            // 
-            this.txtMuestra.Location = new System.Drawing.Point(519, 23);
-            this.txtMuestra.Name = "txtMuestra";
-            this.txtMuestra.Size = new System.Drawing.Size(100, 20);
-            this.txtMuestra.TabIndex = 5;
-            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +163,5 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnBusacar;
-        private System.Windows.Forms.TextBox txtMuestra;
     }
 }

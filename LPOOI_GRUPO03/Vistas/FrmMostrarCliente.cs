@@ -18,14 +18,5 @@ namespace Vistas
         {
             InitializeComponent();
         }
-
-        public void mostrarCliente(Cliente c)
-        {
-            txtDni.Text = c.Cli_DNI;
-            txtNombre.Text = c.Cli_Nombre;
-            txtApellido.Text = c.Cli_Apellido;
-            txtDireccion.Text = c.Cli_Direccion;
-            txtTelefono.Text = c.Cli_Telefono;
-        }
     }
 }

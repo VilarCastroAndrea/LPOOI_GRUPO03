@@ -70,6 +70,7 @@
             // 
             // txtDni
             // 
+            this.txtDni.Enabled = false;
             this.txtDni.Location = new System.Drawing.Point(18, 59);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(171, 20);
@@ -182,15 +183,15 @@
 
         private System.Windows.Forms.Button btnECliente;
         private System.Windows.Forms.Button btnMCliente;
-        private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtDni;
+        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtApellido;
+        public System.Windows.Forms.TextBox txtNombre;
     }
 }
