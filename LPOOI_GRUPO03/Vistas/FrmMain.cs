@@ -24,11 +24,11 @@ namespace Vistas
             AddFormInPanel(frmSistema);
             if (lblNom.Text == "admin")
             {
-                btnCliente.Enabled = true;
+                btnCliente.Visible = false;
             }
             else if(lblNom.Text=="vendedor")
             {
-                btnVehiculos.Enabled = true;
+                btnVehiculos.Visible= true;
             } 
 
 
