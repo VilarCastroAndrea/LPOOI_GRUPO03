@@ -251,9 +251,9 @@
         public System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Panel panelContenedor;
         private FontAwesome.Sharp.IconButton btnSistema;
-        private FontAwesome.Sharp.IconButton btnCliente;
-        private FontAwesome.Sharp.IconButton btnVehiculos;
         private FontAwesome.Sharp.IconButton btnVentas;
         private FontAwesome.Sharp.IconButton btnSalir;
+        public FontAwesome.Sharp.IconButton btnCliente;
+        public FontAwesome.Sharp.IconButton btnVehiculos;
     }
 }
