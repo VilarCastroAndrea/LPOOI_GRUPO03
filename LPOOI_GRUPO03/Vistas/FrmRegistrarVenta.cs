@@ -26,7 +26,7 @@ namespace Vistas
 
         private void FrmRegistrarVenta_Load(object sender, EventArgs e)
         {
-
+            cmbClientes.DataSource = TrabajarCliente.ListaCliente;
         }
     }
 }
