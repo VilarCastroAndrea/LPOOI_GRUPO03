@@ -28,9 +28,9 @@ namespace ClasesBase.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Josue\\Documents\\bd\\A" +
             "genciaDB.mdf;Integrated Security=True;Connect Timeout=30")]
-        public string conexion {
+        public string AgenciaDBConnectionString {
             get {
-                return ((string)(this["conexion"]));
+                return ((string)(this["AgenciaDBConnectionString"]));
             }
         }
     }
