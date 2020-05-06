@@ -21,7 +21,7 @@ namespace Vistas
         private String cargarCapcha;
         FrmMain formMain = new FrmMain();
         FrmSistema frmSistema = new FrmSistema();
-
+       public Usuario user = new Usuario();
 
         public FrmLogin()
         {
@@ -31,61 +31,10 @@ namespace Vistas
 
             lblCapcha.Text = cargarCapcha;
         }
-        SqlConnection cnn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\RENE\source\repos\LPOOI_GRUPO03\AgenciaDB.mdf;Integrated Security = True");
+      
 
 
-        public void ingresar(string user, string password)
-        {
-
-            try
-            {
-                cnn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT USU_NombreUsuario, ROL_Codigo FROM Usuario WHERE USU_NombreUsuario= @usuario AND USU_Password=@pswd",cnn);
-                cmd.Parameters.AddWithValue("usuario", user);
-                cmd.Parameters.AddWithValue("pswd", password);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dataTable = new DataTable();
-                sda.Fill(dataTable);
-
-                if (dataTable.Rows.Count == 1)
-                {
-                    this.Hide();
-                    if (dataTable.Rows[0][1].ToString() == "admin")
-                    {
-                        formMain.Show();
-                        formMain.lblNom.Text = dataTable.Rows[0][0].ToString();
-                    }
-                    else if (dataTable.Rows[0][1].ToString() == "vendedor")
-                    {
-                        formMain.Show();
-                        formMain.lblNom.Text =  dataTable.Rows[0][0].ToString();
-                    }
-                    else if (dataTable.Rows[0][1].ToString() == "auditor")
-                    {
-                        formMain.Show();
-                        formMain.lblNom.Text =  dataTable.Rows[0][0].ToString();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Datos de acceso incorrectos");
-                }
-
-
-            } catch(Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
-                cnn.Close();
-            }
-        }
-
-
-
-       // */
-
+     
 
 
 
@@ -112,61 +61,35 @@ namespace Vistas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-           ingresar(this.txtUsuario.Text, this.txtContra.Text);
-
-
-
-          /*  Boolean user = false;
-            Usuario admin = new Usuario("admin", "admin", "admin", "Administrador");
-            Usuario vendedor = new Usuario("vendedor", "vendedor", "vendedor", "Vendedor");
-            Usuario auditor = new Usuario("audi", "audi","audi", "Auditor");
+            DataTable dataTable = new DataTable();
+            
+            dataTable = ConecctionLog.ingresar(txtUsuario.Text, txtContra.Text);
            
-            formMain.lblNom.Text = txtUsuario.Text;
-
-
-
-
-            if(txtUsuario.Text == admin.Usu_NombreUsuario && txtContra.Text == admin.Usu_Contraseña)
-            {
-                user = true;
-            }
-            else
-            {
-                if(txtUsuario.Text == vendedor.Usu_NombreUsuario && txtContra.Text == vendedor.Usu_Contraseña)
+            if (dataTable.Rows.Count!=0)
                 {
-                    user = true;
-                }
-                else
-                {
-                    if(txtUsuario.Text == auditor.Usu_NombreUsuario && txtContra.Text == auditor.Usu_Contraseña)
-                    {
-                        user = true;
-                    }
-                }
-            }
-
-            if (lblCapcha.Text == txtResultadoCapcha.Text)
-            {
-
-                if (user)
-                {
-
                     this.Hide();
                     formMain.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Datos de acceso incorrectos");
-                }
+                guardarUser(dataTable);
+                formMain.lblNom.Text = "BIENVENIDO:"+dataTable.Rows[0][1].ToString();
+                    
             }
-            else
+                
+              else
             {
-                MessageBox.Show("Capcha incorrecto");
+                MessageBox.Show("Datos incorrectos");
             }
 
-    
-    */
+           
 
+        }
+        public void guardarUser(DataTable dt)
+        {
+          
+            user.Usu_NombreUsuario = dt.Rows[0]["USU_NombreUsuario"].ToString();
+            user.Usu_Contraseña = dt.Rows[0]["USU_Password"].ToString();
+            user.Usu_ApellidoNombre = dt.Rows[0]["USU_ApellidoNombre"].ToString();
+            user.Rol_Codigo = dt.Rows[0]["ROL_Codigo"].ToString();
+            user.Usu_ID = Convert.ToInt32(dt.Rows[0]["USU_ID"].ToString());
         }
 
         private void txtUsuario_MouseHover(object sender, EventArgs e)

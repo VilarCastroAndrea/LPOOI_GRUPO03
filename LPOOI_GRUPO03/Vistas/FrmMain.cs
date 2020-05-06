@@ -22,11 +22,13 @@ namespace Vistas
             var form = Application.OpenForms.OfType<FrmSistema>().FirstOrDefault();
             FrmSistema frmSistema = form ?? new FrmSistema();
             AddFormInPanel(frmSistema);
-            if (lblNom.Text == "admin")
+            FrmLogin fLogin = new FrmLogin();
+
+            if ( fLogin.user.Rol_Codigo == "admin")
             {
                 btnCliente.Visible = false;
             }
-            else if(lblNom.Text=="vendedor")
+            else if(fLogin.user.Rol_Codigo == "vendedor")
             {
                 btnVehiculos.Visible= true;
             } 
