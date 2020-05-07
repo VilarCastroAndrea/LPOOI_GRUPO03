@@ -16,7 +16,7 @@ namespace Vistas
         public FrmAltaUsuario()
         {
             InitializeComponent();
-            cargarRol();
+         
         }
 
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
@@ -26,13 +26,21 @@ namespace Vistas
             nuevoUsu.Usu_NombreUsuario = txtNombreUsuario.Text;
             nuevoUsu.Usu_Contraseña = txtPass.Text;
             nuevoUsu.Usu_ApellidoNombre = txtNombreApellidoUsuario.Text;
-            nuevoUsu.Rol_Codigo = cmbRol.Text;
+            nuevoUsu.Rol_Codigo = cmbRoles.Text;
 
             TrabajoUsuario.AgregarUsuario(nuevoUsu);
         }
         public void cargarRol()
         {
-            cmbRol.DataSource = TrabajoRol.cargarRol();
+
+            cmbRoles.DisplayMember = "ROL_Descriccion";
+            cmbRoles.ValueMember = "ROL_codigo";
+            cmbRoles.DataSource = TrabajoUsuario.listaRoles();
+        }
+
+        private void FrmAltaUsuario_Load(object sender, EventArgs e)
+        {
+            cargarRol();
         }
     }
 }

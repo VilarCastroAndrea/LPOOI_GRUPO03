@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.cmbRoles = new System.Windows.Forms.ComboBox();
             this.lblRolUsuario = new System.Windows.Forms.Label();
             this.lblNombreApellidoUsuario = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
@@ -42,19 +42,20 @@
             this.btnActualizarUsuario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // cmbRol
+            // cmbRoles
             // 
-            this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Location = new System.Drawing.Point(120, 148);
-            this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(121, 21);
-            this.cmbRol.TabIndex = 23;
+            this.cmbRoles.FormattingEnabled = true;
+            this.cmbRoles.Location = new System.Drawing.Point(12, 189);
+            this.cmbRoles.Name = "cmbRoles";
+            this.cmbRoles.Size = new System.Drawing.Size(121, 21);
+            this.cmbRoles.TabIndex = 23;
+            this.cmbRoles.SelectedIndexChanged += new System.EventHandler(this.cmbRoles_SelectedIndexChanged);
             // 
             // lblRolUsuario
             // 
             this.lblRolUsuario.AutoSize = true;
             this.lblRolUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRolUsuario.Location = new System.Drawing.Point(12, 154);
+            this.lblRolUsuario.Location = new System.Drawing.Point(12, 173);
             this.lblRolUsuario.Name = "lblRolUsuario";
             this.lblRolUsuario.Size = new System.Drawing.Size(23, 13);
             this.lblRolUsuario.TabIndex = 22;
@@ -64,7 +65,7 @@
             // 
             this.lblNombreApellidoUsuario.AutoSize = true;
             this.lblNombreApellidoUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombreApellidoUsuario.Location = new System.Drawing.Point(12, 128);
+            this.lblNombreApellidoUsuario.Location = new System.Drawing.Point(12, 134);
             this.lblNombreApellidoUsuario.Name = "lblNombreApellidoUsuario";
             this.lblNombreApellidoUsuario.Size = new System.Drawing.Size(91, 13);
             this.lblNombreApellidoUsuario.TabIndex = 21;
@@ -84,7 +85,7 @@
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 71);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 48);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(83, 13);
             this.lblNombreUsuario.TabIndex = 19;
@@ -94,7 +95,7 @@
             // 
             this.lblIDUsuario.AutoSize = true;
             this.lblIDUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblIDUsuario.Location = new System.Drawing.Point(12, 36);
+            this.lblIDUsuario.Location = new System.Drawing.Point(12, 9);
             this.lblIDUsuario.Name = "lblIDUsuario";
             this.lblIDUsuario.Size = new System.Drawing.Size(55, 13);
             this.lblIDUsuario.TabIndex = 18;
@@ -102,35 +103,35 @@
             // 
             // txtNombreApellidoUsuario
             // 
-            this.txtNombreApellidoUsuario.Location = new System.Drawing.Point(120, 121);
+            this.txtNombreApellidoUsuario.Location = new System.Drawing.Point(12, 150);
             this.txtNombreApellidoUsuario.Name = "txtNombreApellidoUsuario";
             this.txtNombreApellidoUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtNombreApellidoUsuario.TabIndex = 17;
             // 
             // txtNombreUsuario
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(120, 64);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(12, 64);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtNombreUsuario.TabIndex = 16;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(120, 95);
+            this.txtPass.Location = new System.Drawing.Point(12, 111);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(121, 20);
             this.txtPass.TabIndex = 15;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(120, 36);
+            this.txtId.Location = new System.Drawing.Point(12, 25);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(121, 20);
             this.txtId.TabIndex = 14;
             // 
             // btnEliminarUsuario
             // 
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(141, 220);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(109, 220);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(100, 29);
             this.btnEliminarUsuario.TabIndex = 25;
@@ -155,7 +156,7 @@
             this.ClientSize = new System.Drawing.Size(259, 291);
             this.Controls.Add(this.btnEliminarUsuario);
             this.Controls.Add(this.btnActualizarUsuario);
-            this.Controls.Add(this.cmbRol);
+            this.Controls.Add(this.cmbRoles);
             this.Controls.Add(this.lblRolUsuario);
             this.Controls.Add(this.lblNombreApellidoUsuario);
             this.Controls.Add(this.lblPass);
@@ -174,7 +175,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbRol;
+        private System.Windows.Forms.ComboBox cmbRoles;
         private System.Windows.Forms.Label lblRolUsuario;
         private System.Windows.Forms.Label lblNombreApellidoUsuario;
         private System.Windows.Forms.Label lblPass;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.cmbRoles = new System.Windows.Forms.ComboBox();
             this.lblRolUsuario = new System.Windows.Forms.Label();
             this.lblNombreApellidoUsuario = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
@@ -40,13 +40,13 @@
             this.btnCandelarAlta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // cmbRol
+            // cmbRoles
             // 
-            this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Location = new System.Drawing.Point(12, 154);
-            this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(121, 21);
-            this.cmbRol.TabIndex = 31;
+            this.cmbRoles.FormattingEnabled = true;
+            this.cmbRoles.Location = new System.Drawing.Point(12, 154);
+            this.cmbRoles.Name = "cmbRoles";
+            this.cmbRoles.Size = new System.Drawing.Size(121, 21);
+            this.cmbRoles.TabIndex = 31;
             // 
             // lblRolUsuario
             // 
@@ -136,7 +136,7 @@
             this.ClientSize = new System.Drawing.Size(283, 336);
             this.Controls.Add(this.btnCandelarAlta);
             this.Controls.Add(this.btnAgregarUsuario);
-            this.Controls.Add(this.cmbRol);
+            this.Controls.Add(this.cmbRoles);
             this.Controls.Add(this.lblRolUsuario);
             this.Controls.Add(this.lblNombreApellidoUsuario);
             this.Controls.Add(this.lblPass);
@@ -146,6 +146,7 @@
             this.Controls.Add(this.txtPass);
             this.Name = "FrmAltaUsuario";
             this.Text = "FrmAltaUsuario";
+            this.Load += new System.EventHandler(this.FrmAltaUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,7 +154,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbRol;
+        private System.Windows.Forms.ComboBox cmbRoles;
         private System.Windows.Forms.Label lblRolUsuario;
         private System.Windows.Forms.Label lblNombreApellidoUsuario;
         private System.Windows.Forms.Label lblPass;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasesBase;
 
 namespace Vistas
 {
@@ -15,6 +16,16 @@ namespace Vistas
         public FrmMostrarUsuario()
         {
             InitializeComponent();
+            cargar();
+        }
+        public  void cargar()
+        {
+            cmbRoles.DataSource = TrabajoUsuario.listaRoles();
+        }
+
+        private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
