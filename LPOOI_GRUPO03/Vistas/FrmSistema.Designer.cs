@@ -28,18 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnListaUsuario = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnListaUsuario
-            // 
-            this.btnListaUsuario.Location = new System.Drawing.Point(73, 65);
-            this.btnListaUsuario.Name = "btnListaUsuario";
-            this.btnListaUsuario.Size = new System.Drawing.Size(106, 36);
-            this.btnListaUsuario.TabIndex = 0;
-            this.btnListaUsuario.Text = "ABM Usuario";
-            this.btnListaUsuario.UseVisualStyleBackColor = true;
-            this.btnListaUsuario.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmSistema
             // 
@@ -47,7 +36,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(487, 371);
-            this.Controls.Add(this.btnListaUsuario);
             this.Name = "FrmSistema";
             this.Text = "FrmSistema";
             this.ResumeLayout(false);
@@ -55,7 +43,5 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnListaUsuario;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasesBase;
 
 namespace Vistas
 {
@@ -15,6 +16,34 @@ namespace Vistas
         public FrmUsuario()
         {
             InitializeComponent();
+        }
+
+        private void AddFormInPanel(Form fh)
+        {
+            if (this.panelUsuario.Controls.Count > 0)
+                this.panelUsuario.Controls.RemoveAt(0);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panelUsuario.Controls.Add(fh);
+            this.panelUsuario.Tag = fh;
+            fh.Show();
+        }
+
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<FrmMostrarUsuario>().FirstOrDefault();
+            FrmMostrarUsuario frmMostrarUsuario = form ?? new FrmMostrarUsuario();
+            AddFormInPanel(frmMostrarUsuario);
+
+           cargarListaUsuario();
+        }
+
+        public void cargarListaUsuario()
+        {
+
+            dgvListaUsuarios.DataSource = TrabajoUsuario.cargarUsuario();
+            dgvListaUsuarios.Refresh();
         }
     }
 }

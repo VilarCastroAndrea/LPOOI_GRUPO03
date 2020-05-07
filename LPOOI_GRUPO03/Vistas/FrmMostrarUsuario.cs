@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class FrmSistema : Form
+    public partial class FrmMostrarUsuario : Form
     {
-        public FrmSistema()
+        public FrmMostrarUsuario()
         {
             InitializeComponent();
         }
-
-       
     }
 }
