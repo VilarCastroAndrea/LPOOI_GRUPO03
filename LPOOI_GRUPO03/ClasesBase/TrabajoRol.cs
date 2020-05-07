@@ -13,14 +13,19 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Rol";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Rol", cnn);
+                      
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+            DataSet ds = new DataSet(); 
+          
+            da.Fill(ds);
+            return ds.Tables[0];
+
+
+
+
+           
+          
         }
 
     }
