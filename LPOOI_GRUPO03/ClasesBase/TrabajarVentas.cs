@@ -46,7 +46,7 @@ namespace ClasesBase
             cmd.CommandText += " VTA_PrecioFinal as 'VTAPrecioFinal', ";
             cmd.CommandText += " C.CLI_Apellido as 'CLIApellido', USU_NombreUsuario as 'USUNombreUsuario' ";
             cmd.CommandText += " FROM Venta as V";
-            cmd.CommandText += " LEFT JOIN Cliente as C ON (C.CLI_DNI=V.CLI_DNI) ";
+            cmd.CommandText += " LEFT JOIN Cliente as C ON (C.CLI_DNI=V.CLI_DNI)";
             cmd.CommandText += " LEFT JOIN Vehiculo as VE ON (VE.VEH_Matricula=V.VEH_Matricula)";
             cmd.CommandText += " LEFT JOIN Usuario as U ON (U.USU_ID=V.USU_ID)";
             cmd.CommandType = CommandType.Text;
