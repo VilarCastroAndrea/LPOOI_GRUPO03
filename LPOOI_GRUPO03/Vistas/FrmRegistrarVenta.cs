@@ -48,7 +48,7 @@ namespace Vistas
             cmbClientesDNI.SelectionStart = cmbClientesDNI.Text.Length;
             for (int i = 0; i < tablaCliente.Rows.Count; i++)
             {
-                cmbClientesDNI.Items.Add(tablaCliente.Rows[i]["DNI"].ToString() + " |" +
+                cmbClientesDNI.Items.Add(tablaCliente.Rows[i]["DNI"].ToString() + " | " +
                     tablaCliente.Rows[i]["Nombre"].ToString() + " | " + tablaCliente.Rows[i]["Apellido"].ToString());
             }
         }
@@ -85,7 +85,7 @@ namespace Vistas
             nuevaVenta.Usu_ID = 1;
             nuevaVenta.Vta_FormaPago = cmbMedioDePago.Text;
             nuevaVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
-
+            TrabajarVentas.InsertarVenta(nuevaVenta);
         }
     }
 }
