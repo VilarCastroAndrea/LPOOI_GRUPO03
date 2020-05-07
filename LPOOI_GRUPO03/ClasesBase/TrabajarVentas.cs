@@ -11,14 +11,14 @@ namespace ClasesBase
     public class TrabajarVentas
     {
 
-        public static DataTable ListaVentas()
+        public static DataTable listaVentas()
         {
              //CONEXION
              SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-            
+            /*
              //CONFIGURACION DE LA CONSULTA
              SqlCommand cmd = new SqlCommand();
-             cmd.CommandText = "SELECT * FROM Venta";
+             cmd.CommandText = "SELECT FROM";
              cmd.CommandType = CommandType.Text;
              cmd.Connection = cnn;
 
@@ -36,20 +36,19 @@ namespace ClasesBase
 
              //DEVOLVER TABLA
              return dt;  
-            
-           /* SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT";
-            cmd.CommandText += " VTA_ID as 'ID VENTA', ";
-            cmd.CommandText += " CLI_DNI as 'CLI_DNI', ";
-            cmd.CommandText += " VEH_Matricula as 'VEH_Matricula', ";
-            cmd.CommandText += " USU_ID as 'USU_ID', ";
-            cmd.CommandText += " VTA_Fecha as 'VTA_Fecha' ,";
-          
-            cmd.CommandText += " VTA_FormaPago as 'VTA_Forma Pago' ,";
-            cmd.CommandText += " VTA_PrecioFinal as 'VTA_Precio Final' ";
-            cmd.CommandText += " FROM Venta as V";
-
-
+            */
+           SqlCommand cmd = new SqlCommand();
+            cmd.CommandText =  " SELECT ";
+            cmd.CommandText += " VTA_ID as 'IDVENTA', ";
+            cmd.CommandText += " VTA_Fecha as 'VTAFecha', ";          
+            cmd.CommandText += " VTA_FormaPago as 'VTAFormaPago', ";
+            cmd.CommandText += " VTA_PrecioFinal as 'VTAPrecioFinal', ";
+            cmd.CommandText += " CLI_Apellido as 'CLIApellido', USU_NombreUsuario as 'USUNombreUsuario', "; 
+            cmd.CommandText += " V.CLI_DNI, V.VEH_Matricula as 'Matricula', V.USU_ID ";
+            cmd.CommandText += " FROM Venta";
+            cmd.CommandText += " INNER JOIN Cliente as C ON (C.CLI_DNI=V.CLI.DNI)";
+            cmd.CommandText += " INNER JOIN Vehiculo as VE ON (VE.VEH_Matricula=V.VEH_Matricula)";
+            cmd.CommandText += " INNER JOIN Usuario as U ON (U.USU_ID=V.USU_ID)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -59,7 +58,7 @@ namespace ClasesBase
             da.Fill(dt);
 
             return dt;
-            */
+            
         }
 
 

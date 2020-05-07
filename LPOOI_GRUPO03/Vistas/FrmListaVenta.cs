@@ -20,7 +20,7 @@ namespace Vistas
 
         private void FrmListaVenta_Load(object sender, EventArgs e)
         {
-           dataVentas.DataSource = TrabajarVentas.ListaVentas();
+           dataVentas.DataSource = TrabajarVentas.listaVentas();
         }
 
         
