@@ -62,12 +62,12 @@ namespace Vistas
             if (dataTable.Rows.Count!=0)
                 {
                     this.Hide();
-                    formMain.Show();
-                    guardarUser(dataTable);
-                    formMain.lblNom.Text = "BIENVENIDO:"+dataTable.Rows[0][1].ToString();
-                    restringirAcceso(dataTable);
-                    
-            }
+                  
+                guardarUser(dataTable);
+                formMain.lblNom.Text = "BIENVENIDO:" + user.Usu_NombreUsuario;
+                formMain.Show();
+               
+                }
                 
               else
             {
@@ -77,18 +77,7 @@ namespace Vistas
            
 
         }
-        public void restringirAcceso(DataTable dt)
-        {
-            if (dt.Rows[0][1].ToString() == "admin")
-            {
-                formMain.btnCliente.Visible = false;
-            }
-            else if (dt.Rows[0][1].ToString() == "vendedor")
-            {
-                formMain.btnVehiculos.Visible = false;
-
-            }
-        }
+      
         public void guardarUser(DataTable dt)
         {
           
@@ -98,7 +87,7 @@ namespace Vistas
             user.Rol_Codigo = dt.Rows[0]["ROL_Codigo"].ToString();
             user.Usu_ID = Convert.ToInt32(dt.Rows[0]["USU_ID"].ToString());
         }
-
+        
         private void txtUsuario_MouseHover(object sender, EventArgs e)
         {
             lblnfoUsu.Text = "Ingresar Usuario";
