@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using ClasesBase;
 
 
@@ -26,7 +25,7 @@ namespace Vistas
     public void cargarListaUsuario()
     {
 
-            dgvListaUsuarios.DataSource = TrabajarUsuario.cargarUsuario();
+            dgvListaUsuarios.DataSource = TrabajarUsuario.ListaCliente();
             dgvListaUsuarios.Refresh();
     }
 
