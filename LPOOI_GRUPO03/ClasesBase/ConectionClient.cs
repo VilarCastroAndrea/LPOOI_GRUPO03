@@ -76,16 +76,14 @@ namespace ClasesBase
 
             cmd.Parameters.AddWithValue("@apellido" ,"%"+apellido+"%");
 
-            //ejecuta la consulta
+         
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            //llena los datos de la consulta en el datatable
+           
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
 
             return dt;
-
-
-        }
+          }
     }
 }
