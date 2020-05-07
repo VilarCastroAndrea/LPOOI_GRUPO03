@@ -54,6 +54,7 @@
             this.btnECliente.TabIndex = 38;
             this.btnECliente.Text = "Eliminar Cliente";
             this.btnECliente.UseVisualStyleBackColor = false;
+            this.btnECliente.Click += new System.EventHandler(this.btnECliente_Click);
             // 
             // btnMCliente
             // 
@@ -67,6 +68,7 @@
             this.btnMCliente.TabIndex = 37;
             this.btnMCliente.Text = "Modificar Cliente";
             this.btnMCliente.UseVisualStyleBackColor = false;
+            this.btnMCliente.Click += new System.EventHandler(this.btnMCliente_Click);
             // 
             // txtDni
             // 
@@ -99,6 +101,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(171, 20);
             this.txtTelefono.TabIndex = 32;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtApellido
             // 
@@ -106,6 +109,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(171, 20);
             this.txtApellido.TabIndex = 31;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -113,6 +117,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(171, 20);
             this.txtNombre.TabIndex = 30;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label4
             // 
@@ -180,9 +185,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnECliente;
-        private System.Windows.Forms.Button btnMCliente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -193,5 +195,7 @@
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtApellido;
         public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.Button btnECliente;
+        public System.Windows.Forms.Button btnMCliente;
     }
 }

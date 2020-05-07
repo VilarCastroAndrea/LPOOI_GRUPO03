@@ -55,8 +55,8 @@ namespace Vistas
                         TrabajarCliente.InsertarCliente(aCliente);
                         limpiarCampos();
                         FrmCliente fcliente = new FrmCliente();
-                        fcliente.cargarCliente();
-                        fcliente.Refresh();
+                        //fcliente.cargarCliente();
+                        //fcliente.Refresh();
                     }
                     else
                     {

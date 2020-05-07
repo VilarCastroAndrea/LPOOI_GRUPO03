@@ -86,10 +86,6 @@ namespace Vistas
                 }
             }
         }
-
-        private void dataCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

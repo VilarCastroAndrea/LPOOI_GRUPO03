@@ -70,13 +70,14 @@ namespace ClasesBase
             cmd.CommandText += " FROM Cliente as C ";
 
             cmd.CommandText += " WHERE";
-            cmd.CommandText += " CLI_DNI LIKE @pattern ";
-            //cmd.CommandText += " CLI_Apellido LIKE @pattern ";
+            cmd.CommandText += " CLI_DNI LIKE @pattern or";
+            cmd.CommandText += " CLI_Apellido LIKE @pattern2 "; 
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+            cmd.Parameters.AddWithValue("@pattern2", "%" + sPattern + "%");
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -86,6 +87,41 @@ namespace ClasesBase
             return dt;
         }
 
+        public static void eliminarCliente(string dniCliente)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "DELETE FROM Cliente WHERE CLI_DNI=@dni";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@dni", dniCliente);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+
+        public static void modificarCliente(Cliente cliente)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Cliente SET CLI_Nombre = @nombre, ";
+            cmd.CommandText += " CLI_Apellido = @apellido, CLI_Direccion = @direccion, ";
+            cmd.CommandText += " CLI_Telefono = @telefono WHERE CLI_DNI=@dni";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@dni", cliente.Cli_DNI);
+            cmd.Parameters.AddWithValue("@nombre", cliente.Cli_Nombre);
+            cmd.Parameters.AddWithValue("@apellido", cliente.Cli_Apellido);
+            cmd.Parameters.AddWithValue("@direccion", cliente.Cli_Direccion);
+            cmd.Parameters.AddWithValue("@telefono", cliente.Cli_Telefono);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 
     

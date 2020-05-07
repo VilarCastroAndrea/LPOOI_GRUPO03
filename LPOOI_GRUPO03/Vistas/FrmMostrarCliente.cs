@@ -18,5 +18,45 @@ namespace Vistas
         {
             InitializeComponent();
         }
+
+        private void btnMCliente_Click(object sender, EventArgs e)
+        {
+            FrmCliente frmCliente = new FrmCliente();
+            Cliente c = new Cliente();
+            c.Cli_DNI = txtDni.Text;
+            c.Cli_Nombre = txtNombre.Text;
+            c.Cli_Apellido = txtApellido.Text;
+            c.Cli_Direccion = txtDireccion.Text;
+            c.Cli_Telefono = txtTelefono.Text;
+            TrabajarCliente.modificarCliente(c);
+            MessageBox.Show("Cliente Modificado");
+            //frmCliente.cargarCliente();
+            //frmCliente.dataCliente.DataSource = TrabajarCliente.ListaCliente();
+
+        }
+
+        private void btnECliente_Click(object sender, EventArgs e)
+        {
+            FrmCliente frmCliente = new FrmCliente();
+            TrabajarCliente.eliminarCliente(txtDni.Text);
+            MessageBox.Show("Cliente Eliminado");
+            //frmCliente.cargarCliente();
+            //frmCliente.dataCliente.DataSource = TrabajarCliente.ListaCliente();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetra(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetra(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloNumeros(e);
+        }
     }
 }

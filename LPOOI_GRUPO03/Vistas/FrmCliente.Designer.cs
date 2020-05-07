@@ -86,6 +86,7 @@
             // 
             // dataCliente
             // 
+            this.dataCliente.BackgroundColor = System.Drawing.Color.White;
             this.dataCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataCliente.Location = new System.Drawing.Point(19, 63);
             this.dataCliente.Margin = new System.Windows.Forms.Padding(2);
@@ -93,7 +94,6 @@
             this.dataCliente.RowTemplate.Height = 24;
             this.dataCliente.Size = new System.Drawing.Size(598, 355);
             this.dataCliente.TabIndex = 1;
-            this.dataCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCliente_CellContentClick);
             this.dataCliente.CurrentCellChanged += new System.EventHandler(this.dataCliente_CurrentCellChanged);
             // 
             // panelCliente

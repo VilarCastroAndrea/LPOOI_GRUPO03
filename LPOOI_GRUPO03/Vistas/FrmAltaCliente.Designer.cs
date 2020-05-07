@@ -132,7 +132,7 @@
             // 
             // btnACliente
             // 
-            this.btnACliente.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnACliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnACliente.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.btnACliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnACliente.ForeColor = System.Drawing.Color.White;
