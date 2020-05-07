@@ -30,5 +30,19 @@ namespace ClasesBase
 
 
         }
+        public static void DeleteUser(int idUser)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "DELETE FROM Usuario WHERE USU_ID=@iduser";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@iduser",idUser);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 }
