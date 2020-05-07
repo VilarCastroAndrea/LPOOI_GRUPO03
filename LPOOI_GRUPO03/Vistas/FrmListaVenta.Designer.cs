@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class FrmListaVehiculo
+    partial class FrmListaVenta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataVehiculos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVehiculos)).BeginInit();
+            this.dataVentas = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVentas)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataVehiculos
+            // dataVentas
             // 
-            this.dataVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataVehiculos.Location = new System.Drawing.Point(7, 28);
-            this.dataVehiculos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataVehiculos.Name = "dataVehiculos";
-            this.dataVehiculos.RowTemplate.Height = 24;
-            this.dataVehiculos.Size = new System.Drawing.Size(289, 290);
-            this.dataVehiculos.TabIndex = 0;
-            this.dataVehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataVehiculos_CellContentClick);
+            this.dataVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataVentas.Location = new System.Drawing.Point(12, 36);
+            this.dataVentas.Name = "dataVentas";
+            this.dataVentas.Size = new System.Drawing.Size(284, 318);
+            this.dataVentas.TabIndex = 0;
             // 
-            // FrmListaVehiculo
+            // FrmListaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(308, 366);
-            this.Controls.Add(this.dataVehiculos);
-            this.Name = "FrmListaVehiculo";
-            this.Text = "FrmListaVehiculo";
-            this.Load += new System.EventHandler(this.FrmListaVehiculo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataVehiculos)).EndInit();
+            this.Controls.Add(this.dataVentas);
+            this.Name = "FrmListaVenta";
+            this.Text = "FrmListaVenta";
+            this.Load += new System.EventHandler(this.FrmListaVenta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataVentas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.DataGridView dataVehiculos;
+        private System.Windows.Forms.DataGridView dataVentas;
     }
 }
