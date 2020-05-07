@@ -32,12 +32,6 @@ namespace Vistas
             lblCapcha.Text = cargarCapcha;
         }
       
-
-
-     
-
-
-
         public String generarCapcha()
         {
 
@@ -69,9 +63,9 @@ namespace Vistas
                 {
                     this.Hide();
                     formMain.Show();
-                guardarUser(dataTable);
-                formMain.lblNom.Text = "BIENVENIDO:"+dataTable.Rows[0][1].ToString();
-                restringirAcceso(dataTable);
+                    guardarUser(dataTable);
+                    formMain.lblNom.Text = "BIENVENIDO:"+dataTable.Rows[0][1].ToString();
+                    restringirAcceso(dataTable);
                     
             }
                 
