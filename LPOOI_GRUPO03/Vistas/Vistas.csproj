@@ -103,6 +103,12 @@
     <Compile Include="FrmSistema.Designer.cs">
       <DependentUpon>FrmSistema.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSistema.resx">
       <DependentUpon>FrmSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVehiculo.resx">
       <DependentUpon>FrmVehiculo.cs</DependentUpon>
