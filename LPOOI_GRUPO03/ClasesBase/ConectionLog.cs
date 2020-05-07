@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ClasesBase
 {
-    public class ConecctionLog
+    public class ConectionLog
     {
         public static DataTable ingresar(string user, string pswd)
         {

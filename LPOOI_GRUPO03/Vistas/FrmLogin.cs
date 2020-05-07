@@ -57,7 +57,7 @@ namespace Vistas
         {
             DataTable dataTable = new DataTable();
             
-            dataTable = ConecctionLog.ingresar(txtUsuario.Text, txtContra.Text);
+            dataTable = ConectionLog.ingresar(txtUsuario.Text, txtContra.Text);
            
             if (dataTable.Rows.Count!=0)
                 {
