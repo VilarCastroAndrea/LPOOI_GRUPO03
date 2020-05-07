@@ -60,5 +60,12 @@ namespace Vistas
                 cargarListaUsuario();
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<FrmAltaUsuario>().FirstOrDefault();
+            FrmAltaUsuario frmAltaUsuario = form ?? new FrmAltaUsuario();
+            AddFormInPanel(frmAltaUsuario);
+        }
     }
 }

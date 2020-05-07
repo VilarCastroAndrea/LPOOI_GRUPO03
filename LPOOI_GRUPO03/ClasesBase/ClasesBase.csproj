@@ -50,6 +50,7 @@
       <DependentUpon>AgenciaDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="TrabajoRol.cs" />
     <Compile Include="TrabajoUsuario.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

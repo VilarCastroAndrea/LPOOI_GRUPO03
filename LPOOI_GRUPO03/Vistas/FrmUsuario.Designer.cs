@@ -67,6 +67,7 @@
             this.btnAgregar.TabIndex = 27;
             this.btnAgregar.Text = "Nuevo Usuario";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // panelUsuario
             // 
@@ -127,6 +128,7 @@
             this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListaUsuarios.Name = "dgvListaUsuarios";
             this.dgvListaUsuarios.RowTemplate.Height = 24;
+            this.dgvListaUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaUsuarios.Size = new System.Drawing.Size(598, 355);
             this.dgvListaUsuarios.TabIndex = 1;
             // 
