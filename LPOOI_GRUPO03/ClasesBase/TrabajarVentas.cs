@@ -15,10 +15,10 @@ namespace ClasesBase
         {
              //CONEXION
              SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-            /*
+            
              //CONFIGURACION DE LA CONSULTA
              SqlCommand cmd = new SqlCommand();
-             cmd.CommandText = "SELECT * FROM  Venta";
+             cmd.CommandText = "SELECT * FROM Venta";
              cmd.CommandType = CommandType.Text;
              cmd.Connection = cnn;
 
@@ -36,16 +36,16 @@ namespace ClasesBase
 
              //DEVOLVER TABLA
              return dt;  
-             */
-            SqlCommand cmd = new SqlCommand();
+            
+           /* SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
             cmd.CommandText += " VTA_ID as 'ID VENTA', ";
             cmd.CommandText += " CLI_DNI as 'CLI_DNI', ";
             cmd.CommandText += " VEH_Matricula as 'VEH_Matricula', ";
             cmd.CommandText += " USU_ID as 'USU_ID', ";
-            cmd.CommandText += " VTA_Fecha as 'VTA_Fecha' ";
+            cmd.CommandText += " VTA_Fecha as 'VTA_Fecha' ,";
           
-            cmd.CommandText += " VTA_FormaPago as 'VTA_Forma Pago' ";
+            cmd.CommandText += " VTA_FormaPago as 'VTA_Forma Pago' ,";
             cmd.CommandText += " VTA_PrecioFinal as 'VTA_Precio Final' ";
             cmd.CommandText += " FROM Venta as V";
 
@@ -59,6 +59,7 @@ namespace ClasesBase
             da.Fill(dt);
 
             return dt;
+            */
         }
 
 
