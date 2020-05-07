@@ -15,13 +15,13 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Venta(VTA_ID,CLI_DNI,VEH_Matricula," +
-                "USU_ID,VTA_Fecha,VTA_FormaPago,VTA_PrecioFinal) values(@vtaId,@dni," +
+            cmd.CommandText = "INSERT INTO Venta(CLI_DNI,VEH_Matricula," +
+                "USU_ID,VTA_Fecha,VTA_FormaPago,VTA_PrecioFinal) values(@dni," +
                 "@matricula,@usuId,@fecha,@formaDePago,@precioFinal)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@vtaId", venta.Vta_ID);
+
             cmd.Parameters.AddWithValue("@dni", venta.Cli_DNI);
             cmd.Parameters.AddWithValue("@matricula", venta.Veh_Matricula);
             cmd.Parameters.AddWithValue("@usuId", venta.Usu_ID);
