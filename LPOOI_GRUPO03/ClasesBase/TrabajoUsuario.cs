@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace ClasesBase
 {
-    class TrabajoUsuario
+    public class TrabajoUsuario
     {
 
         public static DataTable cargarUsuario()

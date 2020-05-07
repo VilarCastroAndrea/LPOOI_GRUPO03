@@ -24,8 +24,8 @@ namespace Vistas
 
     public void cargarListaUsuario()
     {
-
-            dgvListaUsuarios.DataSource = TrabajarUsuario.ListaCliente();
+            Usuario usu = new Usuario();
+            dgvListaUsuarios.DataSource = TrabajoUsuario.cargarUsuario();
             dgvListaUsuarios.Refresh();
     }
 
