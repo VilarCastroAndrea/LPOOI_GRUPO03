@@ -100,6 +100,7 @@
             this.btnBusacarUsuario.TabIndex = 4;
             this.btnBusacarUsuario.Text = "Buscar";
             this.btnBusacarUsuario.UseVisualStyleBackColor = false;
+            this.btnBusacarUsuario.Click += new System.EventHandler(this.btnBusacarUsuario_Click);
             // 
             // label7
             // 

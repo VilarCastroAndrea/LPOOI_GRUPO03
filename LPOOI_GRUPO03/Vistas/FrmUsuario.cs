@@ -45,5 +45,20 @@ namespace Vistas
             dgvListaUsuarios.DataSource = TrabajoUsuario.cargarUsuario();
             dgvListaUsuarios.Refresh();
         }
+
+        private void btnBusacarUsuario_Click(object sender, EventArgs e)
+        {
+            string buscarUsuario = txtBuscarUsuario.Text ;
+
+
+            if (txtBuscarUsuario.Text != "")
+            {
+                dgvListaUsuarios.DataSource = TrabajoUsuario.buscarUsuario(txtBuscarUsuario.Text);
+            }
+            else
+            {
+                cargarListaUsuario();
+            }
+        }
     }
 }
