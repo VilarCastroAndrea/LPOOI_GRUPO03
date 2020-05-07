@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelContenedorListaVentas = new System.Windows.Forms.Panel();
             this.btnListaVeh = new System.Windows.Forms.Button();
+            this.panelContenedorListaVentas = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // panelContenedorListaVentas
-            // 
-            this.panelContenedorListaVentas.Location = new System.Drawing.Point(12, 71);
-            this.panelContenedorListaVentas.Name = "panelContenedorListaVentas";
-            this.panelContenedorListaVentas.Size = new System.Drawing.Size(308, 405);
-            this.panelContenedorListaVentas.TabIndex = 1;
             // 
             // btnListaVeh
             // 
@@ -52,6 +45,13 @@
             this.btnListaVeh.Text = "Lista Venta";
             this.btnListaVeh.UseVisualStyleBackColor = false;
             this.btnListaVeh.Click += new System.EventHandler(this.btnListaVeh_Click);
+            // 
+            // panelContenedorListaVentas
+            // 
+            this.panelContenedorListaVentas.Location = new System.Drawing.Point(12, 71);
+            this.panelContenedorListaVentas.Name = "panelContenedorListaVentas";
+            this.panelContenedorListaVentas.Size = new System.Drawing.Size(961, 405);
+            this.panelContenedorListaVentas.TabIndex = 1;
             // 
             // FrmVenta
             // 
@@ -68,8 +68,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelContenedorListaVentas;
         private System.Windows.Forms.Button btnListaVeh;
+        private System.Windows.Forms.Panel panelContenedorListaVentas;
     }
 }
