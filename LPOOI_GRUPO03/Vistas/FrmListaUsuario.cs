@@ -25,22 +25,8 @@ namespace Vistas
 
     public void cargarListaUsuario()
     {
-            SqlConnection cn = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Luis\\source\\repos\\LPOOI_GRUPO03\\AgenciaDB.mdf; Integrated Security = True; Connect Timeout = 30");
 
-            SqlDataAdapter da = new SqlDataAdapter();
-            //crear el sqlCommand
-            da.SelectCommand = new SqlCommand();
-            //pasarle la conexion al Command del DataAdapter
-            da.SelectCommand.Connection = cn;
-            //indicar el nombre del stored procedure a llamar
-            da.SelectCommand.CommandText = "ListarUsuarios";
-            //Indicar de que tipo es el command
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-
-            //correr el Stored procedure
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Usuario");
-            dgvListaUsuarios.DataSource = ds.Tables[0];
+            dgvListaUsuarios.DataSource = TrabajarUsuario.cargarUsuario();
             dgvListaUsuarios.Refresh();
     }
 

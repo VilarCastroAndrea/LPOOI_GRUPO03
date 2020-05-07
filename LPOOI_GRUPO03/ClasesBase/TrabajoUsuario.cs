@@ -11,7 +11,7 @@ namespace ClasesBase
     class TrabajoUsuario
     {
 
-        public static DataTable listarUsuario()
+        public static DataTable cargarUsuario()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
