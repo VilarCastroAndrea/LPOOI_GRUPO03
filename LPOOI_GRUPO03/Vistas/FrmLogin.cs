@@ -64,7 +64,7 @@ namespace Vistas
                     this.Hide();
                   
                 guardarUser(dataTable);
-                formMain.lblNom.Text = "BIENVENIDO:" + user.Usu_NombreUsuario;
+                formMain.lblNom.Text = "BIENVENIDO: " + user.Usu_NombreUsuario;
                 formMain.Show();
                
                 }
