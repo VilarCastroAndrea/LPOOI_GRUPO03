@@ -34,7 +34,7 @@ namespace Vistas
             for (int i = 0; i < tablaVehiculo.Rows.Count; i++)
             {
                 cmbVehiculos.Items.Add(tablaVehiculo.Rows[i]["Matricula"].ToString() + " | " +
-                    tablaVehiculo.Rows[i]["Marca"].ToString() + " , " + tablaVehiculo.Rows[i]["Linea"].ToString()
+                    tablaVehiculo.Rows[i]["Marca"].ToString() + " | " + tablaVehiculo.Rows[i]["Linea"].ToString()
                     + " | " + tablaVehiculo.Rows[i]["Modelo"].ToString() + " | " + tablaVehiculo.Rows[i]["Color"].ToString()
                     + " | " + tablaVehiculo.Rows[i]["Puertas"].ToString() + " | " + tablaVehiculo.Rows[i]["TipoVehiculo"].ToString()
                     + " | " + tablaVehiculo.Rows[i]["ClaseVehiculo"].ToString() + " | " + tablaVehiculo.Rows[i]["Precio"].ToString());
@@ -54,38 +54,79 @@ namespace Vistas
         }
 
         private void cmbClientesDNI_TextUpdate(object sender, EventArgs e)
-        {
-            
+        {   
             cargarBoxCliente(TrabajarCliente.buscarClienteAproximado(cmbClientesDNI.Text));
         }
 
         private void cmbVehiculos_TextUpdate(object sender, EventArgs e)
         {
-
             cargarBoxVehiculo(TrabajarVehiculo.buscarVehiculoAproximado(cmbVehiculos.Text));
         }
 
         private void cmbVehiculos_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] cadena = cmbVehiculos.Text.Split('|');
-            txtPrecio.Text = cadena[7];
+            txtPrecio.Text = cadena[8];
             txtPrecio.Text = txtPrecio.Text.TrimStart();
         }
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            string[] cadenaVehiculo = cmbVehiculos.Text.Split('|');
-            string[] cadenaCliente = cmbClientesDNI.Text.Split('|');
-            Venta nuevaVenta = new Venta();
+            if (validarCampos())
+            {
+                Venta nuevaVenta = new Venta();
+                nuevaVenta.Cli_DNI = primerValorCombobox(cmbClientesDNI.Text);
+                nuevaVenta.Veh_Matricula = primerValorCombobox(cmbVehiculos.Text);
+                nuevaVenta.Vta_Fecha = dtpFecha.Value;
+                //TO DO session
+                nuevaVenta.Usu_ID = 1;
+                nuevaVenta.Vta_FormaPago = cmbMedioDePago.Text;
+                nuevaVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
+                TrabajarVentas.InsertarVenta(nuevaVenta);
+                limpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("alerta");
+            }
+        }
 
-            nuevaVenta.Cli_DNI = cadenaCliente[0].TrimEnd();
-            nuevaVenta.Veh_Matricula = cadenaVehiculo[0].TrimEnd();
-            nuevaVenta.Vta_Fecha = dtpFecha.Value;
-            //TO DO coneccion a bd y session
-            nuevaVenta.Usu_ID = 1;
-            nuevaVenta.Vta_FormaPago = cmbMedioDePago.Text;
-            nuevaVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
-            TrabajarVentas.InsertarVenta(nuevaVenta);
+        private bool validarCampos()
+        {
+            if(cmbClientesDNI.Text!="" && cmbClientesDNI.Text.Split('|').Length == 3)
+            {
+                if(cmbVehiculos.Text != "" && cmbVehiculos.Text.Split('|').Length == 9)
+                {
+                    if (cmbMedioDePago.Text != ""|| cmbMedioDePago.Text=="Tarjeta De Credito"||
+                        cmbMedioDePago.Text == "Efectivo"||cmbMedioDePago.Text == "Credito Personal")
+                    {
+                        if(txtPrecio.Text != "")
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        private string primerValorCombobox(string textoCombo)
+        {
+           return textoCombo.Split('|')[0].TrimEnd();
+        }
+
+        private void limpiarCampos()
+        {
+            cmbClientesDNI.Text = "";
+            cmbVehiculos.Text = "";
+            dtpFecha.Value = DateTime.Now;
+            cmbMedioDePago.Text = "";
+            txtPrecio.Text = "";
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloNumeros(e);
         }
     }
 }
