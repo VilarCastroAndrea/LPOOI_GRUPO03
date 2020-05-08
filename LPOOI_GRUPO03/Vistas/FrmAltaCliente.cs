@@ -52,11 +52,13 @@ namespace Vistas
                                                       "Agregar Cliente", MessageBoxButtons.OKCancel);
                     if (result == DialogResult.OK)
                     {
-                        TrabajarCliente.InsertarCliente(aCliente);
-                        limpiarCampos();
-                        FrmCliente fcliente = new FrmCliente();
-                        //fcliente.cargarCliente();
-                        //fcliente.Refresh();
+                        Form frmCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmCliente);
+                        if (frmCliente != null)
+                        {
+                            TrabajarCliente.InsertarCliente(aCliente);
+                            limpiarCampos();
+                            ((FrmCliente)frmCliente).cargarCliente();
+                        }
                     }
                     else
                     {

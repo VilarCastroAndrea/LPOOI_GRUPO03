@@ -21,27 +21,32 @@ namespace Vistas
 
         private void btnMCliente_Click(object sender, EventArgs e)
         {
-            FrmCliente frmCliente = new FrmCliente();
             Cliente c = new Cliente();
-            c.Cli_DNI = txtDni.Text;
-            c.Cli_Nombre = txtNombre.Text;
-            c.Cli_Apellido = txtApellido.Text;
-            c.Cli_Direccion = txtDireccion.Text;
-            c.Cli_Telefono = txtTelefono.Text;
-            TrabajarCliente.modificarCliente(c);
-            MessageBox.Show("Cliente Modificado");
-            //frmCliente.cargarCliente();
-            //frmCliente.dataCliente.DataSource = TrabajarCliente.ListaCliente();
+
+            Form frmCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmCliente);
+            if (frmCliente != null)
+            {
+                c.Cli_DNI = txtDni.Text;
+                c.Cli_Nombre = txtNombre.Text;
+                c.Cli_Apellido = txtApellido.Text;
+                c.Cli_Direccion = txtDireccion.Text;
+                c.Cli_Telefono = txtTelefono.Text;
+                TrabajarCliente.modificarCliente(c);
+                MessageBox.Show("Cliente Modificado");
+                ((FrmCliente)frmCliente).cargarCliente();
+            }
 
         }
 
         private void btnECliente_Click(object sender, EventArgs e)
         {
-            FrmCliente frmCliente = new FrmCliente();
-            TrabajarCliente.eliminarCliente(txtDni.Text);
-            MessageBox.Show("Cliente Eliminado");
-            //frmCliente.cargarCliente();
-            //frmCliente.dataCliente.DataSource = TrabajarCliente.ListaCliente();
+            Form frmCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmCliente);
+            if (frmCliente != null)
+            {
+                TrabajarCliente.eliminarCliente(txtDni.Text);
+                MessageBox.Show("Cliente Eliminado");
+                ((FrmCliente)frmCliente).cargarCliente();
+            }
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
