@@ -95,5 +95,26 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+
+        public static void modificarCliente(Usuario usuario)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Usuario SET USU_nombreUsuario = @nomUsu, ";
+            cmd.CommandText += " USU_Password = @pass, USU_ApellidoNombre = @aynu,";
+            cmd.CommandText += " ROL_Codigo = @rol WHERE USU_Id=@idu";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@idu", usuario.Usu_ID);
+            cmd.Parameters.AddWithValue("@nomUsu", usuario.Usu_NombreUsuario);
+            cmd.Parameters.AddWithValue("@pass", usuario.Usu_Contraseña);
+            cmd.Parameters.AddWithValue("@aynu", usuario.Usu_ApellidoNombre);
+            cmd.Parameters.AddWithValue("@rol", usuario.Rol_Codigo);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 }
