@@ -192,7 +192,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbClientesDNI);
             this.Name = "FrmRegistrarVenta";
-            this.Text = "FrmRegistrarVenta";
+            this.Text = "Registrar la Venta";
             this.Load += new System.EventHandler(this.FrmRegistrarVenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
