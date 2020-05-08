@@ -96,7 +96,7 @@ namespace ClasesBase
             return dt;
         }
 
-        public static void modificarCliente(Usuario usuario)
+        public static void modificarUsuario(Usuario usuario)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
             SqlCommand cmd = new SqlCommand();

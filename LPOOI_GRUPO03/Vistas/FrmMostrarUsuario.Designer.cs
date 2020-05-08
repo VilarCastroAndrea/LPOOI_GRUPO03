@@ -148,6 +148,7 @@
             this.btnActualizarUsuario.TabIndex = 24;
             this.btnActualizarUsuario.Text = "Actualizar";
             this.btnActualizarUsuario.UseVisualStyleBackColor = true;
+            this.btnActualizarUsuario.Click += new System.EventHandler(this.btnActualizarUsuario_Click);
             // 
             // FrmMostrarUsuario
             // 

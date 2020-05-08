@@ -25,10 +25,7 @@ namespace Vistas
             cmbRoles.DataSource = TrabajoUsuario.listaRoles();
         }
 
-        private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
@@ -36,6 +33,24 @@ namespace Vistas
             FrmUsuario frmUsuario = new FrmUsuario();
             TrabajoUsuario.eliminarUsuario(id);
             MessageBox.Show("Usuario Eliminado");
+        }
+
+        private void btnActualizarUsuario_Click(object sender, EventArgs e)
+        {
+            {
+                FrmUsuario frmCliente = new FrmUsuario();
+                Usuario usuario = new Usuario();
+
+                usuario.Usu_ID = Convert.ToInt32(this.txtId.Text);
+                usuario.Usu_NombreUsuario = txtNombreUsuario.Text;
+                usuario.Usu_Contraseña = txtPass.Text;
+                usuario.Usu_ApellidoNombre = txtNombreApellidoUsuario.Text;
+                usuario.Rol_Codigo = cmbRoles.Text;
+                TrabajoUsuario.modificarUsuario(usuario);
+                MessageBox.Show("Usuario Modificado");
+               
+
+            }
         }
     }
 }
