@@ -31,17 +31,33 @@ namespace Vistas
 
         private void txtAPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Validar.soloNumeros(e);
             Validar.numerosDecimales(e);
         }
 
         private void btnAltaVeh_Click(object sender, EventArgs e)
+
+
         {
+            String opcionGPS = "No";
+
+            if (cmbModelo.Text != "" && cmbCantPuert.Text != "" && cmbColor.Text != "" && txtALinea.Text !="" && txtAMarca.Text !="" && txtAMatricula.Text != "" && txtATipo.Text != "" && txtAPrecio.Text != "" && txtAClase.Text != "")
+            {
+
+          
+
+
+
+
             int m = Convert.ToInt32(cmbModelo.Text);
             int p = Convert.ToInt32(cmbCantPuert.Text);
-            decimal pre = Convert.ToDecimal(txtAPrecio.Text);
-            Vehiculo vehiculo = new Vehiculo(txtAMatricula.Text,txtAMarca.Text,txtALinea.Text,m,cmbColor.Text,p,checkGps.Checked,txtATipo.Text,txtAClase.Text,pre);
+            Decimal precio = Convert.ToDecimal(txtAPrecio.Text);
+            Vehiculo vehiculo = new Vehiculo(txtAMatricula.Text,txtAMarca.Text,txtALinea.Text,m,cmbColor.Text,p,checkGps.Checked,txtATipo.Text,txtAClase.Text,precio);
 
-
+                if (vehiculo.Veh_GPS == true)
+                {
+                    opcionGPS = "Si";
+                }
             DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
                                                    "Matricula: " + vehiculo.Veh_Matricula + "\n" + 
                                                    "Marca: " + vehiculo.Veh_Marca + "\n" + 
@@ -49,7 +65,7 @@ namespace Vistas
                                                    "Modelo: " + vehiculo.Veh_Modelo + "\n" + 
                                                    "Color: " + vehiculo.Veh_Color + "\n" +
                                                    "Puertas: " + vehiculo.Veh_Puertas + "\n" +
-                                                   "GPS: " + vehiculo.Veh_GPS + "\n" +
+                                                   "GPS: " + opcionGPS + "\n" +
                                                    "Tipo de Vehiculo: " + vehiculo.Veh_TipoVehiculo + "\n" +
                                                    "Clase de Vehiculo: " + vehiculo.Veh_ClaseVehiculo + "\n" +
                                                    "Precio: " + vehiculo.Veh_Precio, "Agregar Cliente", MessageBoxButtons.OKCancel);
@@ -63,6 +79,7 @@ namespace Vistas
 
                 cmbColor.Text = "";
                 cmbCantPuert.Text = "";
+          
                 checkGps.Checked = false;
                 txtATipo.Text = "";
                 txtAClase.Text = "";
@@ -80,6 +97,11 @@ namespace Vistas
             {
                 MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
                 result = new DialogResult();
+            }
+        }
+            else
+            {
+                MessageBox.Show("complete todos los campos");
             }
         }
 

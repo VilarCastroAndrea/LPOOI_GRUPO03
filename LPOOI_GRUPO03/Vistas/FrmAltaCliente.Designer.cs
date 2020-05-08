@@ -51,7 +51,7 @@
             this.btnAltaClinte.Location = new System.Drawing.Point(193, 331);
             this.btnAltaClinte.Name = "btnAltaClinte";
             this.btnAltaClinte.Size = new System.Drawing.Size(92, 23);
-            this.btnAltaClinte.TabIndex = 0;
+            this.btnAltaClinte.TabIndex = 5;
             this.btnAltaClinte.Text = "Agregar";
             this.btnAltaClinte.UseVisualStyleBackColor = false;
             this.btnAltaClinte.Click += new System.EventHandler(this.btnAlta_Click);
@@ -101,7 +101,7 @@
             this.txtANombre.Location = new System.Drawing.Point(46, 124);
             this.txtANombre.Name = "txtANombre";
             this.txtANombre.Size = new System.Drawing.Size(239, 20);
-            this.txtANombre.TabIndex = 5;
+            this.txtANombre.TabIndex = 1;
             this.txtANombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtANombre_KeyPress);
             // 
             // txtAApellido
@@ -109,7 +109,7 @@
             this.txtAApellido.Location = new System.Drawing.Point(46, 169);
             this.txtAApellido.Name = "txtAApellido";
             this.txtAApellido.Size = new System.Drawing.Size(239, 20);
-            this.txtAApellido.TabIndex = 6;
+            this.txtAApellido.TabIndex = 2;
             this.txtAApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAApellido_KeyPress);
             // 
             // txtATelefono
@@ -117,7 +117,7 @@
             this.txtATelefono.Location = new System.Drawing.Point(46, 256);
             this.txtATelefono.Name = "txtATelefono";
             this.txtATelefono.Size = new System.Drawing.Size(239, 20);
-            this.txtATelefono.TabIndex = 7;
+            this.txtATelefono.TabIndex = 4;
             this.txtATelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtATelefono_KeyPress);
             // 
             // txtADireccion
@@ -125,7 +125,7 @@
             this.txtADireccion.Location = new System.Drawing.Point(46, 214);
             this.txtADireccion.Name = "txtADireccion";
             this.txtADireccion.Size = new System.Drawing.Size(239, 20);
-            this.txtADireccion.TabIndex = 8;
+            this.txtADireccion.TabIndex = 3;
             // 
             // lblClinte
             // 
@@ -143,7 +143,7 @@
             this.txtADNI.Location = new System.Drawing.Point(46, 85);
             this.txtADNI.Name = "txtADNI";
             this.txtADNI.Size = new System.Drawing.Size(239, 20);
-            this.txtADNI.TabIndex = 11;
+            this.txtADNI.TabIndex = 0;
             this.txtADNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtADNI_KeyPress);
             // 
             // label5
