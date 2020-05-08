@@ -132,6 +132,8 @@
             this.dgvListaUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaUsuarios.Size = new System.Drawing.Size(598, 355);
             this.dgvListaUsuarios.TabIndex = 1;
+            this.dgvListaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaUsuarios_CellContentClick);
+            this.dgvListaUsuarios.CurrentCellChanged += new System.EventHandler(this.dgvListaUsuarios_CurrentCellChanged);
             // 
             // FrmUsuario
             // 

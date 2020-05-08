@@ -52,5 +52,10 @@ namespace Vistas
 
             }
         }
+
+        private void FrmMostrarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

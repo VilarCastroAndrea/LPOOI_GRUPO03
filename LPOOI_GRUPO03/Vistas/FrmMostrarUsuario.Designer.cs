@@ -49,7 +49,6 @@
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(121, 21);
             this.cmbRoles.TabIndex = 23;
-            this.cmbRoles.SelectedIndexChanged += new System.EventHandler(this.cmbRoles_SelectedIndexChanged);
             // 
             // lblRolUsuario
             // 
@@ -176,18 +175,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbRoles;
         private System.Windows.Forms.Label lblRolUsuario;
         private System.Windows.Forms.Label lblNombreApellidoUsuario;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblIDUsuario;
-        private System.Windows.Forms.TextBox txtNombreApellidoUsuario;
-        private System.Windows.Forms.TextBox txtNombreUsuario;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnEliminarUsuario;
         private System.Windows.Forms.Button btnActualizarUsuario;
+        public System.Windows.Forms.ComboBox cmbRoles;
+        public System.Windows.Forms.TextBox txtNombreApellidoUsuario;
+        public System.Windows.Forms.TextBox txtNombreUsuario;
+        public System.Windows.Forms.TextBox txtPass;
+        public System.Windows.Forms.TextBox txtId;
     }
 }
