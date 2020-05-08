@@ -67,5 +67,12 @@ namespace Vistas
             FrmAltaUsuario frmAltaUsuario = form ?? new FrmAltaUsuario();
             AddFormInPanel(frmAltaUsuario);
         }
+
+        private void btnMostrarUsuario_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<FrmMostrarUsuario>().FirstOrDefault();
+            FrmMostrarUsuario frmMostrarUsuario = form ?? new FrmMostrarUsuario();
+            AddFormInPanel(frmMostrarUsuario);
+        }
     }
 }

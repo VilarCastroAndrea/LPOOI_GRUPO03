@@ -37,7 +37,6 @@
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
-            this.btnCandelarAlta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbRoles
@@ -119,22 +118,12 @@
             this.btnAgregarUsuario.UseVisualStyleBackColor = true;
             this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
             // 
-            // btnCandelarAlta
-            // 
-            this.btnCandelarAlta.Location = new System.Drawing.Point(107, 211);
-            this.btnCandelarAlta.Name = "btnCandelarAlta";
-            this.btnCandelarAlta.Size = new System.Drawing.Size(75, 23);
-            this.btnCandelarAlta.TabIndex = 33;
-            this.btnCandelarAlta.Text = "Cancelar";
-            this.btnCandelarAlta.UseVisualStyleBackColor = true;
-            // 
             // FrmAltaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(283, 336);
-            this.Controls.Add(this.btnCandelarAlta);
             this.Controls.Add(this.btnAgregarUsuario);
             this.Controls.Add(this.cmbRoles);
             this.Controls.Add(this.lblRolUsuario);
@@ -163,6 +152,5 @@
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnAgregarUsuario;
-        private System.Windows.Forms.Button btnCandelarAlta;
     }
 }

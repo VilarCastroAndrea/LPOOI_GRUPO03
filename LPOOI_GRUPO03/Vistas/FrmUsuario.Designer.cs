@@ -53,6 +53,7 @@
             this.btnMostrarUsuario.TabIndex = 28;
             this.btnMostrarUsuario.Text = "Mostrar";
             this.btnMostrarUsuario.UseVisualStyleBackColor = false;
+            this.btnMostrarUsuario.Click += new System.EventHandler(this.btnMostrarUsuario_Click);
             // 
             // btnAgregar
             // 

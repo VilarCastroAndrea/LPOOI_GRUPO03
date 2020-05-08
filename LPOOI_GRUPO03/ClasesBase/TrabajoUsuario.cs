@@ -30,13 +30,13 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Usuario(USU_NombreUsuario,USU_Password,USU_ApellidoNombre,ROL_Codigo) values (@nomUsu,@pass,@ayp,@rol)";
+            cmd.CommandText = "INSERT INTO Usuario(USU_NombreUsuario,USU_Password,USU_ApellidoNombre,ROL_Codigo) values (@nomUsu,@pass,@aynu,@rol)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@nomUsu", usuario.Usu_NombreUsuario);
             cmd.Parameters.AddWithValue("@pass", usuario.Usu_Contraseña);
-            cmd.Parameters.AddWithValue("@ayn", usuario.Usu_ApellidoNombre);
+            cmd.Parameters.AddWithValue("@aynu", usuario.Usu_ApellidoNombre);
             cmd.Parameters.AddWithValue("@rol", usuario.Rol_Codigo);
 
             cnn.Open();
@@ -64,16 +64,22 @@ namespace ClasesBase
             return dt;
         }
 
-        public static int eliminarUsuario(int idUsu)
+        public static void eliminarUsuario(int idUsu)
         {
-            int retorno = 0;
+            
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
-            SqlCommand cmd = new SqlCommand(string.Format("Delete From Usuario Where id={ 0 }",idUsu), cnn);
-            retorno = cmd.ExecuteNonQuery();
-            cnn.Close();
+           
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "DELETE FROM Usuario WHERE USU_Id=@id";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
 
-            return retorno;
+            cmd.Parameters.AddWithValue("@id", idUsu);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
         }
 
         public static DataTable listaRoles()
