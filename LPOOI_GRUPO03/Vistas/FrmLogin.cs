@@ -61,15 +61,25 @@ namespace Vistas
            
             if (dataTable.Rows.Count!=0)
                 {
-                    this.Hide();
+                    
                   
                 guardarUser(dataTable);
-                formMain.lblNom.Text = "BIENVENIDO: " + user.Usu_NombreUsuario;
-                formMain.Show();
+                if ((user.Usu_NombreUsuario ==txtUsuario.Text)&&(user.Usu_Contraseña == txtContra.Text))
+
+                {
+                    this.Hide();
+                    formMain.lblNom.Text = "BIENVENIDO: " + user.Usu_NombreUsuario;
+                    formMain.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Datos no Validos");
+                }
+               
                
                 }
                 
-              else
+             else
             {
                 MessageBox.Show("Datos incorrectos");
             }
