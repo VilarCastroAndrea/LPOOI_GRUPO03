@@ -13,6 +13,7 @@ namespace Vistas
 {
     public partial class FrmMostrarUsuario : Form
     {
+        String rol = "";
         public FrmMostrarUsuario()
         {
             InitializeComponent();
@@ -60,6 +61,26 @@ namespace Vistas
         private void FrmMostrarUsuario_Load(object sender, EventArgs e)
         {
             Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnActualizarUsuario.Enabled = true;
+        }
+
+        private void txtNombreApellidoUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnActualizarUsuario.Enabled = true;
+        }
+
+        private void cmbRoles_MouseCaptureChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

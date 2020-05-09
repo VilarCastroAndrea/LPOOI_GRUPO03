@@ -49,6 +49,8 @@
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(121, 21);
             this.cmbRoles.TabIndex = 23;
+            this.cmbRoles.SelectedIndexChanged += new System.EventHandler(this.cmbRoles_SelectedIndexChanged);
+            this.cmbRoles.MouseCaptureChanged += new System.EventHandler(this.cmbRoles_MouseCaptureChanged);
             // 
             // lblRolUsuario
             // 
@@ -106,6 +108,7 @@
             this.txtNombreApellidoUsuario.Name = "txtNombreApellidoUsuario";
             this.txtNombreApellidoUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtNombreApellidoUsuario.TabIndex = 17;
+            this.txtNombreApellidoUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreApellidoUsuario_KeyDown);
             // 
             // txtNombreUsuario
             // 
@@ -120,6 +123,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(121, 20);
             this.txtPass.TabIndex = 15;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // txtId
             // 
@@ -140,6 +144,7 @@
             // 
             // btnActualizarUsuario
             // 
+            this.btnActualizarUsuario.Enabled = false;
             this.btnActualizarUsuario.Location = new System.Drawing.Point(3, 220);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Size = new System.Drawing.Size(100, 29);
