@@ -140,7 +140,6 @@
             // 
             // btnActualizarUsuario
             // 
-            this.btnActualizarUsuario.Enabled = false;
             this.btnActualizarUsuario.Location = new System.Drawing.Point(3, 220);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Size = new System.Drawing.Size(100, 29);

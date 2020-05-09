@@ -22,7 +22,7 @@ namespace Vistas
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
             Usuario nuevoUsu = new Usuario();
-
+            Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
             nuevoUsu.Usu_NombreUsuario = txtNombreUsuario.Text;
             nuevoUsu.Usu_Contraseña = txtPass.Text;
             nuevoUsu.Usu_ApellidoNombre = txtNombreApellidoUsuario.Text;
@@ -45,8 +45,9 @@ namespace Vistas
                 if (result == DialogResult.OK)
                 {
                     TrabajoUsuario.AgregarUsuario(nuevoUsu);
+                    ((FrmUsuario)frmUsuario).cargarListaUsuario();
                     limpiarCampos();
-                    FrmUsuario fcliente = new FrmUsuario();
+                    
                    
                 }
                 else
