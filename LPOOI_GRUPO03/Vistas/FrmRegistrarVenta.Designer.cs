@@ -117,9 +117,9 @@
             // 
             // btnVender
             // 
-            this.btnVender.Location = new System.Drawing.Point(275, 267);
+            this.btnVender.Location = new System.Drawing.Point(285, 267);
             this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(234, 85);
+            this.btnVender.Size = new System.Drawing.Size(221, 80);
             this.btnVender.TabIndex = 8;
             this.btnVender.Text = "Realizar Venta";
             this.btnVender.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@
             // 
             this.btnCancelar.Location = new System.Drawing.Point(536, 267);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(234, 85);
+            this.btnCancelar.Size = new System.Drawing.Size(221, 80);
             this.btnCancelar.TabIndex = 13;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
