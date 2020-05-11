@@ -31,10 +31,6 @@ namespace ClasesBase
             Rol_Codigo = codigo;
         }
 
-        public Usuario()
-        {
-
-        }
 
     }
 }
