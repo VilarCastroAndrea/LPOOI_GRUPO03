@@ -22,6 +22,13 @@ namespace Vistas
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
 
+            DataTable userX = new DataTable();
+               userX= TrabajoUsuario.buscarUsuario(txtNombreUsuario.Text);
+            if (userX.Rows.Count ==0 )
+            {
+
+           
+           
 
             Usuario nuevoUsu = new Usuario();
             Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
@@ -58,9 +65,11 @@ namespace Vistas
                     result = new DialogResult();
                 }
             }
-
-
-
+            }
+            else
+            {
+                MessageBox.Show("Usuario ya existente, ingrese otro nombre de usuario");
+            }
 
 
 
