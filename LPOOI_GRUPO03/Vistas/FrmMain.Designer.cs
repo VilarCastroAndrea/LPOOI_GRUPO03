@@ -179,7 +179,7 @@
             // 
             this.lblNom.AutoSize = true;
             this.lblNom.ForeColor = System.Drawing.Color.White;
-            this.lblNom.Location = new System.Drawing.Point(155, 88);
+            this.lblNom.Location = new System.Drawing.Point(63, 88);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(50, 13);
             this.lblNom.TabIndex = 5;
@@ -251,9 +251,9 @@
         public System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Panel panelContenedor;
         private FontAwesome.Sharp.IconButton btnSistema;
-        private FontAwesome.Sharp.IconButton btnCliente;
-        private FontAwesome.Sharp.IconButton btnVehiculos;
         private FontAwesome.Sharp.IconButton btnVentas;
         private FontAwesome.Sharp.IconButton btnSalir;
+        public FontAwesome.Sharp.IconButton btnCliente;
+        public FontAwesome.Sharp.IconButton btnVehiculos;
     }
 }

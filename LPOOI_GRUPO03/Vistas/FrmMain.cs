@@ -7,23 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasesBase;
+using System.Data.SqlClient;
 
 namespace Vistas
 {
     public partial class FrmMain : Form
     {
-        public FrmMain()
+           
+      
+          public FrmMain()
         {
             InitializeComponent();
         }
 
+
+
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            
             var form = Application.OpenForms.OfType<FrmSistema>().FirstOrDefault();
             FrmSistema frmSistema = form ?? new FrmSistema();
             AddFormInPanel(frmSistema);
-        }
+            
+            restringirAcceso();
 
+        }
+        public void restringirAcceso()
+        {
+            Form frmLogin = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmLogin);
+            if (frmLogin != null)
+            {
+                if (((FrmLogin)frmLogin).user.Rol_Codigo == "admin")
+                {
+                    btnCliente.Visible = false;
+                }
+                else if (((FrmLogin)frmLogin).user.Rol_Codigo == "vendedor")
+                {
+                    btnVehiculos.Visible = false;
+                }
+            }
+            
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();

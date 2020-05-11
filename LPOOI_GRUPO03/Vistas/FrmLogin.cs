@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClasesBase;
+using System.Data.SqlClient;
 
 namespace Vistas
 {
@@ -18,8 +19,9 @@ namespace Vistas
     {
 
         private String cargarCapcha;
-
-        
+        FrmMain formMain = new FrmMain();
+        FrmSistema frmSistema = new FrmSistema();
+       public Usuario user = new Usuario();
 
         public FrmLogin()
         {
@@ -29,7 +31,7 @@ namespace Vistas
 
             lblCapcha.Text = cargarCapcha;
         }
-
+      
         public String generarCapcha()
         {
 
@@ -53,60 +55,49 @@ namespace Vistas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Boolean user = false;
-            Usuario admin = new Usuario("admin", "admin", "admin", "Administrador");
-            Usuario vendedor = new Usuario("vendedor", "vendedor", "vendedor", "Vendedor");
-            Usuario auditor = new Usuario("audi", "audi","audi", "Auditor");
-            FrmMain formMain = new FrmMain();
-            FrmSistema frmSistema = new FrmSistema();
-            formMain.lblNom.Text = txtUsuario.Text;
-
-
-
-
-            if(txtUsuario.Text == admin.Usu_NombreUsuario && txtContra.Text == admin.Usu_Contraseña)
-            {
-                user = true;
-            }
-            else
-            {
-                if(txtUsuario.Text == vendedor.Usu_NombreUsuario && txtContra.Text == vendedor.Usu_Contraseña)
+            DataTable dataTable = new DataTable();
+            
+            dataTable = ConectionLog.ingresar(txtUsuario.Text, txtContra.Text);
+           
+            if (dataTable.Rows.Count!=0)
                 {
-                    user = true;
-                }
-                else
+                    
+                  
+                guardarUser(dataTable);
+                if ((user.Usu_NombreUsuario ==txtUsuario.Text)&&(user.Usu_Contraseña == txtContra.Text))
+
                 {
-                    if(txtUsuario.Text == auditor.Usu_NombreUsuario && txtContra.Text == auditor.Usu_Contraseña)
-                    {
-                        user = true;
-                    }
-                }
-            }
-
-            if (lblCapcha.Text == txtResultadoCapcha.Text)
-            {
-
-                if (user)
-                {
-
                     this.Hide();
+                    formMain.lblNom.Text = "BIENVENIDO: " + user.Usu_NombreUsuario;
                     formMain.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Datos de acceso incorrectos");
+                    MessageBox.Show("Datos no Validos");
                 }
-            }
-            else
+               
+               
+                }
+                
+             else
             {
-                MessageBox.Show("Capcha incorrecto");
+                MessageBox.Show("Datos incorrectos");
             }
 
-
-
+           
 
         }
-
+      
+        public void guardarUser(DataTable dt)
+        {
+          
+            user.Usu_NombreUsuario = dt.Rows[0]["USU_NombreUsuario"].ToString();
+            user.Usu_Contraseña = dt.Rows[0]["USU_Password"].ToString();
+            user.Usu_ApellidoNombre = dt.Rows[0]["USU_ApellidoNombre"].ToString();
+            user.Rol_Codigo = dt.Rows[0]["ROL_Codigo"].ToString();
+            user.Usu_ID = Convert.ToInt32(dt.Rows[0]["USU_ID"].ToString());
+        }
+        
         private void txtUsuario_MouseHover(object sender, EventArgs e)
         {
             lblnfoUsu.Text = "Ingresar Usuario";

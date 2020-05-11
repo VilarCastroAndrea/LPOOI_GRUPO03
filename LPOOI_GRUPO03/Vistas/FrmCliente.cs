@@ -12,6 +12,7 @@ namespace Vistas
 {
     public partial class FrmCliente : Form
     {
+        FrmMain formMain = new FrmMain();
         public FrmCliente()
         {
             InitializeComponent();
@@ -19,9 +20,18 @@ namespace Vistas
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<FrmListaCliente>().FirstOrDefault();
-            FrmListaCliente frmLista = form ?? new FrmListaCliente();
-            AddFormInPanel(frmLista);
+            if (formMain.lblNom.Text == "admin" )
+            {
+                btnAltaCliente.Enabled = true;
+            }
+            else
+            {
+                var form = Application.OpenForms.OfType<FrmListaCliente>().FirstOrDefault();
+                FrmListaCliente frmLista = form ?? new FrmListaCliente();
+                AddFormInPanel(frmLista);
+               
+            }
+           
         }
 
         private void AddFormInPanel(Form fh)

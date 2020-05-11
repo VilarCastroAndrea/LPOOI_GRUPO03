@@ -208,7 +208,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TextBox txtUsuario;
@@ -219,5 +218,6 @@
         private System.Windows.Forms.Label lblCapcha;
         private System.Windows.Forms.TextBox txtResultadoCapcha;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox txtContra;
     }
 }

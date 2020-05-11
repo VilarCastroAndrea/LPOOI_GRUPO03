@@ -85,9 +85,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAltaCliente;
         private System.Windows.Forms.Panel panelContenedor2;
         private System.Windows.Forms.Button btnListaCliente;
+        public System.Windows.Forms.Button btnAltaCliente;
     }
 }
