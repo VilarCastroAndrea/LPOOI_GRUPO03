@@ -32,9 +32,9 @@ namespace Vistas
 
         private void btnSistema_Click_1(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<FrmSistema>().FirstOrDefault();
-            FrmSistema frmSistema = form ?? new FrmSistema();
-            AddFormInPanel(frmSistema);
+            var form = Application.OpenForms.OfType<FrmUsuario>().FirstOrDefault();
+            FrmUsuario frmUsuario = form ?? new FrmUsuario();
+            AddFormInPanel(frmUsuario);
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
