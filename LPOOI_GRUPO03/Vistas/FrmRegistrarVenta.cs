@@ -55,7 +55,7 @@ namespace Vistas
 
         private void cmbClientesDNI_TextUpdate(object sender, EventArgs e)
         {   
-            //cargarBoxCliente(TrabajarCliente.buscarClienteAproximado(cmbClientesDNI.Text));
+            cargarBoxCliente(TrabajarCliente.buscarClienteAproximado(cmbClientesDNI.Text));
         }
 
         private void cmbVehiculos_TextUpdate(object sender, EventArgs e)

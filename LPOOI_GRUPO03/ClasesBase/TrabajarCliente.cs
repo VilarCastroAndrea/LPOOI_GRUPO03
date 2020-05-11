@@ -55,7 +55,36 @@ namespace ClasesBase
 
             return dt;
         }
+        public static DataTable buscarClienteAproximado(string sPattern)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT";
+            cmd.CommandText += " CLI_DNI as 'Dni', ";
+            cmd.CommandText += " CLI_Nombre as 'Nombre', ";
+            cmd.CommandText += " CLI_Apellido as 'Apellido', ";
+            cmd.CommandText += " CLI_Direccion as 'Direccion', ";
+            cmd.CommandText += " CLI_Telefono as 'Telefono' ";
+            cmd.CommandText += " FROM Cliente as C ";
+
+            cmd.CommandText += " WHERE";
+            cmd.CommandText += " CLI_DNI LIKE @pattern";
+            cmd.CommandText += " OR CLI_Apellido LIKE @pattern";
+            cmd.CommandText += " OR CLI_Nombre LIKE @pattern";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
         public static DataTable buscarCliente(string sPattern)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
