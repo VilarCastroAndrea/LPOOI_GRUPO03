@@ -7,24 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasesBase;
 
 namespace Vistas
 {
-    public partial class FrmListaVehiculo : Form
+    public partial class FrmListaVenta : Form
     {
-        public FrmListaVehiculo()
+        public FrmListaVenta()
         {
             InitializeComponent();
         }
 
-        private void dataVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FrmListaVenta_Load(object sender, EventArgs e)
         {
-
+           dataVentas.DataSource = TrabajarVentas.listaVentas();
         }
 
-        private void FrmListaVehiculo_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
