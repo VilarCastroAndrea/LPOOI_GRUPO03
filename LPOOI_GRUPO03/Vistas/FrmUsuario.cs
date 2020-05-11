@@ -89,11 +89,14 @@ namespace Vistas
                 Form frmMostrarUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmMostrarUsuario);
                 if (frmMostrarUsuario != null)
                 {
+                    ((FrmMostrarUsuario)frmMostrarUsuario).btnActualizarUsuario.Enabled = false;
+                    ((FrmMostrarUsuario)frmMostrarUsuario).rol= dgvListaUsuarios.CurrentRow.Cells[4].Value.ToString();
                     ((FrmMostrarUsuario)frmMostrarUsuario).txtId.Text = dgvListaUsuarios.CurrentRow.Cells[0].Value.ToString();
                     ((FrmMostrarUsuario)frmMostrarUsuario).txtNombreUsuario.Text = dgvListaUsuarios.CurrentRow.Cells[1].Value.ToString();
                     ((FrmMostrarUsuario)frmMostrarUsuario).txtPass.Text = dgvListaUsuarios.CurrentRow.Cells[2].Value.ToString();
                     ((FrmMostrarUsuario)frmMostrarUsuario).txtNombreApellidoUsuario.Text = dgvListaUsuarios.CurrentRow.Cells[3].Value.ToString();
                     ((FrmMostrarUsuario)frmMostrarUsuario).cmbRoles.Text = dgvListaUsuarios.CurrentRow.Cells[4].Value.ToString();
+
                 }
             }
         }

@@ -21,6 +21,8 @@ namespace Vistas
 
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
+
+
             Usuario nuevoUsu = new Usuario();
             Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
             nuevoUsu.Usu_NombreUsuario = txtNombreUsuario.Text;

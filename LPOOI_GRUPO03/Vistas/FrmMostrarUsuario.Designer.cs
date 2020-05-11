@@ -185,11 +185,11 @@
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblIDUsuario;
         private System.Windows.Forms.Button btnEliminarUsuario;
-        private System.Windows.Forms.Button btnActualizarUsuario;
         public System.Windows.Forms.ComboBox cmbRoles;
         public System.Windows.Forms.TextBox txtNombreApellidoUsuario;
         public System.Windows.Forms.TextBox txtNombreUsuario;
         public System.Windows.Forms.TextBox txtPass;
         public System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.Button btnActualizarUsuario;
     }
 }

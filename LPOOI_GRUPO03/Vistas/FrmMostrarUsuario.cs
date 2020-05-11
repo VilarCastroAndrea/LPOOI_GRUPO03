@@ -13,7 +13,7 @@ namespace Vistas
 {
     public partial class FrmMostrarUsuario : Form
     {
-        String rol = "";
+       public String rol = "";
         public FrmMostrarUsuario()
         {
             InitializeComponent();
@@ -80,7 +80,11 @@ namespace Vistas
 
         private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (rol != cmbRoles.Text)
+            {
+                btnActualizarUsuario.Enabled = true;
+            }
+           
         }
     }
 }

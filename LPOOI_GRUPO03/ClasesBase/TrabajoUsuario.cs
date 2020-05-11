@@ -55,7 +55,7 @@ namespace ClasesBase
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
-            cmd.Parameters.AddWithValue("@nombreUsuario", "%" + nombreUsuario + "%");
+            cmd.Parameters.AddWithValue("@nombreUsuario",  nombreUsuario );
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
