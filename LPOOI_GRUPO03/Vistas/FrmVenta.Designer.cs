@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(487, 371);
+            this.ClientSize = new System.Drawing.Size(985, 488);
             this.Name = "FrmVenta";
             this.Text = "FrmVenta";
             this.ResumeLayout(false);
