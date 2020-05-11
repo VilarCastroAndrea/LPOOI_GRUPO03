@@ -47,7 +47,7 @@
             // cmbClientesDNI
             // 
             this.cmbClientesDNI.FormattingEnabled = true;
-            this.cmbClientesDNI.Location = new System.Drawing.Point(46, 57);
+            this.cmbClientesDNI.Location = new System.Drawing.Point(46, 33);
             this.cmbClientesDNI.Name = "cmbClientesDNI";
             this.cmbClientesDNI.Size = new System.Drawing.Size(707, 24);
             this.cmbClientesDNI.TabIndex = 0;
@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 37);
+            this.label1.Location = new System.Drawing.Point(52, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 17);
             this.label1.TabIndex = 1;
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 94);
+            this.label2.Location = new System.Drawing.Point(51, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 2;
@@ -74,7 +74,7 @@
             // cmbVehiculos
             // 
             this.cmbVehiculos.FormattingEnabled = true;
-            this.cmbVehiculos.Location = new System.Drawing.Point(46, 114);
+            this.cmbVehiculos.Location = new System.Drawing.Point(46, 90);
             this.cmbVehiculos.Name = "cmbVehiculos";
             this.cmbVehiculos.Size = new System.Drawing.Size(707, 24);
             this.cmbVehiculos.TabIndex = 3;
@@ -84,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 159);
+            this.label3.Location = new System.Drawing.Point(51, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 4;
@@ -93,14 +93,14 @@
             // txtDatosVendedor
             // 
             this.txtDatosVendedor.Enabled = false;
-            this.txtDatosVendedor.Location = new System.Drawing.Point(48, 179);
+            this.txtDatosVendedor.Location = new System.Drawing.Point(48, 148);
             this.txtDatosVendedor.Name = "txtDatosVendedor";
             this.txtDatosVendedor.Size = new System.Drawing.Size(707, 22);
             this.txtDatosVendedor.TabIndex = 5;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(48, 350);
+            this.txtPrecio.Location = new System.Drawing.Point(48, 320);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(200, 22);
             this.txtPrecio.TabIndex = 6;
@@ -109,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 330);
+            this.label4.Location = new System.Drawing.Point(51, 300);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 7;
@@ -117,7 +117,7 @@
             // 
             // btnVender
             // 
-            this.btnVender.Location = new System.Drawing.Point(285, 267);
+            this.btnVender.Location = new System.Drawing.Point(285, 237);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(221, 80);
             this.btnVender.TabIndex = 8;
@@ -127,7 +127,7 @@
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(48, 289);
+            this.dtpFecha.Location = new System.Drawing.Point(48, 262);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 22);
             this.dtpFecha.TabIndex = 9;
@@ -135,7 +135,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 269);
+            this.label5.Location = new System.Drawing.Point(51, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 17);
             this.label5.TabIndex = 10;
@@ -144,7 +144,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 213);
+            this.label6.Location = new System.Drawing.Point(51, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 17);
             this.label6.TabIndex = 11;
@@ -157,14 +157,14 @@
             "Tarjeta De Credito",
             "Efectivo",
             "Credito Personal"});
-            this.cmbMedioDePago.Location = new System.Drawing.Point(48, 233);
+            this.cmbMedioDePago.Location = new System.Drawing.Point(48, 202);
             this.cmbMedioDePago.Name = "cmbMedioDePago";
             this.cmbMedioDePago.Size = new System.Drawing.Size(200, 24);
             this.cmbMedioDePago.TabIndex = 12;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(536, 267);
+            this.btnCancelar.Location = new System.Drawing.Point(536, 240);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(221, 80);
             this.btnCancelar.TabIndex = 13;
@@ -176,6 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 399);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbMedioDePago);

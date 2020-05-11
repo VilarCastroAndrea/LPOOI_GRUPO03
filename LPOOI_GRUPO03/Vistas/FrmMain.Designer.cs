@@ -171,7 +171,7 @@
             this.lblHora.ForeColor = System.Drawing.Color.White;
             this.lblHora.Location = new System.Drawing.Point(14, 433);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(43, 17);
+            this.lblHora.Size = new System.Drawing.Size(53, 22);
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "Hora";
             // 
@@ -181,7 +181,7 @@
             this.lblNom.ForeColor = System.Drawing.Color.White;
             this.lblNom.Location = new System.Drawing.Point(155, 88);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(50, 13);
+            this.lblNom.Size = new System.Drawing.Size(64, 17);
             this.lblNom.TabIndex = 5;
             this.lblNom.Text = "Usuario";
             // 
@@ -193,7 +193,7 @@
             this.lblFecha.ForeColor = System.Drawing.Color.White;
             this.lblFecha.Location = new System.Drawing.Point(15, 450);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(42, 13);
+            this.lblFecha.Size = new System.Drawing.Size(52, 17);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
             // 
@@ -222,7 +222,7 @@
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;

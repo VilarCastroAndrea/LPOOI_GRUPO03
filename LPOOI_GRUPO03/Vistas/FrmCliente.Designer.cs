@@ -39,9 +39,10 @@
             this.btnAltaCliente.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.btnAltaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAltaCliente.ForeColor = System.Drawing.Color.White;
-            this.btnAltaCliente.Location = new System.Drawing.Point(123, 12);
+            this.btnAltaCliente.Location = new System.Drawing.Point(164, 15);
+            this.btnAltaCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAltaCliente.Name = "btnAltaCliente";
-            this.btnAltaCliente.Size = new System.Drawing.Size(102, 39);
+            this.btnAltaCliente.Size = new System.Drawing.Size(136, 48);
             this.btnAltaCliente.TabIndex = 0;
             this.btnAltaCliente.Text = "Alta Cliente";
             this.btnAltaCliente.UseVisualStyleBackColor = false;
@@ -49,9 +50,10 @@
             // 
             // panelContenedor2
             // 
-            this.panelContenedor2.Location = new System.Drawing.Point(15, 50);
+            this.panelContenedor2.Location = new System.Drawing.Point(20, 62);
+            this.panelContenedor2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContenedor2.Name = "panelContenedor2";
-            this.panelContenedor2.Size = new System.Drawing.Size(308, 405);
+            this.panelContenedor2.Size = new System.Drawing.Size(411, 498);
             this.panelContenedor2.TabIndex = 1;
             // 
             // btnListaCliente
@@ -60,9 +62,10 @@
             this.btnListaCliente.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnListaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListaCliente.ForeColor = System.Drawing.Color.White;
-            this.btnListaCliente.Location = new System.Drawing.Point(15, 12);
+            this.btnListaCliente.Location = new System.Drawing.Point(20, 15);
+            this.btnListaCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListaCliente.Name = "btnListaCliente";
-            this.btnListaCliente.Size = new System.Drawing.Size(102, 39);
+            this.btnListaCliente.Size = new System.Drawing.Size(136, 48);
             this.btnListaCliente.TabIndex = 2;
             this.btnListaCliente.Text = "Lista Cliente";
             this.btnListaCliente.UseVisualStyleBackColor = false;
@@ -70,13 +73,14 @@
             // 
             // FrmCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(351, 467);
+            this.ClientSize = new System.Drawing.Size(468, 575);
             this.Controls.Add(this.btnListaCliente);
             this.Controls.Add(this.btnAltaCliente);
             this.Controls.Add(this.panelContenedor2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
