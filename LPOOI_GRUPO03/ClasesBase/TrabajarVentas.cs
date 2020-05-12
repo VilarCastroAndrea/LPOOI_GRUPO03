@@ -61,26 +61,6 @@ namespace ClasesBase
             
         }
 
-
-
-
-
-
-
-    }
-}
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-
-namespace ClasesBase
-{
-    public class TrabajarVentas
-    {
         public static void InsertarVenta(Venta venta)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
@@ -163,7 +143,5 @@ namespace ClasesBase
 
             return dt;
         }
-
-
     }
 }
