@@ -23,6 +23,5 @@ namespace Vistas
            dataVentas.DataSource = TrabajarVentas.listaVentas();
         }
 
-        
     }
 }
