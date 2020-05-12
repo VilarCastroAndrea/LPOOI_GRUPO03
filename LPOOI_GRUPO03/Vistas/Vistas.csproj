@@ -85,6 +85,12 @@
     <Compile Include="FrmListaVehiculo.Designer.cs">
       <DependentUpon>FrmListaVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaVenta.Designer.cs">
+      <DependentUpon>FrmListaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListaVehiculo.resx">
       <DependentUpon>FrmListaVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaVenta.resx">
+      <DependentUpon>FrmListaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
