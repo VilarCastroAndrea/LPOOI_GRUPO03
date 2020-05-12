@@ -24,6 +24,12 @@ namespace Vistas
         {
             cargarBoxCliente(TrabajarCliente.ListaCliente());
             cargarBoxVehiculo(TrabajarVehiculo.ListaVehiculo());
+            Form frmLogin = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmLogin);
+            if (frmLogin != null)
+            {
+                txtDatosVendedor.Text ="Nombre y apellido: "+ ((FrmLogin)frmLogin).user.Usu_ApellidoNombre +" ID: "+ ((FrmLogin)frmLogin).user.Usu_NombreUsuario;
+            }
+            
         }
 
 
