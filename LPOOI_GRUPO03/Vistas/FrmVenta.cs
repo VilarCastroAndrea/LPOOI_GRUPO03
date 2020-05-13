@@ -52,6 +52,20 @@ namespace Vistas
             FrmListaVenta frmLista = form ?? new FrmListaVenta();
             AddFormInPanel(frmLista);
         }
+
+        private void btnRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<FrmRegistrarVenta>().FirstOrDefault();
+            FrmRegistrarVenta frmRegistrarVenta = form ?? new FrmRegistrarVenta();
+            AddFormInPanel(frmRegistrarVenta);
+        }
+
+        private void FrmVenta_Load_1(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<FrmListaVenta>().FirstOrDefault();
+            FrmListaVenta frmLista = form ?? new FrmListaVenta();
+            AddFormInPanel(frmLista);
+        }
     }
 
 

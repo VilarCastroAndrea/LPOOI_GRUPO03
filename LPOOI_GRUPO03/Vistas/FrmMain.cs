@@ -78,8 +78,8 @@ namespace Vistas
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<FrmRegistrarVenta>().FirstOrDefault();
-            FrmRegistrarVenta fventa = form ?? new FrmRegistrarVenta();
+            var form = Application.OpenForms.OfType<FrmVenta>().FirstOrDefault();
+            FrmVenta fventa = form ?? new FrmVenta();
             AddFormInPanel(fventa);
         }
 

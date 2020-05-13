@@ -138,9 +138,5 @@ namespace Vistas
             Validar.soloNumeros(e);
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
     }
 }
