@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClasesBase;
 
 namespace Vistas
 {
@@ -22,6 +23,8 @@ namespace Vistas
             var form = Application.OpenForms.OfType<FrmMostrarVehiculo>().FirstOrDefault();
             FrmMostrarVehiculo frmLista = form ?? new FrmMostrarVehiculo();
             AddFormInPanel(frmLista);
+            dataVehiculo.DataSource = TrabajarVehiculo.ListaVehiculo();
+            dataVehiculo.Refresh();
         }
 
         private void AddFormInPanel(Form fh)
