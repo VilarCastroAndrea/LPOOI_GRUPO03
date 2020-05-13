@@ -129,5 +129,53 @@ namespace ClasesBase
 
             return dt;
         }
+
+        public static void modificarVehiculo(Vehiculo vehiculo)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE Vehiculo SET VEH_Marca = @Marca, ";
+            cmd.CommandText += " VEH_Linea = @Linea, ";
+            cmd.CommandText += " VEH_Modelo = @Modelo, ";
+            cmd.CommandText += " VEH_Color = @Color, ";
+            cmd.CommandText += " VEH_Puertas = @Puertas, ";
+            cmd.CommandText += " VEH_GPS = @Gps, ";
+            cmd.CommandText += " VEH_TipoVehiculo = @TipoVehiculo, ";
+            cmd.CommandText += " VEH_ClaseVehiculo = @ClaseVehiculo, ";
+            cmd.CommandText += " VEH_Precio = @Precio WHERE VEH_Matricula=@Matricula";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@matricula", vehiculo.Veh_Matricula);
+            cmd.Parameters.AddWithValue("@marca", vehiculo.Veh_Marca);
+            cmd.Parameters.AddWithValue("@linea", vehiculo.Veh_Linea);
+            cmd.Parameters.AddWithValue("@modelo", vehiculo.Veh_Modelo);
+            cmd.Parameters.AddWithValue("@color", vehiculo.Veh_Color);
+            cmd.Parameters.AddWithValue("@puertas", vehiculo.Veh_Puertas);
+            cmd.Parameters.AddWithValue("@gps", vehiculo.Veh_GPS);
+            cmd.Parameters.AddWithValue("@tipovehiculo", vehiculo.Veh_TipoVehiculo);
+            cmd.Parameters.AddWithValue("@clasevehiculo", vehiculo.Veh_ClaseVehiculo);
+            cmd.Parameters.AddWithValue("@precio", vehiculo.Veh_Precio);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+
+        public static void eliminarVehiculo(string matricula)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "DELETE FROM Vehiculo WHERE VEH_Matricula=@matricula";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@matricula", matricula);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 }

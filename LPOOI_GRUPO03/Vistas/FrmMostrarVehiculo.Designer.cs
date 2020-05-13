@@ -32,7 +32,7 @@
             this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.cmbColor = new System.Windows.Forms.ComboBox();
             this.cmbCantPuert = new System.Windows.Forms.ComboBox();
-            this.checkGps = new System.Windows.Forms.CheckBox();
+            this.cGps = new System.Windows.Forms.CheckBox();
             this.txtAPrecio = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtAClase = new System.Windows.Forms.TextBox();
@@ -49,8 +49,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAltaVeh = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEVehiculo = new System.Windows.Forms.Button();
+            this.btnMVehiculo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -112,16 +112,16 @@
             this.cmbCantPuert.Size = new System.Drawing.Size(51, 21);
             this.cmbCantPuert.TabIndex = 39;
             // 
-            // checkGps
+            // cGps
             // 
-            this.checkGps.AutoSize = true;
-            this.checkGps.ForeColor = System.Drawing.Color.White;
-            this.checkGps.Location = new System.Drawing.Point(58, 280);
-            this.checkGps.Name = "checkGps";
-            this.checkGps.Size = new System.Drawing.Size(35, 17);
-            this.checkGps.TabIndex = 40;
-            this.checkGps.Text = "Si";
-            this.checkGps.UseVisualStyleBackColor = true;
+            this.cGps.AutoSize = true;
+            this.cGps.ForeColor = System.Drawing.Color.White;
+            this.cGps.Location = new System.Drawing.Point(58, 280);
+            this.cGps.Name = "cGps";
+            this.cGps.Size = new System.Drawing.Size(35, 17);
+            this.cGps.TabIndex = 40;
+            this.cGps.Text = "Si";
+            this.cGps.UseVisualStyleBackColor = true;
             // 
             // txtAPrecio
             // 
@@ -266,33 +266,33 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Marca";
             // 
-            // btnAltaVeh
+            // btnEVehiculo
             // 
-            this.btnAltaVeh.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAltaVeh.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAltaVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAltaVeh.ForeColor = System.Drawing.Color.White;
-            this.btnAltaVeh.Location = new System.Drawing.Point(19, 360);
-            this.btnAltaVeh.Name = "btnAltaVeh";
-            this.btnAltaVeh.Size = new System.Drawing.Size(172, 23);
-            this.btnAltaVeh.TabIndex = 44;
-            this.btnAltaVeh.Text = "Eliminar Vehiculo";
-            this.btnAltaVeh.UseVisualStyleBackColor = false;
-            this.btnAltaVeh.Click += new System.EventHandler(this.btnAltaVeh_Click);
+            this.btnEVehiculo.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEVehiculo.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEVehiculo.ForeColor = System.Drawing.Color.White;
+            this.btnEVehiculo.Location = new System.Drawing.Point(19, 360);
+            this.btnEVehiculo.Name = "btnEVehiculo";
+            this.btnEVehiculo.Size = new System.Drawing.Size(172, 23);
+            this.btnEVehiculo.TabIndex = 44;
+            this.btnEVehiculo.Text = "Eliminar Vehiculo";
+            this.btnEVehiculo.UseVisualStyleBackColor = false;
+            this.btnEVehiculo.Click += new System.EventHandler(this.btnEVehiculo_Click);
             // 
-            // button1
+            // btnMVehiculo
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(19, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 23);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Modificar Vehiculo";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnMVehiculo.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnMVehiculo.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.btnMVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMVehiculo.ForeColor = System.Drawing.Color.White;
+            this.btnMVehiculo.Location = new System.Drawing.Point(19, 331);
+            this.btnMVehiculo.Name = "btnMVehiculo";
+            this.btnMVehiculo.Size = new System.Drawing.Size(172, 23);
+            this.btnMVehiculo.TabIndex = 56;
+            this.btnMVehiculo.Text = "Modificar Vehiculo";
+            this.btnMVehiculo.UseVisualStyleBackColor = false;
+            this.btnMVehiculo.Click += new System.EventHandler(this.btnMVehiculo_Click);
             // 
             // FrmMostrarVehiculo
             // 
@@ -300,12 +300,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(207, 389);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMVehiculo);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmbModelo);
             this.Controls.Add(this.cmbColor);
             this.Controls.Add(this.cmbCantPuert);
-            this.Controls.Add(this.checkGps);
+            this.Controls.Add(this.cGps);
             this.Controls.Add(this.txtAPrecio);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtAClase);
@@ -322,10 +322,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAltaVeh);
+            this.Controls.Add(this.btnEVehiculo);
             this.Name = "FrmMostrarVehiculo";
             this.Text = "FrmMostrarVehiculo";
-            this.Load += new System.EventHandler(this.FrmMostrarVehiculo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,8 +343,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAltaVeh;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEVehiculo;
+        private System.Windows.Forms.Button btnMVehiculo;
         public System.Windows.Forms.ComboBox cmbModelo;
         public System.Windows.Forms.ComboBox cmbColor;
         public System.Windows.Forms.ComboBox cmbCantPuert;
@@ -355,6 +354,6 @@
         public System.Windows.Forms.TextBox txtAMatricula;
         public System.Windows.Forms.TextBox txtALinea;
         public System.Windows.Forms.TextBox txtAMarca;
-        public System.Windows.Forms.CheckBox checkGps;
+        public System.Windows.Forms.CheckBox cGps;
     }
 }

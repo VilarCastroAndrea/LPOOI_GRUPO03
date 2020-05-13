@@ -65,7 +65,7 @@ namespace Vistas
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).cmbModelo.Text = dataVehiculo.CurrentRow.Cells[3].Value.ToString();
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).cmbColor.Text = dataVehiculo.CurrentRow.Cells[4].Value.ToString();
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).cmbCantPuert.Text = dataVehiculo.CurrentRow.Cells[5].Value.ToString();
-                    ((FrmMostrarVehiculo)frmMostrarVehiculo).checkGps.Checked = dataVehiculo.CurrentRow.Cells[6].Selected;
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).cGps.Checked = dataVehiculo.CurrentRow.Cells[6].Selected;
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).txtATipo.Text = dataVehiculo.CurrentRow.Cells[7].Value.ToString();
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).txtAClase.Text = dataVehiculo.CurrentRow.Cells[8].Value.ToString();
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).txtAPrecio.Text = dataVehiculo.CurrentRow.Cells[9].Value.ToString();
