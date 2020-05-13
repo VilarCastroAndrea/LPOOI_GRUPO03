@@ -72,11 +72,11 @@ namespace Vistas
                     txtATipo.Text = "";
                     txtAClase.Text = "";
                     txtAPrecio.Text = "";
-                    Form frmListaVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaVehiculo);
+                    Form frmListaVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVehiculo);
                     if (frmListaVehiculo != null)
                     {
-                        ((FrmListaVehiculo)frmListaVehiculo).dataVehiculos.DataSource = null;
-                        ((FrmListaVehiculo)frmListaVehiculo).dataVehiculos.DataSource = listaDeVehiculos;
+                        ((FrmVehiculo)frmListaVehiculo).dataVehiculo.DataSource = null;
+                        ((FrmVehiculo)frmListaVehiculo).dataVehiculo.DataSource = listaDeVehiculos;
                     }
                 }
                 else
