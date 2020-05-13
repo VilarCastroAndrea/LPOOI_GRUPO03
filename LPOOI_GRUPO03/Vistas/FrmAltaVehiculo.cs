@@ -43,22 +43,17 @@ namespace Vistas
 
             if (cmbModelo.Text != "" && cmbCantPuert.Text != "" && cmbColor.Text != "" && txtALinea.Text !="" && txtAMarca.Text !="" && txtAMatricula.Text != "" && txtATipo.Text != "" && txtAPrecio.Text != "" && txtAClase.Text != "")
             {
-
-          
-
-
-
-
-            int m = Convert.ToInt32(cmbModelo.Text);
-            int p = Convert.ToInt32(cmbCantPuert.Text);
-            Decimal precio = Convert.ToDecimal(txtAPrecio.Text);
-            Vehiculo vehiculo = new Vehiculo(txtAMatricula.Text,txtAMarca.Text,txtALinea.Text,m,cmbColor.Text,p,checkGps.Checked,txtATipo.Text,txtAClase.Text,precio);
-
-                if (vehiculo.Veh_GPS == true)
-                {
+            
+                int m = Convert.ToInt32(cmbModelo.Text);
+                int p = Convert.ToInt32(cmbCantPuert.Text);
+                Decimal precio = Convert.ToDecimal(txtAPrecio.Text);
+                Vehiculo vehiculo = new Vehiculo(txtAMatricula.Text,txtAMarca.Text,txtALinea.Text,m,cmbColor.Text,p,checkGps.Checked,txtATipo.Text,txtAClase.Text,precio);
+      
+                 if (vehiculo.Veh_GPS == true)
+                 {
                     opcionGPS = "Si";
-                }
-            DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
+                 }
+                DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
                                                    "Matricula: " + vehiculo.Veh_Matricula + "\n" + 
                                                    "Marca: " + vehiculo.Veh_Marca + "\n" + 
                                                    "Linea: " + vehiculo.Veh_Linea + "\n" + 
@@ -86,11 +81,11 @@ namespace Vistas
                 txtAPrecio.Text = "";
 
 
-                Form frmListaVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaVehiculo);
+                Form frmListaVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVehiculo);
                 if (frmListaVehiculo != null)
                 {
-                    ((FrmListaVehiculo)frmListaVehiculo).dataVehiculos.DataSource = null;
-                    ((FrmListaVehiculo)frmListaVehiculo).dataVehiculos.DataSource = listaDeVehiculos;
+                    ((FrmVehiculo)frmListaVehiculo).dataVehiculo.DataSource = null;
+                    ((FrmVehiculo)frmListaVehiculo).dataVehiculo.DataSource = listaDeVehiculos;
                 }
             }
             else

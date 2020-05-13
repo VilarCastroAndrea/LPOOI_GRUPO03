@@ -19,27 +19,27 @@ namespace Vistas
 
         private void FrmVehiculo_Load(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<FrmListaVehiculo>().FirstOrDefault();
-            FrmListaVehiculo frmLista = form ?? new FrmListaVehiculo();
+            var form = Application.OpenForms.OfType<FrmMostrarVehiculo>().FirstOrDefault();
+            FrmMostrarVehiculo frmLista = form ?? new FrmMostrarVehiculo();
             AddFormInPanel(frmLista);
         }
 
         private void AddFormInPanel(Form fh)
         {
-            if (this.panelContenedor3.Controls.Count > 0)
-                this.panelContenedor3.Controls.RemoveAt(0);
+            if (this.panelVehiculo.Controls.Count > 0)
+                this.panelVehiculo.Controls.RemoveAt(0);
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
-            this.panelContenedor3.Controls.Add(fh);
-            this.panelContenedor3.Tag = fh;
+            this.panelVehiculo.Controls.Add(fh);
+            this.panelVehiculo.Tag = fh;
             fh.Show();
         }
 
         private void btnListaVeh_Click(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<FrmListaVehiculo>().FirstOrDefault();
-            FrmListaVehiculo frmLista = form ?? new FrmListaVehiculo();
+            var form = Application.OpenForms.OfType<FrmMostrarVehiculo>().FirstOrDefault();
+            FrmMostrarVehiculo frmLista = form ?? new FrmMostrarVehiculo();
             AddFormInPanel(frmLista);
         }
 
