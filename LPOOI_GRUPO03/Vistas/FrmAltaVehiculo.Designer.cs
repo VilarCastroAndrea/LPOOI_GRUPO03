@@ -30,7 +30,6 @@
         {
             this.txtAMatricula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblClinte = new System.Windows.Forms.Label();
             this.txtALinea = new System.Windows.Forms.TextBox();
             this.txtAMarca = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,48 +49,38 @@
             this.cmbCantPuert = new System.Windows.Forms.ComboBox();
             this.cmbColor = new System.Windows.Forms.ComboBox();
             this.cmbModelo = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtAMatricula
             // 
-            this.txtAMatricula.Location = new System.Drawing.Point(16, 79);
+            this.txtAMatricula.Location = new System.Drawing.Point(19, 25);
             this.txtAMatricula.Name = "txtAMatricula";
-            this.txtAMatricula.Size = new System.Drawing.Size(123, 20);
+            this.txtAMatricula.Size = new System.Drawing.Size(170, 20);
             this.txtAMatricula.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(13, 63);
+            this.label5.Location = new System.Drawing.Point(17, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 22;
             this.label5.Text = "Matricula";
             // 
-            // lblClinte
-            // 
-            this.lblClinte.AutoSize = true;
-            this.lblClinte.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClinte.ForeColor = System.Drawing.Color.White;
-            this.lblClinte.Location = new System.Drawing.Point(119, 22);
-            this.lblClinte.Name = "lblClinte";
-            this.lblClinte.Size = new System.Drawing.Size(177, 25);
-            this.lblClinte.TabIndex = 21;
-            this.lblClinte.Text = "Agregar Vehiculo";
-            // 
             // txtALinea
             // 
-            this.txtALinea.Location = new System.Drawing.Point(15, 129);
+            this.txtALinea.Location = new System.Drawing.Point(20, 66);
             this.txtALinea.Name = "txtALinea";
-            this.txtALinea.Size = new System.Drawing.Size(124, 20);
+            this.txtALinea.Size = new System.Drawing.Size(169, 20);
             this.txtALinea.TabIndex = 2;
             // 
             // txtAMarca
             // 
-            this.txtAMarca.Location = new System.Drawing.Point(161, 79);
+            this.txtAMarca.Location = new System.Drawing.Point(20, 139);
             this.txtAMarca.Name = "txtAMarca";
-            this.txtAMarca.Size = new System.Drawing.Size(125, 20);
+            this.txtAMarca.Size = new System.Drawing.Size(169, 20);
             this.txtAMarca.TabIndex = 1;
             this.txtAMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAMarca_KeyPress);
             // 
@@ -99,7 +88,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(15, 167);
+            this.label4.Location = new System.Drawing.Point(16, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 16;
@@ -109,7 +98,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(13, 113);
+            this.label3.Location = new System.Drawing.Point(17, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 15;
@@ -119,7 +108,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(158, 113);
+            this.label2.Location = new System.Drawing.Point(16, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 14;
@@ -129,7 +118,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(158, 63);
+            this.label1.Location = new System.Drawing.Point(18, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 13;
@@ -141,9 +130,9 @@
             this.btnAltaVeh.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.btnAltaVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAltaVeh.ForeColor = System.Drawing.Color.White;
-            this.btnAltaVeh.Location = new System.Drawing.Point(192, 340);
+            this.btnAltaVeh.Location = new System.Drawing.Point(18, 363);
             this.btnAltaVeh.Name = "btnAltaVeh";
-            this.btnAltaVeh.Size = new System.Drawing.Size(92, 23);
+            this.btnAltaVeh.Size = new System.Drawing.Size(172, 23);
             this.btnAltaVeh.TabIndex = 10;
             this.btnAltaVeh.Text = "Agregar";
             this.btnAltaVeh.UseVisualStyleBackColor = false;
@@ -153,7 +142,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(162, 167);
+            this.label6.Location = new System.Drawing.Point(17, 208);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 13);
             this.label6.TabIndex = 24;
@@ -163,7 +152,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(15, 223);
+            this.label7.Location = new System.Drawing.Point(17, 314);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 26;
@@ -171,9 +160,9 @@
             // 
             // txtATipo
             // 
-            this.txtATipo.Location = new System.Drawing.Point(163, 239);
+            this.txtATipo.Location = new System.Drawing.Point(20, 245);
             this.txtATipo.Name = "txtATipo";
-            this.txtATipo.Size = new System.Drawing.Size(123, 20);
+            this.txtATipo.Size = new System.Drawing.Size(166, 20);
             this.txtATipo.TabIndex = 7;
             this.txtATipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtATipo_KeyPress);
             // 
@@ -181,7 +170,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(162, 223);
+            this.label8.Location = new System.Drawing.Point(15, 229);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 28;
@@ -189,9 +178,9 @@
             // 
             // txtAClase
             // 
-            this.txtAClase.Location = new System.Drawing.Point(16, 292);
+            this.txtAClase.Location = new System.Drawing.Point(20, 284);
             this.txtAClase.Name = "txtAClase";
-            this.txtAClase.Size = new System.Drawing.Size(123, 20);
+            this.txtAClase.Size = new System.Drawing.Size(166, 20);
             this.txtAClase.TabIndex = 8;
             this.txtAClase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAClase_KeyPress);
             // 
@@ -199,7 +188,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(15, 276);
+            this.label9.Location = new System.Drawing.Point(17, 268);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 13);
             this.label9.TabIndex = 30;
@@ -207,9 +196,9 @@
             // 
             // txtAPrecio
             // 
-            this.txtAPrecio.Location = new System.Drawing.Point(161, 292);
+            this.txtAPrecio.Location = new System.Drawing.Point(72, 337);
             this.txtAPrecio.Name = "txtAPrecio";
-            this.txtAPrecio.Size = new System.Drawing.Size(123, 20);
+            this.txtAPrecio.Size = new System.Drawing.Size(118, 20);
             this.txtAPrecio.TabIndex = 9;
             this.txtAPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAPrecio_KeyPress);
             // 
@@ -217,17 +206,18 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(160, 276);
+            this.label10.Location = new System.Drawing.Point(18, 340);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 32;
             this.label10.Text = "Precio";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // checkGps
             // 
             this.checkGps.AutoSize = true;
             this.checkGps.ForeColor = System.Drawing.Color.White;
-            this.checkGps.Location = new System.Drawing.Point(18, 239);
+            this.checkGps.Location = new System.Drawing.Point(57, 313);
             this.checkGps.Name = "checkGps";
             this.checkGps.Size = new System.Drawing.Size(35, 17);
             this.checkGps.TabIndex = 6;
@@ -241,9 +231,9 @@
             "3",
             "4",
             "5"});
-            this.cmbCantPuert.Location = new System.Drawing.Point(165, 182);
+            this.cmbCantPuert.Location = new System.Drawing.Point(138, 205);
             this.cmbCantPuert.Name = "cmbCantPuert";
-            this.cmbCantPuert.Size = new System.Drawing.Size(121, 21);
+            this.cmbCantPuert.Size = new System.Drawing.Size(51, 21);
             this.cmbCantPuert.TabIndex = 5;
             // 
             // cmbColor
@@ -257,9 +247,9 @@
             "Gris",
             "Blanco",
             "Amarillo"});
-            this.cmbColor.Location = new System.Drawing.Point(15, 181);
+            this.cmbColor.Location = new System.Drawing.Point(71, 97);
             this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(121, 21);
+            this.cmbColor.Size = new System.Drawing.Size(118, 21);
             this.cmbColor.TabIndex = 4;
             // 
             // cmbModelo
@@ -277,17 +267,29 @@
             "2012",
             "2011",
             "2010"});
-            this.cmbModelo.Location = new System.Drawing.Point(161, 127);
+            this.cmbModelo.Location = new System.Drawing.Point(71, 172);
             this.cmbModelo.Name = "cmbModelo";
-            this.cmbModelo.Size = new System.Drawing.Size(121, 21);
+            this.cmbModelo.Size = new System.Drawing.Size(118, 21);
             this.cmbModelo.TabIndex = 3;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(98, 314);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(40, 17);
+            this.checkBox1.TabIndex = 33;
+            this.checkBox1.Text = "No";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // FrmAltaVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(308, 366);
+            this.ClientSize = new System.Drawing.Size(207, 415);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmbModelo);
             this.Controls.Add(this.cmbColor);
             this.Controls.Add(this.cmbCantPuert);
@@ -302,7 +304,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAMatricula);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblClinte);
             this.Controls.Add(this.txtALinea);
             this.Controls.Add(this.txtAMarca);
             this.Controls.Add(this.label4);
@@ -312,6 +313,7 @@
             this.Controls.Add(this.btnAltaVeh);
             this.Name = "FrmAltaVehiculo";
             this.Text = "FrmAltaVehiculo";
+            this.Load += new System.EventHandler(this.FrmAltaVehiculo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,7 +323,6 @@
 
         private System.Windows.Forms.TextBox txtAMatricula;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblClinte;
         private System.Windows.Forms.TextBox txtALinea;
         private System.Windows.Forms.TextBox txtAMarca;
         private System.Windows.Forms.Label label4;
@@ -341,5 +342,6 @@
         private System.Windows.Forms.ComboBox cmbCantPuert;
         private System.Windows.Forms.ComboBox cmbColor;
         private System.Windows.Forms.ComboBox cmbModelo;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

@@ -13,7 +13,7 @@ namespace Vistas
 {
     public partial class FrmAltaVehiculo : Form
     {
-        private List<Vehiculo> listaDeVehiculos = new List<Vehiculo>();
+
         public FrmAltaVehiculo()
         {
             InitializeComponent();
@@ -76,7 +76,7 @@ namespace Vistas
                     if (frmListaVehiculo != null)
                     {
                         ((FrmVehiculo)frmListaVehiculo).dataVehiculo.DataSource = null;
-                        ((FrmVehiculo)frmListaVehiculo).dataVehiculo.DataSource = listaDeVehiculos;
+                        ((FrmVehiculo)frmListaVehiculo).dataVehiculo.DataSource = TrabajarVehiculo.ListaVehiculo();
                     }
                 }
                 else
@@ -109,6 +109,16 @@ namespace Vistas
         private void txtAClase_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloLetra(e);
+        }
+
+        private void FrmAltaVehiculo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
