@@ -42,20 +42,15 @@ namespace Vistas
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
             Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
-
             Usuario usuario = new Usuario();
-               
-                usuario.Usu_ID = Convert.ToInt32(this.txtId.Text);
-                usuario.Usu_NombreUsuario = txtNombreUsuario.Text;
-                usuario.Usu_Contraseña = txtPass.Text;
-                usuario.Usu_ApellidoNombre = txtNombreApellidoUsuario.Text;
-                usuario.Rol_Codigo = cmbRoles.Text;
-                TrabajoUsuario.modificarUsuario(usuario);
+            usuario.Usu_ID = Convert.ToInt32(this.txtId.Text);
+            usuario.Usu_NombreUsuario = txtNombreUsuario.Text;
+            usuario.Usu_Contraseña = txtPass.Text;
+            usuario.Usu_ApellidoNombre = txtNombreApellidoUsuario.Text;
+            usuario.Rol_Codigo = cmbRoles.Text;
+            TrabajoUsuario.modificarUsuario(usuario);
             ((FrmUsuario)frmUsuario).cargarListaUsuario();
-            MessageBox.Show("Usuario Modificado");
-                
-
-            
+            MessageBox.Show("Usuario Modificado");          
         }
 
         private void FrmMostrarUsuario_Load(object sender, EventArgs e)
