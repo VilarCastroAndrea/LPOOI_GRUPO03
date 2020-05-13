@@ -71,14 +71,14 @@
             // 
             // txtALinea
             // 
-            this.txtALinea.Location = new System.Drawing.Point(20, 66);
+            this.txtALinea.Location = new System.Drawing.Point(19, 105);
             this.txtALinea.Name = "txtALinea";
             this.txtALinea.Size = new System.Drawing.Size(169, 20);
             this.txtALinea.TabIndex = 2;
             // 
             // txtAMarca
             // 
-            this.txtAMarca.Location = new System.Drawing.Point(20, 139);
+            this.txtAMarca.Location = new System.Drawing.Point(18, 65);
             this.txtAMarca.Name = "txtAMarca";
             this.txtAMarca.Size = new System.Drawing.Size(169, 20);
             this.txtAMarca.TabIndex = 1;
@@ -88,7 +88,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(16, 100);
+            this.label4.Location = new System.Drawing.Point(18, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 16;
@@ -98,7 +98,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(17, 50);
+            this.label3.Location = new System.Drawing.Point(16, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 15;
@@ -108,7 +108,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(16, 175);
+            this.label2.Location = new System.Drawing.Point(17, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 14;
@@ -118,7 +118,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 123);
+            this.label1.Location = new System.Drawing.Point(16, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 13;
@@ -231,7 +231,7 @@
             "3",
             "4",
             "5"});
-            this.cmbCantPuert.Location = new System.Drawing.Point(138, 205);
+            this.cmbCantPuert.Location = new System.Drawing.Point(135, 205);
             this.cmbCantPuert.Name = "cmbCantPuert";
             this.cmbCantPuert.Size = new System.Drawing.Size(51, 21);
             this.cmbCantPuert.TabIndex = 5;
@@ -247,7 +247,7 @@
             "Gris",
             "Blanco",
             "Amarillo"});
-            this.cmbColor.Location = new System.Drawing.Point(71, 97);
+            this.cmbColor.Location = new System.Drawing.Point(70, 171);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(118, 21);
             this.cmbColor.TabIndex = 4;
@@ -267,7 +267,7 @@
             "2012",
             "2011",
             "2010"});
-            this.cmbModelo.Location = new System.Drawing.Point(71, 172);
+            this.cmbModelo.Location = new System.Drawing.Point(70, 139);
             this.cmbModelo.Name = "cmbModelo";
             this.cmbModelo.Size = new System.Drawing.Size(118, 21);
             this.cmbModelo.TabIndex = 3;

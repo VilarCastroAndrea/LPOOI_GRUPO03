@@ -16,5 +16,10 @@ namespace Vistas
         {
             InitializeComponent();
         }
+
+        private void FrmMostrarVehiculo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
