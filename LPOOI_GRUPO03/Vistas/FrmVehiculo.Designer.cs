@@ -34,7 +34,7 @@
             this.panelListaVehiculo = new System.Windows.Forms.Panel();
             this.btnBusacar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtBuscarC = new System.Windows.Forms.TextBox();
+            this.txtBuscarVehiculo = new System.Windows.Forms.TextBox();
             this.dataVehiculo = new System.Windows.Forms.DataGridView();
             this.panelListaVehiculo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVehiculo)).BeginInit();
@@ -81,7 +81,7 @@
             this.panelListaVehiculo.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panelListaVehiculo.Controls.Add(this.btnBusacar);
             this.panelListaVehiculo.Controls.Add(this.label7);
-            this.panelListaVehiculo.Controls.Add(this.txtBuscarC);
+            this.panelListaVehiculo.Controls.Add(this.txtBuscarVehiculo);
             this.panelListaVehiculo.Controls.Add(this.dataVehiculo);
             this.panelListaVehiculo.Location = new System.Drawing.Point(13, 18);
             this.panelListaVehiculo.Name = "panelListaVehiculo";
@@ -100,6 +100,7 @@
             this.btnBusacar.TabIndex = 4;
             this.btnBusacar.Text = "Buscar";
             this.btnBusacar.UseVisualStyleBackColor = false;
+            this.btnBusacar.Click += new System.EventHandler(this.btnBusacar_Click);
             // 
             // label7
             // 
@@ -112,12 +113,12 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Buscar";
             // 
-            // txtBuscarC
+            // txtBuscarVehiculo
             // 
-            this.txtBuscarC.Location = new System.Drawing.Point(80, 25);
-            this.txtBuscarC.Name = "txtBuscarC";
-            this.txtBuscarC.Size = new System.Drawing.Size(331, 20);
-            this.txtBuscarC.TabIndex = 2;
+            this.txtBuscarVehiculo.Location = new System.Drawing.Point(80, 25);
+            this.txtBuscarVehiculo.Name = "txtBuscarVehiculo";
+            this.txtBuscarVehiculo.Size = new System.Drawing.Size(331, 20);
+            this.txtBuscarVehiculo.TabIndex = 2;
             // 
             // dataVehiculo
             // 
@@ -127,8 +128,10 @@
             this.dataVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.dataVehiculo.Name = "dataVehiculo";
             this.dataVehiculo.RowTemplate.Height = 24;
+            this.dataVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataVehiculo.Size = new System.Drawing.Size(598, 355);
             this.dataVehiculo.TabIndex = 1;
+            this.dataVehiculo.CurrentCellChanged += new System.EventHandler(this.dataVehiculo_CurrentCellChanged);
             // 
             // FrmVehiculo
             // 
@@ -157,7 +160,7 @@
         private System.Windows.Forms.Panel panelListaVehiculo;
         private System.Windows.Forms.Button btnBusacar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBuscarC;
+        private System.Windows.Forms.TextBox txtBuscarVehiculo;
         public System.Windows.Forms.DataGridView dataVehiculo;
     }
 }

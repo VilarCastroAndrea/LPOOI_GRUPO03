@@ -278,6 +278,7 @@
             this.btnAltaVeh.TabIndex = 44;
             this.btnAltaVeh.Text = "Eliminar Vehiculo";
             this.btnAltaVeh.UseVisualStyleBackColor = false;
+            this.btnAltaVeh.Click += new System.EventHandler(this.btnAltaVeh_Click);
             // 
             // button1
             // 
@@ -291,6 +292,7 @@
             this.button1.TabIndex = 56;
             this.button1.Text = "Modificar Vehiculo";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmMostrarVehiculo
             // 
@@ -332,27 +334,27 @@
         #endregion
 
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox cmbModelo;
-        private System.Windows.Forms.ComboBox cmbColor;
-        private System.Windows.Forms.ComboBox cmbCantPuert;
-        private System.Windows.Forms.CheckBox checkGps;
-        private System.Windows.Forms.TextBox txtAPrecio;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtAClase;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtATipo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtAMatricula;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtALinea;
-        private System.Windows.Forms.TextBox txtAMarca;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAltaVeh;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.ComboBox cmbModelo;
+        public System.Windows.Forms.ComboBox cmbColor;
+        public System.Windows.Forms.ComboBox cmbCantPuert;
+        public System.Windows.Forms.TextBox txtAPrecio;
+        public System.Windows.Forms.TextBox txtAClase;
+        public System.Windows.Forms.TextBox txtATipo;
+        public System.Windows.Forms.TextBox txtAMatricula;
+        public System.Windows.Forms.TextBox txtALinea;
+        public System.Windows.Forms.TextBox txtAMarca;
+        public System.Windows.Forms.CheckBox checkGps;
     }
 }

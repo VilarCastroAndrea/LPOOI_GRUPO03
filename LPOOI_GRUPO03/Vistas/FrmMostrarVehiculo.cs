@@ -21,5 +21,15 @@ namespace Vistas
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAltaVeh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

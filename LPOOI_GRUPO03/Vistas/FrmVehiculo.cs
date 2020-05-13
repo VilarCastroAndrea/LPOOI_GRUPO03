@@ -52,5 +52,39 @@ namespace Vistas
             FrmAltaVehiculo frmAltaVehi = form ?? new FrmAltaVehiculo();
             AddFormInPanel(frmAltaVehi);
         }
+
+        private void dataVehiculo_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (this.dataVehiculo.CurrentRow != null) {
+                FrmMostrarVehiculo frmMosVehiculo = new FrmMostrarVehiculo();
+                Form frmMostrarVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmMostrarVehiculo);
+                if (frmMostrarVehiculo != null) {
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).txtAMatricula.Text = dataVehiculo.CurrentRow.Cells[0].Value.ToString();
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).txtAMarca.Text = dataVehiculo.CurrentRow.Cells[1].Value.ToString();
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).txtALinea.Text = dataVehiculo.CurrentRow.Cells[2].Value.ToString();
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).cmbModelo.Text = dataVehiculo.CurrentRow.Cells[3].Value.ToString();
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).cmbColor.Text = dataVehiculo.CurrentRow.Cells[4].Value.ToString();
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).cmbCantPuert.Text = dataVehiculo.CurrentRow.Cells[5].Value.ToString();
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).checkGps.Checked = dataVehiculo.CurrentRow.Cells[6].Selected;
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).txtATipo.Text = dataVehiculo.CurrentRow.Cells[7].Value.ToString();
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).txtAClase.Text = dataVehiculo.CurrentRow.Cells[8].Value.ToString();
+                    ((FrmMostrarVehiculo)frmMostrarVehiculo).txtAPrecio.Text = dataVehiculo.CurrentRow.Cells[9].Value.ToString();
+                }
+            }
+        }
+
+        private void btnBusacar_Click(object sender, EventArgs e)
+        {
+            string buscarvehiculo = txtBuscarVehiculo.Text;
+            if (txtBuscarVehiculo.Text != "")
+            {
+                dataVehiculo.DataSource = TrabajarVehiculo.buscarVehiculo(txtBuscarVehiculo.Text);
+            }
+            else
+            {
+                dataVehiculo.DataSource = TrabajarVehiculo.ListaVehiculo();
+                dataVehiculo.Refresh();
+            }
+        }
     }
 }
