@@ -82,7 +82,7 @@
             this.cmbVehiculos.Margin = new System.Windows.Forms.Padding(2);
             this.cmbVehiculos.Name = "cmbVehiculos";
             this.cmbVehiculos.Size = new System.Drawing.Size(171, 21);
-            this.cmbVehiculos.TabIndex = 3;
+            this.cmbVehiculos.TabIndex = 1;
             this.cmbVehiculos.SelectedIndexChanged += new System.EventHandler(this.cmbVehiculos_SelectedIndexChanged);
             this.cmbVehiculos.TextUpdate += new System.EventHandler(this.cmbVehiculos_TextUpdate);
             // 
@@ -104,7 +104,7 @@
             this.txtDatosVendedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtDatosVendedor.Name = "txtDatosVendedor";
             this.txtDatosVendedor.Size = new System.Drawing.Size(171, 20);
-            this.txtDatosVendedor.TabIndex = 5;
+            this.txtDatosVendedor.TabIndex = 2;
             // 
             // txtPrecio
             // 
@@ -112,7 +112,7 @@
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(171, 20);
-            this.txtPrecio.TabIndex = 6;
+            this.txtPrecio.TabIndex = 5;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // label4
@@ -147,7 +147,7 @@
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(171, 20);
-            this.dtpFecha.TabIndex = 9;
+            this.dtpFecha.TabIndex = 4;
             // 
             // label5
             // 
@@ -182,7 +182,7 @@
             this.cmbMedioDePago.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMedioDePago.Name = "cmbMedioDePago";
             this.cmbMedioDePago.Size = new System.Drawing.Size(171, 21);
-            this.cmbMedioDePago.TabIndex = 12;
+            this.cmbMedioDePago.TabIndex = 3;
             // 
             // FrmRegistrarVenta
             // 

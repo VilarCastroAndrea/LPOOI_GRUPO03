@@ -76,7 +76,7 @@
             this.txtDni.Location = new System.Drawing.Point(18, 59);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(171, 20);
-            this.txtDni.TabIndex = 35;
+            this.txtDni.TabIndex = 0;
             // 
             // label5
             // 
@@ -93,14 +93,14 @@
             this.txtDireccion.Location = new System.Drawing.Point(18, 211);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(171, 20);
-            this.txtDireccion.TabIndex = 33;
+            this.txtDireccion.TabIndex = 3;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(18, 261);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(171, 20);
-            this.txtTelefono.TabIndex = 32;
+            this.txtTelefono.TabIndex = 4;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtApellido
@@ -108,7 +108,7 @@
             this.txtApellido.Location = new System.Drawing.Point(18, 162);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(171, 20);
-            this.txtApellido.TabIndex = 31;
+            this.txtApellido.TabIndex = 2;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
@@ -116,7 +116,7 @@
             this.txtNombre.Location = new System.Drawing.Point(18, 110);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(171, 20);
-            this.txtNombre.TabIndex = 30;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label4

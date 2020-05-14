@@ -47,7 +47,7 @@
             this.cmbRoles.Location = new System.Drawing.Point(18, 211);
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(171, 21);
-            this.cmbRoles.TabIndex = 23;
+            this.cmbRoles.TabIndex = 3;
             this.cmbRoles.SelectedIndexChanged += new System.EventHandler(this.cmbRoles_SelectedIndexChanged);
             this.cmbRoles.MouseCaptureChanged += new System.EventHandler(this.cmbRoles_MouseCaptureChanged);
             // 
@@ -96,7 +96,7 @@
             this.txtNombreApellidoUsuario.Location = new System.Drawing.Point(18, 160);
             this.txtNombreApellidoUsuario.Name = "txtNombreApellidoUsuario";
             this.txtNombreApellidoUsuario.Size = new System.Drawing.Size(171, 20);
-            this.txtNombreApellidoUsuario.TabIndex = 17;
+            this.txtNombreApellidoUsuario.TabIndex = 2;
             this.txtNombreApellidoUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreApellidoUsuario_KeyDown);
             // 
             // txtNombreUsuario
@@ -104,14 +104,14 @@
             this.txtNombreUsuario.Location = new System.Drawing.Point(18, 60);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(171, 20);
-            this.txtNombreUsuario.TabIndex = 16;
+            this.txtNombreUsuario.TabIndex = 0;
             // 
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(18, 110);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(171, 20);
-            this.txtPass.TabIndex = 15;
+            this.txtPass.TabIndex = 1;
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // btnEliminarUsuario
@@ -148,7 +148,7 @@
             this.txtId.Location = new System.Drawing.Point(15, 12);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(171, 20);
-            this.txtId.TabIndex = 14;
+            this.txtId.TabIndex = 0;
             this.txtId.Visible = false;
             // 
             // FrmMostrarUsuario

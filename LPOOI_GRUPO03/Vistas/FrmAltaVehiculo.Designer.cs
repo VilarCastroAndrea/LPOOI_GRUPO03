@@ -163,7 +163,7 @@
             this.txtATipo.Location = new System.Drawing.Point(20, 245);
             this.txtATipo.Name = "txtATipo";
             this.txtATipo.Size = new System.Drawing.Size(166, 20);
-            this.txtATipo.TabIndex = 7;
+            this.txtATipo.TabIndex = 6;
             this.txtATipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtATipo_KeyPress);
             // 
             // label8
@@ -181,7 +181,7 @@
             this.txtAClase.Location = new System.Drawing.Point(20, 284);
             this.txtAClase.Name = "txtAClase";
             this.txtAClase.Size = new System.Drawing.Size(166, 20);
-            this.txtAClase.TabIndex = 8;
+            this.txtAClase.TabIndex = 7;
             this.txtAClase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAClase_KeyPress);
             // 
             // label9
@@ -220,7 +220,7 @@
             this.checkGps.Location = new System.Drawing.Point(57, 313);
             this.checkGps.Name = "checkGps";
             this.checkGps.Size = new System.Drawing.Size(35, 17);
-            this.checkGps.TabIndex = 6;
+            this.checkGps.TabIndex = 8;
             this.checkGps.Text = "Si";
             this.checkGps.UseVisualStyleBackColor = true;
             // 

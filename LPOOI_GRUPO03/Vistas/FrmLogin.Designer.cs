@@ -80,7 +80,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(17, 312);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(201, 23);
-            this.btnIngresar.TabIndex = 4;
+            this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -161,7 +161,7 @@
             this.txtResultadoCapcha.Location = new System.Drawing.Point(69, 271);
             this.txtResultadoCapcha.Name = "txtResultadoCapcha";
             this.txtResultadoCapcha.Size = new System.Drawing.Size(149, 21);
-            this.txtResultadoCapcha.TabIndex = 15;
+            this.txtResultadoCapcha.TabIndex = 4;
             // 
             // pictureBox2
             // 

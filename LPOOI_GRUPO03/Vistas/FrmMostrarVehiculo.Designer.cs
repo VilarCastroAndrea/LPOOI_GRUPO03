@@ -82,7 +82,7 @@
             this.cmbModelo.Location = new System.Drawing.Point(71, 106);
             this.cmbModelo.Name = "cmbModelo";
             this.cmbModelo.Size = new System.Drawing.Size(118, 21);
-            this.cmbModelo.TabIndex = 37;
+            this.cmbModelo.TabIndex = 3;
             // 
             // cmbColor
             // 
@@ -98,7 +98,7 @@
             this.cmbColor.Location = new System.Drawing.Point(71, 138);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(118, 21);
-            this.cmbColor.TabIndex = 38;
+            this.cmbColor.TabIndex = 4;
             // 
             // cmbCantPuert
             // 
@@ -110,7 +110,7 @@
             this.cmbCantPuert.Location = new System.Drawing.Point(136, 172);
             this.cmbCantPuert.Name = "cmbCantPuert";
             this.cmbCantPuert.Size = new System.Drawing.Size(51, 21);
-            this.cmbCantPuert.TabIndex = 39;
+            this.cmbCantPuert.TabIndex = 5;
             // 
             // cGps
             // 
@@ -119,7 +119,7 @@
             this.cGps.Location = new System.Drawing.Point(58, 280);
             this.cGps.Name = "cGps";
             this.cGps.Size = new System.Drawing.Size(35, 17);
-            this.cGps.TabIndex = 40;
+            this.cGps.TabIndex = 8;
             this.cGps.Text = "Si";
             this.cGps.UseVisualStyleBackColor = true;
             // 
@@ -128,7 +128,7 @@
             this.txtAPrecio.Location = new System.Drawing.Point(73, 304);
             this.txtAPrecio.Name = "txtAPrecio";
             this.txtAPrecio.Size = new System.Drawing.Size(118, 20);
-            this.txtAPrecio.TabIndex = 43;
+            this.txtAPrecio.TabIndex = 9;
             // 
             // label10
             // 
@@ -145,7 +145,7 @@
             this.txtAClase.Location = new System.Drawing.Point(21, 251);
             this.txtAClase.Name = "txtAClase";
             this.txtAClase.Size = new System.Drawing.Size(166, 20);
-            this.txtAClase.TabIndex = 42;
+            this.txtAClase.TabIndex = 7;
             // 
             // label9
             // 
@@ -162,7 +162,7 @@
             this.txtATipo.Location = new System.Drawing.Point(21, 212);
             this.txtATipo.Name = "txtATipo";
             this.txtATipo.Size = new System.Drawing.Size(166, 20);
-            this.txtATipo.TabIndex = 41;
+            this.txtATipo.TabIndex = 6;
             // 
             // label8
             // 
@@ -200,7 +200,7 @@
             this.txtAMatricula.Location = new System.Drawing.Point(83, 12);
             this.txtAMatricula.Name = "txtAMatricula";
             this.txtAMatricula.Size = new System.Drawing.Size(106, 20);
-            this.txtAMatricula.TabIndex = 34;
+            this.txtAMatricula.TabIndex = 0;
             // 
             // label5
             // 
@@ -217,14 +217,14 @@
             this.txtALinea.Location = new System.Drawing.Point(71, 74);
             this.txtALinea.Name = "txtALinea";
             this.txtALinea.Size = new System.Drawing.Size(118, 20);
-            this.txtALinea.TabIndex = 36;
+            this.txtALinea.TabIndex = 2;
             // 
             // txtAMarca
             // 
             this.txtAMarca.Location = new System.Drawing.Point(71, 42);
             this.txtAMarca.Name = "txtAMarca";
             this.txtAMarca.Size = new System.Drawing.Size(118, 20);
-            this.txtAMarca.TabIndex = 35;
+            this.txtAMarca.TabIndex = 1;
             // 
             // label4
             // 
@@ -275,7 +275,7 @@
             this.btnEVehiculo.Location = new System.Drawing.Point(19, 360);
             this.btnEVehiculo.Name = "btnEVehiculo";
             this.btnEVehiculo.Size = new System.Drawing.Size(172, 23);
-            this.btnEVehiculo.TabIndex = 44;
+            this.btnEVehiculo.TabIndex = 11;
             this.btnEVehiculo.Text = "Eliminar Vehiculo";
             this.btnEVehiculo.UseVisualStyleBackColor = false;
             this.btnEVehiculo.Click += new System.EventHandler(this.btnEVehiculo_Click);
@@ -289,7 +289,7 @@
             this.btnMVehiculo.Location = new System.Drawing.Point(19, 331);
             this.btnMVehiculo.Name = "btnMVehiculo";
             this.btnMVehiculo.Size = new System.Drawing.Size(172, 23);
-            this.btnMVehiculo.TabIndex = 56;
+            this.btnMVehiculo.TabIndex = 10;
             this.btnMVehiculo.Text = "Modificar Vehiculo";
             this.btnMVehiculo.UseVisualStyleBackColor = false;
             this.btnMVehiculo.Click += new System.EventHandler(this.btnMVehiculo_Click);

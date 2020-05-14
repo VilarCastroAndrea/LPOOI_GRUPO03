@@ -45,7 +45,7 @@
             this.cmbRoles.Location = new System.Drawing.Point(18, 212);
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(171, 21);
-            this.cmbRoles.TabIndex = 31;
+            this.cmbRoles.TabIndex = 3;
             // 
             // lblRolUsuario
             // 
@@ -92,21 +92,21 @@
             this.txtNombreApellidoUsuario.Location = new System.Drawing.Point(18, 163);
             this.txtNombreApellidoUsuario.Name = "txtNombreApellidoUsuario";
             this.txtNombreApellidoUsuario.Size = new System.Drawing.Size(171, 20);
-            this.txtNombreApellidoUsuario.TabIndex = 26;
+            this.txtNombreApellidoUsuario.TabIndex = 2;
             // 
             // txtNombreUsuario
             // 
             this.txtNombreUsuario.Location = new System.Drawing.Point(18, 61);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(171, 20);
-            this.txtNombreUsuario.TabIndex = 25;
+            this.txtNombreUsuario.TabIndex = 0;
             // 
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(18, 111);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(171, 20);
-            this.txtPass.TabIndex = 24;
+            this.txtPass.TabIndex = 1;
             // 
             // btnAgregarUsuario
             // 
@@ -117,7 +117,7 @@
             this.btnAgregarUsuario.Location = new System.Drawing.Point(18, 301);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(171, 23);
-            this.btnAgregarUsuario.TabIndex = 32;
+            this.btnAgregarUsuario.TabIndex = 4;
             this.btnAgregarUsuario.Text = "Agregar Usuario";
             this.btnAgregarUsuario.UseVisualStyleBackColor = false;
             this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);

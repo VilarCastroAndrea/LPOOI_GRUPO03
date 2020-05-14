@@ -46,7 +46,7 @@
             this.txtDni.Location = new System.Drawing.Point(18, 59);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(171, 20);
-            this.txtDni.TabIndex = 34;
+            this.txtDni.TabIndex = 0;
             this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress_1);
             // 
             // label5
@@ -64,14 +64,14 @@
             this.txtDireccion.Location = new System.Drawing.Point(18, 211);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(171, 20);
-            this.txtDireccion.TabIndex = 32;
+            this.txtDireccion.TabIndex = 3;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(18, 261);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(171, 20);
-            this.txtTelefono.TabIndex = 31;
+            this.txtTelefono.TabIndex = 4;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtApellido
@@ -79,7 +79,7 @@
             this.txtApellido.Location = new System.Drawing.Point(18, 162);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(171, 20);
-            this.txtApellido.TabIndex = 30;
+            this.txtApellido.TabIndex = 2;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
@@ -87,7 +87,7 @@
             this.txtNombre.Location = new System.Drawing.Point(18, 110);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(171, 20);
-            this.txtNombre.TabIndex = 29;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label4
@@ -139,7 +139,7 @@
             this.btnACliente.Location = new System.Drawing.Point(18, 303);
             this.btnACliente.Name = "btnACliente";
             this.btnACliente.Size = new System.Drawing.Size(171, 23);
-            this.btnACliente.TabIndex = 38;
+            this.btnACliente.TabIndex = 5;
             this.btnACliente.Text = "Agregar Cliente";
             this.btnACliente.UseVisualStyleBackColor = false;
             this.btnACliente.Click += new System.EventHandler(this.btnACliente_Click);
