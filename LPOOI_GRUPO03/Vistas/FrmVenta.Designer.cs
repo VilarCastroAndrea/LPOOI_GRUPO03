@@ -129,6 +129,7 @@
             this.btnMostrar.TabIndex = 28;
             this.btnMostrar.Text = "Mostrar Venta";
             this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Visible = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // FrmVenta

@@ -20,9 +20,9 @@ namespace Vistas
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<FrmMostrarVenta>().FirstOrDefault();
-            FrmMostrarVenta frmVenta = form ?? new FrmMostrarVenta();
-            AddFormInPanel(frmVenta);
+            var form = Application.OpenForms.OfType<FrmRegistrarVenta>().FirstOrDefault();
+            FrmRegistrarVenta frmRegistrarVenta = form ?? new FrmRegistrarVenta();
+            AddFormInPanel(frmRegistrarVenta);
             cargarVentas();
         }
 

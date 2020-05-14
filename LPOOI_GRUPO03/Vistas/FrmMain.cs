@@ -25,11 +25,11 @@ namespace Vistas
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            
-            var form = Application.OpenForms.OfType<FrmSistema>().FirstOrDefault();
-            FrmSistema frmSistema = form ?? new FrmSistema();
-            AddFormInPanel(frmSistema);
-            
+
+            var form = Application.OpenForms.OfType<FrmUsuario>().FirstOrDefault();
+            FrmUsuario frmUsuario = form ?? new FrmUsuario();
+            AddFormInPanel(frmUsuario);
+
             restringirAcceso();
 
         }
