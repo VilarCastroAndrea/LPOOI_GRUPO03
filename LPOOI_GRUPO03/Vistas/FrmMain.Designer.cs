@@ -217,7 +217,7 @@
             this.panelContenedor.BackColor = System.Drawing.Color.White;
             this.panelContenedor.Location = new System.Drawing.Point(199, -1);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1473, 474);
+            this.panelContenedor.Size = new System.Drawing.Size(825, 474);
             this.panelContenedor.TabIndex = 3;
             // 
             // FrmMain
@@ -226,7 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1668, 468);
+            this.ClientSize = new System.Drawing.Size(1026, 468);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContenedor);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
