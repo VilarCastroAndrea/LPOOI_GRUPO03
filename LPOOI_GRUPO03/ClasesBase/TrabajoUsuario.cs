@@ -16,7 +16,13 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Usuario";
+            cmd.CommandText = "SELECT";
+            cmd.CommandText += " USU_NombreUsuario as 'Nombre de Usuario', ";
+            cmd.CommandText += " USU_ID as 'ID', ";
+            cmd.CommandText += " USU_Password as 'Contraseña', ";
+            cmd.CommandText += " USU_ApellidoNombre as 'Apellido y Nombre', ";
+            cmd.CommandText += " ROL_Codigo as 'Rol'";
+            cmd.CommandText += " FROM Usuario as U";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
             SqlDataAdapter da = new SqlDataAdapter(cmd);

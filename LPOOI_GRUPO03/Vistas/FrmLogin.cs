@@ -18,18 +18,31 @@ namespace Vistas
     public partial class FrmLogin : Form
     {
 
-        private String cargarCapcha;
         FrmMain formMain = new FrmMain();
         FrmSistema frmSistema = new FrmSistema();
+        private int intentos;
        public Usuario user = new Usuario();
 
         public FrmLogin()
         {
             InitializeComponent();
+            intentos = 0;
+            ocultarCapcha();
+        }
 
-            cargarCapcha = generarCapcha();
+        private void mostrarCapcha()
+        {
+            imgCapcha.Visible = true;
+            txtResultadoCapcha.Visible = true;
+            lblCapcha.Visible = true;
+            lblCapcha.Text = generarCapcha();
+        }
 
-            lblCapcha.Text = cargarCapcha;
+        private void ocultarCapcha()
+        {
+            imgCapcha.Visible = false;
+            txtResultadoCapcha.Visible = false;
+            lblCapcha.Visible = false;
         }
       
         public String generarCapcha()
@@ -55,40 +68,58 @@ namespace Vistas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            DataTable dataTable = new DataTable();
-            
-            dataTable = ConectionLog.ingresar(txtUsuario.Text, txtContra.Text);
-           
-            if (dataTable.Rows.Count!=0)
-                {
-                    
-                  
-                guardarUser(dataTable);
-                if ((user.Usu_NombreUsuario ==txtUsuario.Text)&&(user.Usu_Contraseña == txtContra.Text))
 
+            if (intentos < 5)
+            {
+                ingresar();
+            }
+            else
+            {
+                if(lblCapcha.Text== txtResultadoCapcha.Text)
+                {
+                    ingresar();
+                }
+                else
+                {
+                    MessageBox.Show("Capcha incorrecto");
+                    lblCapcha.Text = generarCapcha();
+                }
+            }
+
+            
+        }
+
+        private void ingresar()
+        {
+            DataTable dataTable = new DataTable();
+            dataTable = ConectionLog.ingresar(txtUsuario.Text, txtContra.Text);
+            if (dataTable.Rows.Count != 0)
+            {
+                guardarUser(dataTable);
+                if ((user.Usu_NombreUsuario == txtUsuario.Text) && (user.Usu_Contraseña == txtContra.Text))
                 {
                     this.Hide();
                     formMain.lblNom.Text = "BIENVENIDO: " + user.Usu_NombreUsuario;
                     formMain.Show();
                 }
-                else
-                {
-                    MessageBox.Show("Datos no Validos");
-                }
-               
-               
-                }
-                
-             else
+
+            }
+            else
             {
+                intentos++;
+                intentosMaximos();
                 MessageBox.Show("Datos incorrectos");
             }
-
-           
-
         }
       
-        public void guardarUser(DataTable dt)
+        private void intentosMaximos()
+        {
+            if (intentos > 4)
+            {
+                mostrarCapcha();
+            }
+        }
+        private void guardarUser(DataTable dt)
         {
           
             user.Usu_NombreUsuario = dt.Rows[0]["USU_NombreUsuario"].ToString();

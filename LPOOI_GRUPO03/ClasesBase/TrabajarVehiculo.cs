@@ -40,22 +40,8 @@ namespace ClasesBase
 
 
 
+
         public static DataTable ListaVehiculo()
-        {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Vehiculo";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-        }
-
-
-        public static DataTable ListaVehiculoVentas()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 

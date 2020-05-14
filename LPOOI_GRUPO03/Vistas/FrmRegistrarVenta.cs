@@ -23,7 +23,7 @@ namespace Vistas
         private void FrmRegistrarVenta_Load(object sender, EventArgs e)
         {
             cargarBoxCliente(TrabajarCliente.ListaCliente());
-            cargarBoxVehiculo(TrabajarVehiculo.ListaVehiculoVentas());
+            cargarBoxVehiculo(TrabajarVehiculo.ListaVehiculo());
             Form frmLogin = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmLogin);
             if (frmLogin != null)
             {

@@ -90,15 +90,25 @@ namespace Vistas
                 if (frmMostrarUsuario != null)
                 {
                     ((FrmMostrarUsuario)frmMostrarUsuario).btnActualizarUsuario.Enabled = false;
-                    ((FrmMostrarUsuario)frmMostrarUsuario).rol= dgvListaUsuarios.CurrentRow.Cells[4].Value.ToString();
-                    ((FrmMostrarUsuario)frmMostrarUsuario).txtId.Text = dgvListaUsuarios.CurrentRow.Cells[0].Value.ToString();
-                    ((FrmMostrarUsuario)frmMostrarUsuario).txtNombreUsuario.Text = dgvListaUsuarios.CurrentRow.Cells[1].Value.ToString();
-                    ((FrmMostrarUsuario)frmMostrarUsuario).txtPass.Text = dgvListaUsuarios.CurrentRow.Cells[2].Value.ToString();
-                    ((FrmMostrarUsuario)frmMostrarUsuario).txtNombreApellidoUsuario.Text = dgvListaUsuarios.CurrentRow.Cells[3].Value.ToString();
-                    ((FrmMostrarUsuario)frmMostrarUsuario).cmbRoles.Text = dgvListaUsuarios.CurrentRow.Cells[4].Value.ToString();
+                    ((FrmMostrarUsuario)frmMostrarUsuario).rol= dgvListaUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
+                    ((FrmMostrarUsuario)frmMostrarUsuario).txtId.Text = dgvListaUsuarios.CurrentRow.Cells["ID"].Value.ToString();
+                    ((FrmMostrarUsuario)frmMostrarUsuario).txtNombreUsuario.Text = dgvListaUsuarios.CurrentRow.Cells["Nombre de Usuario"].Value.ToString();
+                    ((FrmMostrarUsuario)frmMostrarUsuario).txtPass.Text = dgvListaUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
+                    ((FrmMostrarUsuario)frmMostrarUsuario).txtNombreApellidoUsuario.Text = dgvListaUsuarios.CurrentRow.Cells["Apellido y Nombre"].Value.ToString();
+                    ((FrmMostrarUsuario)frmMostrarUsuario).cmbRoles.Text = dgvListaUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
 
                 }
             }
+        }
+
+        private string reemplazoContraseña(string contraseña)
+        {
+            string devolucion="";
+            foreach(char a in contraseña)
+            {
+                devolucion = devolucion + "*";
+            }
+            return devolucion;
         }
     }
 }
