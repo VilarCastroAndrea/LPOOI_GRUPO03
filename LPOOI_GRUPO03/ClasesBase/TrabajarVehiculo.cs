@@ -54,7 +54,37 @@ namespace ClasesBase
             return dt;
         }
 
-        public static DataTable buscarVehiculo(string sPattern)
+
+        public static DataTable ListaVehiculoVentas()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT";
+            cmd.CommandText += " VEH_Matricula as 'Matricula', ";
+            cmd.CommandText += " VEH_Marca as 'Marca', ";
+            cmd.CommandText += " VEH_Linea as 'Linea', ";
+            cmd.CommandText += " VEH_Modelo as 'Modelo', ";
+            cmd.CommandText += " VEH_Color as 'Color', ";
+            cmd.CommandText += " VEH_Puertas as 'Puertas', ";
+            cmd.CommandText += " VEH_GPS as 'Gps', ";
+            cmd.CommandText += " VEH_TipoVehiculo as 'TipoVehiculo', ";
+            cmd.CommandText += " VEH_ClaseVehiculo as 'ClaseVehiculo', ";
+            cmd.CommandText += " VEH_Precio as 'Precio' ";
+            cmd.CommandText += " FROM Vehiculo as V";
+
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+            public static DataTable buscarVehiculo(string sPattern)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
