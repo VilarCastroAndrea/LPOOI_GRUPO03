@@ -23,6 +23,11 @@ namespace Vistas
             var form = Application.OpenForms.OfType<FrmMostrarVenta>().FirstOrDefault();
             FrmMostrarVenta frmVenta = form ?? new FrmMostrarVenta();
             AddFormInPanel(frmVenta);
+            cargarVentas();
+        }
+
+        public void cargarVentas()
+        {
             dataVenta.DataSource = TrabajarVentas.listaVentas();
         }
 

@@ -92,6 +92,8 @@ namespace Vistas
                     nuevaVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
                     TrabajarVentas.InsertarVenta(nuevaVenta);
                     limpiarCampos();
+                    Form frmVenta = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVenta);
+                    ((FrmVenta)frmVenta).cargarVentas();
                 }
             }
             else
