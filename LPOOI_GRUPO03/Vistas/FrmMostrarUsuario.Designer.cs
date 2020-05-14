@@ -101,6 +101,7 @@
             // 
             // txtNombreUsuario
             // 
+            this.txtNombreUsuario.Enabled = false;
             this.txtNombreUsuario.Location = new System.Drawing.Point(18, 60);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(171, 20);
