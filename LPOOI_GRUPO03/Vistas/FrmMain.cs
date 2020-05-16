@@ -25,11 +25,11 @@ namespace Vistas
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            
-            var form = Application.OpenForms.OfType<FrmSistema>().FirstOrDefault();
-            FrmSistema frmSistema = form ?? new FrmSistema();
-            AddFormInPanel(frmSistema);
-            
+
+            var form = Application.OpenForms.OfType<FrmUsuario>().FirstOrDefault();
+            FrmUsuario frmUsuario = form ?? new FrmUsuario();
+            AddFormInPanel(frmUsuario);
+
             restringirAcceso();
 
         }
@@ -78,8 +78,8 @@ namespace Vistas
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            var form = Application.OpenForms.OfType<FrmRegistrarVenta>().FirstOrDefault();
-            FrmRegistrarVenta fventa = form ?? new FrmRegistrarVenta();
+            var form = Application.OpenForms.OfType<FrmVenta>().FirstOrDefault();
+            FrmVenta fventa = form ?? new FrmVenta();
             AddFormInPanel(fventa);
         }
 

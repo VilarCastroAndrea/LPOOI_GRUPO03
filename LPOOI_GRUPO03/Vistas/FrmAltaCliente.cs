@@ -43,30 +43,43 @@ namespace Vistas
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
-                                                       "DNI: " + aCliente.Cli_DNI + "\n" +
-                                                       "Nombre: " + aCliente.Cli_Nombre + "\n" +
-                                                       "Apellido: " + aCliente.Cli_Apellido + "\n" +
-                                                       "Direccion: " + aCliente.Cli_Direccion + "\n" +
-                                                       "Telefono: " + aCliente.Cli_Telefono,
-                                                      "Agregar Cliente", MessageBoxButtons.OKCancel);
-                    if (result == DialogResult.OK)
+                    DataTable dtCliente = new DataTable();
+                    dtCliente = TrabajarCliente.buscarCliente(aCliente.Cli_DNI);
+                    if (dtCliente.Rows.Count == 0)
                     {
-                        Form frmCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmCliente);
-                        if (frmCliente != null)
+
+
+
+                        DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
+                                                           "DNI: " + aCliente.Cli_DNI + "\n" +
+                                                           "Nombre: " + aCliente.Cli_Nombre + "\n" +
+                                                           "Apellido: " + aCliente.Cli_Apellido + "\n" +
+                                                           "Direccion: " + aCliente.Cli_Direccion + "\n" +
+                                                           "Telefono: " + aCliente.Cli_Telefono,
+                                                          "Agregar Cliente", MessageBoxButtons.OKCancel);
+                        if (result == DialogResult.OK)
                         {
-                            TrabajarCliente.InsertarCliente(aCliente);
-                            limpiarCampos();
-                            ((FrmCliente)frmCliente).cargarCliente();
+                            Form frmCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmCliente);
+                            if (frmCliente != null)
+                            {
+                                TrabajarCliente.InsertarCliente(aCliente);
+                                limpiarCampos();
+                                ((FrmCliente)frmCliente).cargarCliente();
+                            }
                         }
-                    }
+                    
                     else
                     {
                         MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
                         result = new DialogResult();
                     }
+                }else
+                {
+                    MessageBox.Show("El Cliente ya existe");
+                }
                 }
             }
+
             else
             {
                 MessageBox.Show("Ingrese un DNI valido");

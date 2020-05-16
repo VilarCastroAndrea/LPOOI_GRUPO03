@@ -20,9 +20,11 @@ namespace Vistas
 
         private void FrmListaVenta_Load(object sender, EventArgs e)
         {
-           dataVentas.DataSource = TrabajarVentas.listaVentas();
+            CargarVentas();
         }
-
-        
+        public void CargarVentas()
+        {
+            dataVentas.DataSource = TrabajarVentas.listaVentas();
+        }
     }
 }

@@ -28,47 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnListaVeh = new System.Windows.Forms.Button();
-            this.panelContenedorListaVentas = new System.Windows.Forms.Panel();
+            this.btnRegistrarVenta = new System.Windows.Forms.Button();
+            this.panelVenta = new System.Windows.Forms.Panel();
+            this.panelListaVenta = new System.Windows.Forms.Panel();
+            this.btnBusacar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBuscarC = new System.Windows.Forms.TextBox();
+            this.dataVenta = new System.Windows.Forms.DataGridView();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.panelListaVenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVenta)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnListaVeh
+            // btnRegistrarVenta
             // 
-            this.btnListaVeh.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnListaVeh.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnListaVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaVeh.ForeColor = System.Drawing.Color.White;
-            this.btnListaVeh.Location = new System.Drawing.Point(12, 26);
-            this.btnListaVeh.Name = "btnListaVeh";
-            this.btnListaVeh.Size = new System.Drawing.Size(102, 39);
-            this.btnListaVeh.TabIndex = 2;
-            this.btnListaVeh.Text = "Lista Venta";
-            this.btnListaVeh.UseVisualStyleBackColor = false;
-            this.btnListaVeh.Click += new System.EventHandler(this.btnListaVeh_Click);
+            this.btnRegistrarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRegistrarVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarVenta.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrarVenta.Location = new System.Drawing.Point(759, 19);
+            this.btnRegistrarVenta.Name = "btnRegistrarVenta";
+            this.btnRegistrarVenta.Size = new System.Drawing.Size(102, 37);
+            this.btnRegistrarVenta.TabIndex = 3;
+            this.btnRegistrarVenta.Text = "Registrar Venta";
+            this.btnRegistrarVenta.UseVisualStyleBackColor = false;
+            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
             // 
-            // panelContenedorListaVentas
+            // panelVenta
             // 
-            this.panelContenedorListaVentas.Location = new System.Drawing.Point(12, 71);
-            this.panelContenedorListaVentas.Name = "panelContenedorListaVentas";
-            this.panelContenedorListaVentas.Size = new System.Drawing.Size(961, 405);
-            this.panelContenedorListaVentas.TabIndex = 1;
+            this.panelVenta.BackColor = System.Drawing.Color.Transparent;
+            this.panelVenta.Location = new System.Drawing.Point(656, 55);
+            this.panelVenta.Name = "panelVenta";
+            this.panelVenta.Size = new System.Drawing.Size(205, 400);
+            this.panelVenta.TabIndex = 26;
+            // 
+            // panelListaVenta
+            // 
+            this.panelListaVenta.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelListaVenta.Controls.Add(this.btnBusacar);
+            this.panelListaVenta.Controls.Add(this.label7);
+            this.panelListaVenta.Controls.Add(this.txtBuscarC);
+            this.panelListaVenta.Controls.Add(this.dataVenta);
+            this.panelListaVenta.Location = new System.Drawing.Point(13, 18);
+            this.panelListaVenta.Name = "panelListaVenta";
+            this.panelListaVenta.Size = new System.Drawing.Size(637, 437);
+            this.panelListaVenta.TabIndex = 25;
+            // 
+            // btnBusacar
+            // 
+            this.btnBusacar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBusacar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnBusacar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusacar.ForeColor = System.Drawing.Color.White;
+            this.btnBusacar.Location = new System.Drawing.Point(427, 23);
+            this.btnBusacar.Name = "btnBusacar";
+            this.btnBusacar.Size = new System.Drawing.Size(85, 22);
+            this.btnBusacar.TabIndex = 4;
+            this.btnBusacar.Text = "Buscar";
+            this.btnBusacar.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(16, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 17);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Buscar";
+            // 
+            // txtBuscarC
+            // 
+            this.txtBuscarC.Location = new System.Drawing.Point(80, 25);
+            this.txtBuscarC.Name = "txtBuscarC";
+            this.txtBuscarC.Size = new System.Drawing.Size(331, 20);
+            this.txtBuscarC.TabIndex = 2;
+            // 
+            // dataVenta
+            // 
+            this.dataVenta.BackgroundColor = System.Drawing.Color.White;
+            this.dataVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataVenta.Location = new System.Drawing.Point(19, 63);
+            this.dataVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.dataVenta.Name = "dataVenta";
+            this.dataVenta.RowTemplate.Height = 24;
+            this.dataVenta.Size = new System.Drawing.Size(598, 355);
+            this.dataVenta.TabIndex = 1;
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnMostrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar.ForeColor = System.Drawing.Color.White;
+            this.btnMostrar.Location = new System.Drawing.Point(656, 18);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(100, 38);
+            this.btnMostrar.TabIndex = 28;
+            this.btnMostrar.Text = "Mostrar Venta";
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Visible = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(985, 488);
-            this.Controls.Add(this.btnListaVeh);
-            this.Controls.Add(this.panelContenedorListaVentas);
+            this.ClientSize = new System.Drawing.Size(875, 472);
+            this.Controls.Add(this.btnRegistrarVenta);
+            this.Controls.Add(this.btnMostrar);
+            this.Controls.Add(this.panelVenta);
+            this.Controls.Add(this.panelListaVenta);
             this.Name = "FrmVenta";
             this.Text = "FrmVenta";
+            this.Load += new System.EventHandler(this.FrmVenta_Load);
+            this.panelListaVenta.ResumeLayout(false);
+            this.panelListaVenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVenta)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnListaVeh;
-        private System.Windows.Forms.Panel panelContenedorListaVentas;
+        private System.Windows.Forms.Button btnRegistrarVenta;
+        private System.Windows.Forms.Panel panelVenta;
+        private System.Windows.Forms.Panel panelListaVenta;
+        private System.Windows.Forms.Button btnBusacar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtBuscarC;
+        public System.Windows.Forms.DataGridView dataVenta;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }

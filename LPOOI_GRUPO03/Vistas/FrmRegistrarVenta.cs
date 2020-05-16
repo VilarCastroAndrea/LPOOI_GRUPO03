@@ -24,6 +24,12 @@ namespace Vistas
         {
             cargarBoxCliente(TrabajarCliente.ListaCliente());
             cargarBoxVehiculo(TrabajarVehiculo.ListaVehiculo());
+            Form frmLogin = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmLogin);
+            if (frmLogin != null)
+            {
+                txtDatosVendedor.Text ="Nombre y apellido: "+ ((FrmLogin)frmLogin).user.Usu_ApellidoNombre +" ID: "+ ((FrmLogin)frmLogin).user.Usu_NombreUsuario;
+            }
+            
         }
 
 
@@ -78,12 +84,17 @@ namespace Vistas
                 nuevaVenta.Cli_DNI = primerValorCombobox(cmbClientesDNI.Text);
                 nuevaVenta.Veh_Matricula = primerValorCombobox(cmbVehiculos.Text);
                 nuevaVenta.Vta_Fecha = dtpFecha.Value;
-                //TO DO session
-                nuevaVenta.Usu_ID = 1;
-                nuevaVenta.Vta_FormaPago = cmbMedioDePago.Text;
-                nuevaVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
-                TrabajarVentas.InsertarVenta(nuevaVenta);
-                limpiarCampos();
+                Form frmLogin = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmLogin);
+                if (frmLogin != null)
+                {
+                    nuevaVenta.Usu_ID = ((FrmLogin)frmLogin).user.Usu_ID;
+                    nuevaVenta.Vta_FormaPago = cmbMedioDePago.Text;
+                    nuevaVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
+                    TrabajarVentas.InsertarVenta(nuevaVenta);
+                    limpiarCampos();
+                    Form frmVenta = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVenta);
+                    ((FrmVenta)frmVenta).cargarVentas();
+                }
             }
             else
             {
@@ -129,9 +140,5 @@ namespace Vistas
             Validar.soloNumeros(e);
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
     }
 }

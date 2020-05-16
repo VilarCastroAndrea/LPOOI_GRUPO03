@@ -62,7 +62,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(761, 18);
+            this.btnAgregar.Location = new System.Drawing.Point(760, 18);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(100, 38);
             this.btnAgregar.TabIndex = 27;
@@ -80,7 +80,7 @@
             // 
             // panelListaCliente
             // 
-            this.panelListaCliente.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelListaCliente.BackColor = System.Drawing.Color.Teal;
             this.panelListaCliente.Controls.Add(this.btnBusacarUsuario);
             this.panelListaCliente.Controls.Add(this.label7);
             this.panelListaCliente.Controls.Add(this.txtBuscarUsuario);
@@ -124,6 +124,7 @@
             // 
             // dgvListaUsuarios
             // 
+            this.dgvListaUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaUsuarios.Location = new System.Drawing.Point(19, 63);
             this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(2);
@@ -139,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(875, 472);
             this.Controls.Add(this.btnMostrarUsuario);
             this.Controls.Add(this.btnAgregar);

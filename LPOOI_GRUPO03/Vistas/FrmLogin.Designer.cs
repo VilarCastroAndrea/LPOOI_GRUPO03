@@ -38,11 +38,11 @@
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.lblCapcha = new System.Windows.Forms.Label();
             this.txtResultadoCapcha = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.imgCapcha = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCapcha)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -80,7 +80,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(17, 312);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(201, 23);
-            this.btnIngresar.TabIndex = 4;
+            this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -161,19 +161,19 @@
             this.txtResultadoCapcha.Location = new System.Drawing.Point(69, 271);
             this.txtResultadoCapcha.Name = "txtResultadoCapcha";
             this.txtResultadoCapcha.Size = new System.Drawing.Size(149, 21);
-            this.txtResultadoCapcha.TabIndex = 15;
+            this.txtResultadoCapcha.TabIndex = 4;
             // 
-            // pictureBox2
+            // imgCapcha
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::Vistas.Properties.Resources.reload;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 237);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 49);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            this.imgCapcha.BackColor = System.Drawing.Color.Transparent;
+            this.imgCapcha.BackgroundImage = global::Vistas.Properties.Resources.reload;
+            this.imgCapcha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgCapcha.Location = new System.Drawing.Point(17, 237);
+            this.imgCapcha.Name = "imgCapcha";
+            this.imgCapcha.Size = new System.Drawing.Size(48, 49);
+            this.imgCapcha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgCapcha.TabIndex = 17;
+            this.imgCapcha.TabStop = false;
             // 
             // FrmLogin
             // 
@@ -184,7 +184,7 @@
             this.BackgroundImage = global::Vistas.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(240, 347);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.imgCapcha);
             this.Controls.Add(this.txtResultadoCapcha);
             this.Controls.Add(this.lblCapcha);
             this.Controls.Add(this.iconPictureBox2);
@@ -197,11 +197,12 @@
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCapcha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,7 +218,7 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label lblCapcha;
         private System.Windows.Forms.TextBox txtResultadoCapcha;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox imgCapcha;
         public System.Windows.Forms.TextBox txtContra;
     }
 }

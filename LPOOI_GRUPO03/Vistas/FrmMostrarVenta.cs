@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class FrmListaVehiculo : Form
+    public partial class FrmMostrarVenta : Form
     {
-        public FrmListaVehiculo()
+        public FrmMostrarVenta()
         {
             InitializeComponent();
-        }
-
-        private void dataVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void FrmListaVehiculo_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

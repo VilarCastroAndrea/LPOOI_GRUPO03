@@ -35,18 +35,20 @@
             // dataVentas
             // 
             this.dataVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataVentas.Location = new System.Drawing.Point(12, 36);
+            this.dataVentas.Location = new System.Drawing.Point(16, 44);
+            this.dataVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataVentas.Name = "dataVentas";
-            this.dataVentas.Size = new System.Drawing.Size(736, 318);
+            this.dataVentas.Size = new System.Drawing.Size(981, 391);
             this.dataVentas.TabIndex = 0;
             // 
             // FrmListaVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(773, 366);
+            this.ClientSize = new System.Drawing.Size(1031, 450);
             this.Controls.Add(this.dataVentas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmListaVenta";
             this.Text = "Lista de Ventas ";
             this.Load += new System.EventHandler(this.FrmListaVenta_Load);

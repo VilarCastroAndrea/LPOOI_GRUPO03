@@ -159,7 +159,7 @@
             this.btnSistema.Rotation = 0D;
             this.btnSistema.Size = new System.Drawing.Size(215, 61);
             this.btnSistema.TabIndex = 0;
-            this.btnSistema.Text = "Sistema";
+            this.btnSistema.Text = "Usuario";
             this.btnSistema.UseVisualStyleBackColor = false;
             this.btnSistema.Click += new System.EventHandler(this.btnSistema_Click_1);
             // 
@@ -179,7 +179,7 @@
             // 
             this.lblNom.AutoSize = true;
             this.lblNom.ForeColor = System.Drawing.Color.White;
-            this.lblNom.Location = new System.Drawing.Point(155, 88);
+            this.lblNom.Location = new System.Drawing.Point(35, 88);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(50, 13);
             this.lblNom.TabIndex = 5;
@@ -217,7 +217,7 @@
             this.panelContenedor.BackColor = System.Drawing.Color.White;
             this.panelContenedor.Location = new System.Drawing.Point(199, -1);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1022, 474);
+            this.panelContenedor.Size = new System.Drawing.Size(1013, 474);
             this.panelContenedor.TabIndex = 3;
             // 
             // FrmMain
@@ -226,12 +226,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1218, 468);
+            this.ClientSize = new System.Drawing.Size(1212, 468);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContenedor);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.panel1.ResumeLayout(false);
