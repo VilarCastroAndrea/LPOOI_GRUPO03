@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelListaCliente = new System.Windows.Forms.Panel();
+            this.btnOrdenApellido = new System.Windows.Forms.Button();
             this.btnBusacar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBuscarC = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@
             // panelListaCliente
             // 
             this.panelListaCliente.BackColor = System.Drawing.Color.DarkCyan;
+            this.panelListaCliente.Controls.Add(this.btnOrdenApellido);
             this.panelListaCliente.Controls.Add(this.btnBusacar);
             this.panelListaCliente.Controls.Add(this.label7);
             this.panelListaCliente.Controls.Add(this.txtBuscarC);
@@ -51,6 +53,20 @@
             this.panelListaCliente.Name = "panelListaCliente";
             this.panelListaCliente.Size = new System.Drawing.Size(637, 437);
             this.panelListaCliente.TabIndex = 1;
+            // 
+            // btnOrdenApellido
+            // 
+            this.btnOrdenApellido.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnOrdenApellido.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnOrdenApellido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdenApellido.ForeColor = System.Drawing.Color.White;
+            this.btnOrdenApellido.Location = new System.Drawing.Point(518, 23);
+            this.btnOrdenApellido.Name = "btnOrdenApellido";
+            this.btnOrdenApellido.Size = new System.Drawing.Size(99, 22);
+            this.btnOrdenApellido.TabIndex = 5;
+            this.btnOrdenApellido.Text = "Orden Apellido";
+            this.btnOrdenApellido.UseVisualStyleBackColor = false;
+            this.btnOrdenApellido.Click += new System.EventHandler(this.btnOrdenApellido_Click);
             // 
             // btnBusacar
             // 
@@ -163,5 +179,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnBusacar;
+        private System.Windows.Forms.Button btnOrdenApellido;
     }
 }
