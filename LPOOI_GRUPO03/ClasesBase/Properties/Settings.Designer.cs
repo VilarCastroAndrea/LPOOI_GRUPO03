@@ -33,5 +33,17 @@ namespace ClasesBase.Properties {
                 return ((string)(this["AgenciaDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\men_v\\source\\repos\\V" +
+            "ilarCastroAndrea\\LPOOI_GRUPO03\\AgenciaDB.mdf;Integrated Security=True;Connect Ti" +
+            "meout=30")]
+        public string AgenciaDBConnectionString1 {
+            get {
+                return ((string)(this["AgenciaDBConnectionString1"]));
+            }
+        }
     }
 }
