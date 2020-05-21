@@ -30,13 +30,27 @@ namespace Vistas
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
+
+            String result;
+            String msj = "Esta seguro que quiere elimnar el Usuario " + this.txtNombreUsuario.Text;
+
+
             int id = Convert.ToInt32(this.txtId.Text);
+
+            DialogResult dialogResult = MessageBox.Show(msj , "Some Title", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+            
+
+
             Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
             TrabajoUsuario.eliminarUsuario(id);
            
             ((FrmUsuario)frmUsuario).cargarListaUsuario();
             MessageBox.Show("Usuario Eliminado");
-           
+            }
+
         }
 
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
