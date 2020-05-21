@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace ClasesBase
 {
@@ -127,14 +128,47 @@ namespace ClasesBase
             cmd.CommandText += " VTA_FormaPago as 'formaDePago', ";
             cmd.CommandText += " VTA_PrecioFinal as 'precioFinal' ";
             cmd.CommandText += " FROM Venta as V";
-
             cmd.CommandText += " WHERE";
-            cmd.CommandText += " VTA_ID LIKE @pattern ";
+            cmd.CommandText += " CLI_DNI LIKE @pattern ";
+
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable buscarVentaMarca(string sPattern,string dni, string desde, string hasta)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT";
+            cmd.CommandText += " * ";
+            cmd.CommandText += " FROM Venta ";
+            cmd.CommandText += " INNER JOIN Vehiculo ON Venta.VEH_Matricula = Vehiculo.VEH_Matricula ";
+            cmd.CommandText += " INNER JOIN Usuario ON Venta.USU_ID = Usuario.USU_ID ";
+            cmd.CommandText += " WHERE";
+            cmd.CommandText += " Vehiculo.VEH_Marca LIKE @pattern ";
+            cmd.CommandText += " AND Venta.CLI_DNI LIKE @dni" ;
+            cmd.CommandText += " AND Venta.VTA_Fecha between @desde and @hasta;";
+
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+            cmd.Parameters.AddWithValue("@dni", "%" + dni + "%");
+            cmd.Parameters.AddWithValue("@desde",  desde);
+            cmd.Parameters.AddWithValue("@hasta",  hasta);
+
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 

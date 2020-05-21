@@ -70,7 +70,32 @@ namespace ClasesBase
 
             return dt;
         }
-            public static DataTable buscarVehiculo(string sPattern)
+
+
+
+
+        public static DataTable ListaMarca()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT VEH_Marca";
+            cmd.CommandText += " FROM Vehiculo";
+            cmd.CommandText += " GROUP BY VEH_Marca";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+
+        public static DataTable buscarVehiculo(string sPattern)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
