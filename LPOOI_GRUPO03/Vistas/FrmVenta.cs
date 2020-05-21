@@ -35,7 +35,7 @@ namespace Vistas
 
         public void cargarVentas()
         {
-            dataVenta.DataSource = TrabajarVentas.listaVentas();
+            dataVenta.DataSource = TrabajarVentas.listaVenta();
         }
 
         private void AddFormInPanel(Form fh)

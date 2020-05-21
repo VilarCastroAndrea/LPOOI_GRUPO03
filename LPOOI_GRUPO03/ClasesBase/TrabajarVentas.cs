@@ -87,24 +87,46 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static DataTable ListaVenta()
+        public static DataTable listaVenta()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
-            cmd.CommandText += " VTA_ID as 'vtaId', ";
-            cmd.CommandText += " CLI_DNI as 'dni', ";
-            cmd.CommandText += " VEH_Matricula as 'matricula', ";
-            cmd.CommandText += " USU_ID as 'usuId', ";
-            cmd.CommandText += " VTA_Fecha as 'fecha', ";
-            cmd.CommandText += " VTA_FormaPago as 'formaDePago', ";
-            cmd.CommandText += " VTA_PrecioFinal as 'precioFinal' ";
-            cmd.CommandText += " FROM Venta as V";
+            cmd.CommandText += " venta.VTA_ID as 'ID de la Venta', ";
+
+            cmd.CommandText += " cliente.CLI_DNI as 'DNI', cliente.CLI_Nombre as 'Nombre'," +
+                " cliente.CLI_Apellido as 'Apellido', cliente.CLI_Direccion as 'Direccion'," +
+                " cliente.CLI_Telefono as 'Telefono', ";
+
+            cmd.CommandText += " vehiculo.VEH_Matricula as 'Matricula', ";
+            cmd.CommandText += " vehiculo.VEH_Marca as 'Marca', ";
+            cmd.CommandText += " vehiculo.VEH_Linea as 'Linea', ";
+            cmd.CommandText += " vehiculo.VEH_Modelo as 'Modelo', ";
+            cmd.CommandText += " vehiculo.VEH_Color as 'Color', ";
+            cmd.CommandText += " vehiculo.VEH_Puertas as 'Puertas', ";
+            cmd.CommandText += " vehiculo.VEH_GPS as 'Gps', ";
+            cmd.CommandText += " vehiculo.VEH_TipoVehiculo as 'Tipo de Vehiculo', ";
+            cmd.CommandText += " vehiculo.VEH_ClaseVehiculo as 'Clase de Vehiculo', ";
+            cmd.CommandText += " vehiculo.VEH_Precio as 'Precio', ";
+
+            cmd.CommandText += " usuario.USU_ApellidoNombre as 'Apellido y Nombre', ";
+
+
+            cmd.CommandText += " venta.VTA_Fecha as 'Fecha de Venta', ";
+            cmd.CommandText += " venta.VTA_FormaPago as 'Forma de Pago', ";
+            cmd.CommandText += " venta.VTA_PrecioFinal as 'Precio Final' ";
+
+            cmd.CommandText += " FROM Venta as venta";
+            cmd.CommandText += " INNER JOIN Vehiculo as vehiculo ON Venta.VEH_Matricula = Vehiculo.VEH_Matricula ";
+            cmd.CommandText += " INNER JOIN Usuario as usuario ON Venta.USU_ID = Usuario.USU_ID ";
+            cmd.CommandText += " INNER JOIN Cliente as cliente ON Venta.CLI_DNI = cliente.CLI_DNI ";
+
 
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
+
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -151,10 +173,34 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
-            cmd.CommandText += " * ";
-            cmd.CommandText += " FROM Venta ";
-            cmd.CommandText += " INNER JOIN Vehiculo ON Venta.VEH_Matricula = Vehiculo.VEH_Matricula ";
-            cmd.CommandText += " INNER JOIN Usuario ON Venta.USU_ID = Usuario.USU_ID ";
+            cmd.CommandText += " venta.VTA_ID as 'ID de la Venta', ";
+
+            cmd.CommandText += " cliente.CLI_DNI as 'DNI', cliente.CLI_Nombre as 'Nombre'," +
+                " cliente.CLI_Apellido as 'Apellido', cliente.CLI_Direccion as 'Direccion'," +
+                " cliente.CLI_Telefono as 'Telefono', ";
+
+            cmd.CommandText += " vehiculo.VEH_Matricula as 'Matricula', ";
+            cmd.CommandText += " vehiculo.VEH_Marca as 'Marca', ";
+            cmd.CommandText += " vehiculo.VEH_Linea as 'Linea', ";
+            cmd.CommandText += " vehiculo.VEH_Modelo as 'Modelo', ";
+            cmd.CommandText += " vehiculo.VEH_Color as 'Color', ";
+            cmd.CommandText += " vehiculo.VEH_Puertas as 'Puertas', ";
+            cmd.CommandText += " vehiculo.VEH_GPS as 'Gps', ";
+            cmd.CommandText += " vehiculo.VEH_TipoVehiculo as 'Tipo de Vehiculo', ";
+            cmd.CommandText += " vehiculo.VEH_ClaseVehiculo as 'Clase de Vehiculo', ";
+            cmd.CommandText += " vehiculo.VEH_Precio as 'Precio', ";
+
+            cmd.CommandText += " usuario.USU_ApellidoNombre as 'Apellido y Nombre', ";
+
+            
+            cmd.CommandText += " venta.VTA_Fecha as 'Fecha de Venta', ";
+            cmd.CommandText += " venta.VTA_FormaPago as 'Forma de Pago', ";
+            cmd.CommandText += " venta.VTA_PrecioFinal as 'Precio Final' ";
+
+            cmd.CommandText += " FROM Venta as venta";
+            cmd.CommandText += " INNER JOIN Vehiculo as vehiculo ON Venta.VEH_Matricula = Vehiculo.VEH_Matricula ";
+            cmd.CommandText += " INNER JOIN Usuario as usuario ON Venta.USU_ID = Usuario.USU_ID ";
+            cmd.CommandText += " INNER JOIN Cliente as cliente ON Venta.CLI_DNI = cliente.CLI_DNI ";
             cmd.CommandText += " WHERE";
             cmd.CommandText += " Vehiculo.VEH_Marca LIKE @pattern ";
             cmd.CommandText += " AND Venta.CLI_DNI LIKE @dni" ;
