@@ -70,7 +70,38 @@ namespace ClasesBase
 
             return dt;
         }
-            public static DataTable buscarVehiculo(string sPattern)
+        public static DataTable ordenarVporMarca()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ordenarVehiculoPorMarca";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+        public static DataTable ordenarVporLinea()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ordenarVporLinea";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable buscarVehiculo(string sPattern)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 

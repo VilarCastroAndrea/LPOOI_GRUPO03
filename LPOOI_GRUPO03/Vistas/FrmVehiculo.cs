@@ -86,5 +86,20 @@ namespace Vistas
                 dataVehiculo.Refresh();
             }
         }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+           
+            if (rbtnMarca.Checked==true)
+            {
+                dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporMarca();
+            }
+            else if (rbtnLinea.Checked==true)
+            {
+                dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporLinea();
+            }
+        }
+
+        }
     }
 }
