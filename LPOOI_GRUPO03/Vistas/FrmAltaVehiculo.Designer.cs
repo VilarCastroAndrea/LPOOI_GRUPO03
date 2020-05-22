@@ -48,8 +48,8 @@
             this.cmbColor = new System.Windows.Forms.ComboBox();
             this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.cmbTipoV = new System.Windows.Forms.ComboBox();
-            this.cmbClaseV = new System.Windows.Forms.ComboBox();
+            this.txtATipo = new System.Windows.Forms.TextBox();
+            this.txtAClase = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAMatricula
@@ -267,30 +267,19 @@
             this.checkBox1.Text = "No";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // cmbTipoV
+            // txtATipo
             // 
-            this.cmbTipoV.FormattingEnabled = true;
-            this.cmbTipoV.Items.AddRange(new object[] {
-            "monovolumen",
-            "utilitario",
-            "automovil",
-            "camioneta"});
-            this.cmbTipoV.Location = new System.Drawing.Point(21, 245);
-            this.cmbTipoV.Name = "cmbTipoV";
-            this.cmbTipoV.Size = new System.Drawing.Size(165, 21);
-            this.cmbTipoV.TabIndex = 34;
+            this.txtATipo.Location = new System.Drawing.Point(18, 245);
+            this.txtATipo.Name = "txtATipo";
+            this.txtATipo.Size = new System.Drawing.Size(166, 20);
+            this.txtATipo.TabIndex = 36;
             // 
-            // cmbClaseV
+            // txtAClase
             // 
-            this.cmbClaseV.FormattingEnabled = true;
-            this.cmbClaseV.Items.AddRange(new object[] {
-            "pasajero",
-            "carga",
-            "deportivo"});
-            this.cmbClaseV.Location = new System.Drawing.Point(18, 285);
-            this.cmbClaseV.Name = "cmbClaseV";
-            this.cmbClaseV.Size = new System.Drawing.Size(168, 21);
-            this.cmbClaseV.TabIndex = 35;
+            this.txtAClase.Location = new System.Drawing.Point(18, 291);
+            this.txtAClase.Name = "txtAClase";
+            this.txtAClase.Size = new System.Drawing.Size(168, 20);
+            this.txtAClase.TabIndex = 37;
             // 
             // FrmAltaVehiculo
             // 
@@ -298,8 +287,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(207, 415);
-            this.Controls.Add(this.cmbClaseV);
-            this.Controls.Add(this.cmbTipoV);
+            this.Controls.Add(this.txtAClase);
+            this.Controls.Add(this.txtATipo);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmbModelo);
             this.Controls.Add(this.cmbColor);
@@ -350,7 +339,7 @@
         private System.Windows.Forms.ComboBox cmbColor;
         private System.Windows.Forms.ComboBox cmbModelo;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox cmbTipoV;
-        private System.Windows.Forms.ComboBox cmbClaseV;
+        private System.Windows.Forms.TextBox txtATipo;
+        private System.Windows.Forms.TextBox txtAClase;
     }
 }
