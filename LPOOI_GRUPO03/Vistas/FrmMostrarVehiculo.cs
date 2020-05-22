@@ -35,7 +35,10 @@ namespace Vistas
                 v.Veh_ClaseVehiculo = txtAClase.Text;
                 v.Veh_GPS = cGps.Checked;
                 v.Veh_Precio = Convert.ToDecimal(txtAPrecio.Text);
-                TrabajarVehiculo.modificarVehiculo(v);
+                //TrabajarVehiculo.modificarVehiculo(v);
+                //STORE PROCEDURE
+                TrabajarVehiculo.modificarVehiculoSP(v);
+
                 MessageBox.Show("Vehiculo Modificado");
                 ((FrmVehiculo)frmVehiculo).dataVehiculo.DataSource = TrabajarVehiculo.ListaVehiculo();
             }
@@ -46,7 +49,9 @@ namespace Vistas
             Form frmVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVehiculo);
             if (frmVehiculo != null)
             {
-                TrabajarVehiculo.eliminarVehiculo(txtAMatricula.Text);
+                //TrabajarVehiculo.eliminarVehiculo(txtAMatricula.Text);
+                TrabajarVehiculo.eliminarVehiculoSP(txtAMatricula.Text);
+
                 MessageBox.Show("Vehiculo Eliminado");
                 ((FrmVehiculo)frmVehiculo).dataVehiculo.DataSource = TrabajarVehiculo.ListaVehiculo();
             }
