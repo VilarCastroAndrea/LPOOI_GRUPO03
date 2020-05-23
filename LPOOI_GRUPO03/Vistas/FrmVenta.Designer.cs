@@ -76,7 +76,7 @@
             this.btnBusacar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.btnBusacar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusacar.ForeColor = System.Drawing.Color.White;
-            this.btnBusacar.Location = new System.Drawing.Point(549, 94);
+            this.btnBusacar.Location = new System.Drawing.Point(542, 96);
             this.btnBusacar.Name = "btnBusacar";
             this.btnBusacar.Size = new System.Drawing.Size(74, 26);
             this.btnBusacar.TabIndex = 4;
@@ -109,7 +109,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(16, 44);
+            this.label5.Location = new System.Drawing.Point(16, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 17);
             this.label5.TabIndex = 13;
@@ -120,7 +120,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(326, 64);
+            this.label4.Location = new System.Drawing.Point(316, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 17);
             this.label4.TabIndex = 12;
@@ -131,7 +131,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(54, 64);
+            this.label3.Location = new System.Drawing.Point(33, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 11;
@@ -140,7 +140,7 @@
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(445, 20);
+            this.cmbMarca.Location = new System.Drawing.Point(448, 28);
             this.cmbMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(136, 21);
@@ -151,7 +151,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(391, 22);
+            this.label2.Location = new System.Drawing.Point(391, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 9;
@@ -159,18 +159,18 @@
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(384, 62);
+            this.dtpHasta.Location = new System.Drawing.Point(369, 69);
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(2);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(197, 20);
+            this.dtpHasta.Size = new System.Drawing.Size(215, 20);
             this.dtpHasta.TabIndex = 8;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(117, 62);
+            this.dtpDesde.Location = new System.Drawing.Point(100, 69);
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(198, 20);
+            this.dtpDesde.Size = new System.Drawing.Size(215, 20);
             this.dtpDesde.TabIndex = 7;
             this.dtpDesde.Value = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             // 
@@ -179,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 22);
+            this.label1.Location = new System.Drawing.Point(33, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 6;
@@ -188,10 +188,10 @@
             // cmbClientes
             // 
             this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(117, 20);
+            this.cmbClientes.Location = new System.Drawing.Point(100, 26);
             this.cmbClientes.Margin = new System.Windows.Forms.Padding(2);
             this.cmbClientes.Name = "cmbClientes";
-            this.cmbClientes.Size = new System.Drawing.Size(267, 21);
+            this.cmbClientes.Size = new System.Drawing.Size(281, 21);
             this.cmbClientes.TabIndex = 5;
             this.cmbClientes.TextUpdate += new System.EventHandler(this.cmbClientes_TextUpdate);
             // 
