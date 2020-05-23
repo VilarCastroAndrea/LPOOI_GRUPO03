@@ -90,7 +90,7 @@ namespace Vistas
                     nuevaVenta.Usu_ID = ((FrmLogin)frmLogin).user.Usu_ID;
                     nuevaVenta.Vta_FormaPago = cmbMedioDePago.Text;
                     nuevaVenta.Vta_PrecioFinal = Convert.ToDecimal(txtPrecio.Text);
-                    TrabajarVentas.InsertarVenta(nuevaVenta);
+                    TrabajarVentas.insertarVenta(nuevaVenta);
                     limpiarCampos();
                     Form frmVenta = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVenta);
                     ((FrmVenta)frmVenta).cargarVentas();

@@ -92,15 +92,11 @@ namespace Vistas
             cargarBoxCliente(TrabajarCliente.buscarClienteAproximado(cmbClientes.Text));
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dtpDesde.Value = new DateTime(2010, 1, 1);
-        }
 
         private void btnBusacar_Click(object sender, EventArgs e)
         {
 
-                dataVenta.DataSource = TrabajarVentas.buscarVentaMarca(cmbMarca.Text, primerValorCombobox(cmbClientes.Text),dtpDesde.Value.ToString("yyyyMMdd"), dtpHasta.Value.ToString("yyyyMMdd"));
+                dataVenta.DataSource = TrabajarVentas.buscarVenta(cmbMarca.Text, primerValorCombobox(cmbClientes.Text),dtpDesde.Value, dtpHasta.Value);
         }
 
         private string primerValorCombobox(string textoCombo)

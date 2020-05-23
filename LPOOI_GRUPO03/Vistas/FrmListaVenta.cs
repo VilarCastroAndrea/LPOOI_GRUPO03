@@ -24,7 +24,7 @@ namespace Vistas
         }
         public void CargarVentas()
         {
-            dataVentas.DataSource = TrabajarVentas.listaVentas();
+            dataVentas.DataSource = TrabajarVentas.listaVenta();
         }
     }
 }
