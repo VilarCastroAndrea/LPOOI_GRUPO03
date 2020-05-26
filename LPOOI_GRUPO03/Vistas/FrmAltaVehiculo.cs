@@ -61,7 +61,11 @@ namespace Vistas
                                                        "Precio: " + vehiculo.Veh_Precio, "Agregar Cliente", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                 {
-                    TrabajarVehiculo.insertarVehiculo(vehiculo);
+                    // TrabajarVehiculo.insertarVehiculo(vehiculo);
+
+                    //STORED PROCEDURE
+                    TrabajarVehiculo.insertarVehiculoSP(vehiculo);
+
                     txtAMatricula.Text = "";
                     txtAMarca.Text = "";
                     txtALinea.Text = "";
