@@ -58,7 +58,10 @@ namespace Vistas
             AddFormInPanel(frmVenta);
         }
 
-      
+        private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataVenta.DataSource = TrabajarVentas.ListarVentaXMarca(cmbMarca.Text);
+        }
     }
 
 

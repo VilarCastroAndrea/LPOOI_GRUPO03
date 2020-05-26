@@ -32,12 +32,17 @@
             this.panelVenta = new System.Windows.Forms.Panel();
             this.panelListaVenta = new System.Windows.Forms.Panel();
             this.btnBusacar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtBuscarC = new System.Windows.Forms.TextBox();
             this.dataVenta = new System.Windows.Forms.DataGridView();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.panelListaVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVenta)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegistrarVenta
@@ -65,9 +70,9 @@
             // panelListaVenta
             // 
             this.panelListaVenta.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panelListaVenta.Controls.Add(this.btnBusacar);
-            this.panelListaVenta.Controls.Add(this.label7);
-            this.panelListaVenta.Controls.Add(this.txtBuscarC);
+            this.panelListaVenta.Controls.Add(this.groupBox3);
+            this.panelListaVenta.Controls.Add(this.groupBox2);
+            this.panelListaVenta.Controls.Add(this.groupBox1);
             this.panelListaVenta.Controls.Add(this.dataVenta);
             this.panelListaVenta.Location = new System.Drawing.Point(13, 18);
             this.panelListaVenta.Name = "panelListaVenta";
@@ -80,29 +85,18 @@
             this.btnBusacar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.btnBusacar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusacar.ForeColor = System.Drawing.Color.White;
-            this.btnBusacar.Location = new System.Drawing.Point(427, 23);
+            this.btnBusacar.Location = new System.Drawing.Point(154, 18);
             this.btnBusacar.Name = "btnBusacar";
-            this.btnBusacar.Size = new System.Drawing.Size(85, 22);
+            this.btnBusacar.Size = new System.Drawing.Size(22, 22);
             this.btnBusacar.TabIndex = 4;
             this.btnBusacar.Text = "Buscar";
             this.btnBusacar.UseVisualStyleBackColor = false;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(16, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 17);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Buscar";
-            // 
             // txtBuscarC
             // 
-            this.txtBuscarC.Location = new System.Drawing.Point(80, 25);
+            this.txtBuscarC.Location = new System.Drawing.Point(6, 19);
             this.txtBuscarC.Name = "txtBuscarC";
-            this.txtBuscarC.Size = new System.Drawing.Size(331, 20);
+            this.txtBuscarC.Size = new System.Drawing.Size(148, 20);
             this.txtBuscarC.TabIndex = 2;
             // 
             // dataVenta
@@ -132,6 +126,59 @@
             this.btnMostrar.Visible = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtBuscarC);
+            this.groupBox1.Controls.Add(this.btnBusacar);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(19, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(184, 45);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Buscar";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(209, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(214, 45);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Buscar";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cmbMarca);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(433, 13);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(184, 45);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Venta x Marca";
+            // 
+            // cmbMarca
+            // 
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Items.AddRange(new object[] {
+            "Audi",
+            "BMW",
+            "Chevrolet",
+            "Citroen",
+            "Fiat",
+            "Ford",
+            "Peugeot",
+            "Renault",
+            "Toyota",
+            "Volkswagen"});
+            this.cmbMarca.Location = new System.Drawing.Point(7, 18);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(171, 21);
+            this.cmbMarca.TabIndex = 0;
+            this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,8 +193,10 @@
             this.Text = "FrmVenta";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
             this.panelListaVenta.ResumeLayout(false);
-            this.panelListaVenta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVenta)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -157,9 +206,12 @@
         private System.Windows.Forms.Panel panelVenta;
         private System.Windows.Forms.Panel panelListaVenta;
         private System.Windows.Forms.Button btnBusacar;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBuscarC;
         public System.Windows.Forms.DataGridView dataVenta;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox cmbMarca;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
