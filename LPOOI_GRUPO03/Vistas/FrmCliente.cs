@@ -86,6 +86,12 @@ namespace Vistas
                 }
             }
         }
-        
+
+        private void btnOrdenApellido_Click(object sender, EventArgs e)
+        {
+            
+            dataCliente.DataSource = TrabajarCliente.ListaClientesPorApellido();
+            dataCliente.Refresh();
+        }
     }
 }
