@@ -56,8 +56,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Cliente(CLI_DNI,CLI_Nombre,CLI_Apellido,CLI_Direccion,CLI_Telefono) values(@dni,@nombre,@apellido,@direccion,@telefono)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insertarCliente";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", cliente.Cli_DNI);
@@ -76,20 +76,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT";
-            cmd.CommandText += " CLI_DNI as 'Dni', ";
-            cmd.CommandText += " CLI_Nombre as 'Nombre', ";
-            cmd.CommandText += " CLI_Apellido as 'Apellido', ";
-            cmd.CommandText += " CLI_Direccion as 'Direccion', ";
-            cmd.CommandText += " CLI_Telefono as 'Telefono' ";
-            cmd.CommandText += " FROM Cliente as C ";
-
-            cmd.CommandText += " WHERE";
-            cmd.CommandText += " CLI_DNI LIKE @pattern";
-            cmd.CommandText += " OR CLI_Apellido LIKE @pattern";
-            cmd.CommandText += " OR CLI_Nombre LIKE @pattern";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "buscarClienteAproximado";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
@@ -106,19 +94,9 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT";
-            cmd.CommandText += " CLI_DNI as 'Dni', ";
-            cmd.CommandText += " CLI_Nombre as 'Nombre', ";
-            cmd.CommandText += " CLI_Apellido as 'Apellido', ";
-            cmd.CommandText += " CLI_Direccion as 'Direccion', ";
-            cmd.CommandText += " CLI_Telefono as 'Telefono' ";
-            cmd.CommandText += " FROM Cliente as C ";
+            cmd.CommandText = "buscarCliente";
 
-            cmd.CommandText += " WHERE";
-            cmd.CommandText += " CLI_DNI LIKE @pattern or";
-            cmd.CommandText += " CLI_Apellido LIKE @pattern2 "; 
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
@@ -136,8 +114,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM Cliente WHERE CLI_DNI=@dni";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "eliminarCliente";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", dniCliente);
@@ -151,11 +129,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Cliente SET CLI_Nombre = @nombre, ";
-            cmd.CommandText += " CLI_Apellido = @apellido, CLI_Direccion = @direccion, ";
-            cmd.CommandText += " CLI_Telefono = @telefono WHERE CLI_DNI=@dni";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "modificarCliente";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             cmd.Parameters.AddWithValue("@dni", cliente.Cli_DNI);
             cmd.Parameters.AddWithValue("@nombre", cliente.Cli_Nombre);
