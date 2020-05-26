@@ -31,7 +31,6 @@ namespace Vistas
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
 
-            String result;
             String msj = "Esta seguro que quiere elimnar el Usuario " + this.txtNombreUsuario.Text;
 
 
