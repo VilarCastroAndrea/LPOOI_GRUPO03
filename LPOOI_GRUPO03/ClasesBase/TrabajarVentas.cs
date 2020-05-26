@@ -21,45 +21,15 @@ namespace ClasesBase
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
+            cmd.Parameters.AddWithValue("@cliDni", venta.Cli_DNI);
+            cmd.Parameters.AddWithValue("@matricula", venta.Veh_Matricula);
+            cmd.Parameters.AddWithValue("@usuId", venta.Usu_ID);
+            cmd.Parameters.AddWithValue("@fecha", venta.Vta_Fecha);
+            cmd.Parameters.AddWithValue("@formaDePago", venta.Vta_FormaPago);
+            cmd.Parameters.AddWithValue("@precioFinal", venta.Vta_PrecioFinal);
+
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            SqlParameter cliDni;
-            cliDni = new SqlParameter("@cliDni", SqlDbType.VarChar);
-            cliDni.Direction = ParameterDirection.Input;
-            cliDni.Value = venta.Cli_DNI;
-
-            SqlParameter matricula;
-            matricula = new SqlParameter("@matricula", SqlDbType.VarChar);
-            matricula.Direction = ParameterDirection.Input;
-            matricula.Value = venta.Veh_Matricula;
-
-            SqlParameter userId;
-            userId = new SqlParameter("@usuId", SqlDbType.Int);
-            userId.Direction = ParameterDirection.Input;
-            userId.Value = venta.Usu_ID;
-
-            SqlParameter bdFecha;
-            bdFecha = new SqlParameter("@fecha", SqlDbType.Date);
-            bdFecha.Direction = ParameterDirection.Input;
-            bdFecha.Value = venta.Vta_Fecha;
-
-            SqlParameter bdFormaDePago;
-            bdFormaDePago = new SqlParameter("@formaDePago", SqlDbType.VarChar);
-            bdFormaDePago.Direction = ParameterDirection.Input;
-            bdFormaDePago.Value = venta.Vta_FormaPago;
-
-            SqlParameter bdPrecioFinal;
-            bdPrecioFinal = new SqlParameter("@precioFinal", SqlDbType.Decimal);
-            bdPrecioFinal.Direction = ParameterDirection.Input;
-            bdPrecioFinal.Value = venta.Vta_PrecioFinal;
-
-            cmd.Parameters.Add(cliDni);
-            cmd.Parameters.Add(matricula);
-            cmd.Parameters.Add(userId);
-            cmd.Parameters.Add(bdFecha);
-            cmd.Parameters.Add(bdFormaDePago);
-            cmd.Parameters.Add(bdPrecioFinal);
-
 
             cnn.Open();
             cmd.ExecuteNonQuery();
