@@ -70,20 +70,12 @@ namespace ClasesBase
 
             return dt;
         }
-
-
-
-
-        public static DataTable ListaMarca()
+        public static DataTable ordenarVporMarca()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT VEH_Marca";
-            cmd.CommandText += " FROM Vehiculo";
-            cmd.CommandText += " GROUP BY VEH_Marca";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ordenarVehiculoPorMarca";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -93,7 +85,21 @@ namespace ClasesBase
 
             return dt;
         }
+        public static DataTable ordenarVporLinea()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ordenarVporLinea";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
 
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
 
         public static DataTable buscarVehiculo(string sPattern)
         {

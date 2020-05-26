@@ -39,9 +39,7 @@
             this.btnAltaVeh = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtATipo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtAClase = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAPrecio = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,6 +48,8 @@
             this.cmbColor = new System.Windows.Forms.ComboBox();
             this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtATipo = new System.Windows.Forms.TextBox();
+            this.txtAClase = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAMatricula
@@ -158,14 +158,6 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "GPS";
             // 
-            // txtATipo
-            // 
-            this.txtATipo.Location = new System.Drawing.Point(20, 245);
-            this.txtATipo.Name = "txtATipo";
-            this.txtATipo.Size = new System.Drawing.Size(166, 20);
-            this.txtATipo.TabIndex = 6;
-            this.txtATipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtATipo_KeyPress);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -175,14 +167,6 @@
             this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 28;
             this.label8.Text = "Tipo de Vehiculo";
-            // 
-            // txtAClase
-            // 
-            this.txtAClase.Location = new System.Drawing.Point(20, 284);
-            this.txtAClase.Name = "txtAClase";
-            this.txtAClase.Size = new System.Drawing.Size(166, 20);
-            this.txtAClase.TabIndex = 7;
-            this.txtAClase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAClase_KeyPress);
             // 
             // label9
             // 
@@ -283,12 +267,28 @@
             this.checkBox1.Text = "No";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // txtATipo
+            // 
+            this.txtATipo.Location = new System.Drawing.Point(18, 245);
+            this.txtATipo.Name = "txtATipo";
+            this.txtATipo.Size = new System.Drawing.Size(166, 20);
+            this.txtATipo.TabIndex = 36;
+            // 
+            // txtAClase
+            // 
+            this.txtAClase.Location = new System.Drawing.Point(18, 291);
+            this.txtAClase.Name = "txtAClase";
+            this.txtAClase.Size = new System.Drawing.Size(168, 20);
+            this.txtAClase.TabIndex = 37;
+            // 
             // FrmAltaVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(207, 415);
+            this.Controls.Add(this.txtAClase);
+            this.Controls.Add(this.txtATipo);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmbModelo);
             this.Controls.Add(this.cmbColor);
@@ -296,9 +296,7 @@
             this.Controls.Add(this.checkGps);
             this.Controls.Add(this.txtAPrecio);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtAClase);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtATipo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -332,9 +330,7 @@
         private System.Windows.Forms.Button btnAltaVeh;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtATipo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtAClase;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAPrecio;
         private System.Windows.Forms.Label label10;
@@ -343,5 +339,7 @@
         private System.Windows.Forms.ComboBox cmbColor;
         private System.Windows.Forms.ComboBox cmbModelo;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtATipo;
+        private System.Windows.Forms.TextBox txtAClase;
     }
 }

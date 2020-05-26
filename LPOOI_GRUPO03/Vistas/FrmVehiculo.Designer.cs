@@ -36,8 +36,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtBuscarVehiculo = new System.Windows.Forms.TextBox();
             this.dataVehiculo = new System.Windows.Forms.DataGridView();
+            this.rbtnLinea = new System.Windows.Forms.RadioButton();
+            this.rbtnMarca = new System.Windows.Forms.RadioButton();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.gBox = new System.Windows.Forms.GroupBox();
             this.panelListaVehiculo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVehiculo)).BeginInit();
+            this.gBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnListaVeh
@@ -79,6 +84,8 @@
             // panelListaVehiculo
             // 
             this.panelListaVehiculo.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelListaVehiculo.Controls.Add(this.gBox);
+            this.panelListaVehiculo.Controls.Add(this.btnMostrar);
             this.panelListaVehiculo.Controls.Add(this.btnBusacar);
             this.panelListaVehiculo.Controls.Add(this.label7);
             this.panelListaVehiculo.Controls.Add(this.txtBuscarVehiculo);
@@ -124,14 +131,64 @@
             // 
             this.dataVehiculo.BackgroundColor = System.Drawing.Color.White;
             this.dataVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataVehiculo.Location = new System.Drawing.Point(19, 63);
+            this.dataVehiculo.Location = new System.Drawing.Point(19, 108);
             this.dataVehiculo.Margin = new System.Windows.Forms.Padding(2);
             this.dataVehiculo.Name = "dataVehiculo";
             this.dataVehiculo.RowTemplate.Height = 24;
             this.dataVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataVehiculo.Size = new System.Drawing.Size(598, 355);
+            this.dataVehiculo.Size = new System.Drawing.Size(575, 310);
             this.dataVehiculo.TabIndex = 1;
             this.dataVehiculo.CurrentCellChanged += new System.EventHandler(this.dataVehiculo_CurrentCellChanged);
+            // 
+            // rbtnLinea
+            // 
+            this.rbtnLinea.AutoSize = true;
+            this.rbtnLinea.ForeColor = System.Drawing.SystemColors.Control;
+            this.rbtnLinea.Location = new System.Drawing.Point(115, 19);
+            this.rbtnLinea.Name = "rbtnLinea";
+            this.rbtnLinea.Size = new System.Drawing.Size(51, 17);
+            this.rbtnLinea.TabIndex = 6;
+            this.rbtnLinea.TabStop = true;
+            this.rbtnLinea.Text = "Linea";
+            this.rbtnLinea.UseVisualStyleBackColor = true;
+            // 
+            // rbtnMarca
+            // 
+            this.rbtnMarca.AutoSize = true;
+            this.rbtnMarca.ForeColor = System.Drawing.SystemColors.Control;
+            this.rbtnMarca.Location = new System.Drawing.Point(21, 19);
+            this.rbtnMarca.Name = "rbtnMarca";
+            this.rbtnMarca.Size = new System.Drawing.Size(55, 17);
+            this.rbtnMarca.TabIndex = 7;
+            this.rbtnMarca.TabStop = true;
+            this.rbtnMarca.Text = "Marca";
+            this.rbtnMarca.UseVisualStyleBackColor = true;
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMostrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar.ForeColor = System.Drawing.Color.White;
+            this.btnMostrar.Location = new System.Drawing.Point(427, 74);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(85, 22);
+            this.btnMostrar.TabIndex = 8;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // gBox
+            // 
+            this.gBox.Controls.Add(this.rbtnMarca);
+            this.gBox.Controls.Add(this.rbtnLinea);
+            this.gBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.gBox.Location = new System.Drawing.Point(200, 51);
+            this.gBox.Name = "gBox";
+            this.gBox.Size = new System.Drawing.Size(211, 52);
+            this.gBox.TabIndex = 9;
+            this.gBox.TabStop = false;
+            this.gBox.Text = "Ordenar segun:";
             // 
             // FrmVehiculo
             // 
@@ -149,6 +206,8 @@
             this.panelListaVehiculo.ResumeLayout(false);
             this.panelListaVehiculo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVehiculo)).EndInit();
+            this.gBox.ResumeLayout(false);
+            this.gBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -162,5 +221,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBuscarVehiculo;
         public System.Windows.Forms.DataGridView dataVehiculo;
+        private System.Windows.Forms.GroupBox gBox;
+        private System.Windows.Forms.RadioButton rbtnMarca;
+        private System.Windows.Forms.RadioButton rbtnLinea;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }
