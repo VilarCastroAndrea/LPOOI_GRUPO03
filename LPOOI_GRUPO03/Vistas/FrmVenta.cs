@@ -58,7 +58,13 @@ namespace Vistas
             AddFormInPanel(frmVenta);
         }
 
-      
+        private void filtrarFechas_Click(object sender, EventArgs e)
+        {
+            
+            dataVenta.DataSource = TrabajarVentas.ventasporFecha(desde.Value , hasta.Value);
+           
+
+        }
     }
 
 

@@ -13,7 +13,7 @@ namespace ClasesBase
 
         public static void InsertarCliente(Cliente cliente)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO Cliente(CLI_DNI,CLI_Nombre,CLI_Apellido,CLI_Direccion,CLI_Telefono) values(@dni,@nombre,@apellido,@direccion,@telefono)";
@@ -33,7 +33,7 @@ namespace ClasesBase
 
         public static DataTable ListaCliente()
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -57,7 +57,7 @@ namespace ClasesBase
         }
         public static DataTable buscarClienteAproximado(string sPattern)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -87,7 +87,7 @@ namespace ClasesBase
         }
         public static DataTable buscarCliente(string sPattern)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -118,7 +118,7 @@ namespace ClasesBase
 
         public static void eliminarCliente(string dniCliente)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "DELETE FROM Cliente WHERE CLI_DNI=@dni";
             cmd.CommandType = CommandType.Text;
@@ -133,7 +133,7 @@ namespace ClasesBase
 
         public static void modificarCliente(Cliente cliente)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "UPDATE Cliente SET CLI_Nombre = @nombre, ";
             cmd.CommandText += " CLI_Apellido = @apellido, CLI_Direccion = @direccion, ";

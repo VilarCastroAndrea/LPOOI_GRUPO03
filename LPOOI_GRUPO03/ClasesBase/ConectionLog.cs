@@ -13,7 +13,7 @@ namespace ClasesBase
     {
         public static DataTable ingresar(string user, string pswd)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
 
             SqlCommand cmd = new SqlCommand();

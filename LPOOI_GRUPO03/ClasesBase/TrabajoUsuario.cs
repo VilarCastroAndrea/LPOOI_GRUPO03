@@ -13,7 +13,7 @@ namespace ClasesBase
 
         public static DataTable cargarUsuario()
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -33,7 +33,7 @@ namespace ClasesBase
 
         public static void AgregarUsuario(Usuario usuario)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO Usuario(USU_NombreUsuario,USU_Password,USU_ApellidoNombre,ROL_Codigo) values (@nomUsu,@pass,@aynu,@rol)";
@@ -52,7 +52,7 @@ namespace ClasesBase
 
         public static DataTable buscarUsuario(String nombreUsuario)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             //cmd.CommandText = "SELECT * FROM Usuario";
@@ -80,7 +80,7 @@ namespace ClasesBase
         public static void eliminarUsuario(int idUsu)
         {
             
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
            
             SqlCommand cmd = new SqlCommand();
@@ -97,7 +97,7 @@ namespace ClasesBase
 
         public static DataTable listaRoles()
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT * FROM Rol";
             cmd.CommandType = CommandType.Text;
@@ -111,7 +111,7 @@ namespace ClasesBase
 
         public static void modificarUsuario(Usuario usuario)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "UPDATE Usuario SET USU_nombreUsuario = @nomUsu, ";
             cmd.CommandText += " USU_Password = @pass, USU_ApellidoNombre = @aynu,";

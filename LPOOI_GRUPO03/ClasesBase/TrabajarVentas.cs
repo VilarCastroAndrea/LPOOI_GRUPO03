@@ -14,7 +14,7 @@ namespace ClasesBase
         public static DataTable listaVentas()
         {
              //CONEXION
-             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
             /*
              //CONFIGURACION DE LA CONSULTA
              SqlCommand cmd = new SqlCommand();
@@ -63,7 +63,7 @@ namespace ClasesBase
 
         public static void InsertarVenta(Venta venta)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO Venta(CLI_DNI,VEH_Matricula," +
@@ -88,7 +88,7 @@ namespace ClasesBase
 
         public static DataTable ListaVenta()
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -115,7 +115,7 @@ namespace ClasesBase
 
         public static DataTable buscarVenta(string sPattern)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -135,6 +135,28 @@ namespace ClasesBase
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable ventasporFecha(DateTime desde, DateTime hasta)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "RangoFechas";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            
+
+            cmd.Parameters.AddWithValue("@desde", desde);
+            cmd.Parameters.AddWithValue("@hasta", hasta);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 

@@ -12,7 +12,7 @@ namespace ClasesBase
     {
         public static void insertarVehiculo(Vehiculo vehiculo)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO Vehiculo(VEH_Matricula,VEH_Marca,VEH_Linea,";
@@ -43,7 +43,7 @@ namespace ClasesBase
 
         public static DataTable ListaVehiculo()
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -72,7 +72,7 @@ namespace ClasesBase
         }
             public static DataTable buscarVehiculo(string sPattern)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -106,7 +106,7 @@ namespace ClasesBase
 
         public static DataTable buscarVehiculoAproximado(string sPattern)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT";
@@ -148,7 +148,7 @@ namespace ClasesBase
 
         public static void modificarVehiculo(Vehiculo vehiculo)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "UPDATE Vehiculo SET VEH_Marca = @Marca, ";
             cmd.CommandText += " VEH_Linea = @Linea, ";
@@ -180,7 +180,7 @@ namespace ClasesBase
 
         public static void eliminarVehiculo(string matricula)
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
             SqlCommand cmd = new SqlCommand();
 
             cmd.CommandText = "DELETE FROM Vehiculo WHERE VEH_Matricula=@matricula";

@@ -31,11 +31,15 @@
             this.btnRegistrarVenta = new System.Windows.Forms.Button();
             this.panelVenta = new System.Windows.Forms.Panel();
             this.panelListaVenta = new System.Windows.Forms.Panel();
+            this.filtrarFechas = new System.Windows.Forms.Button();
+            this.hasta = new System.Windows.Forms.DateTimePicker();
+            this.desde = new System.Windows.Forms.DateTimePicker();
             this.btnBusacar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBuscarC = new System.Windows.Forms.TextBox();
             this.dataVenta = new System.Windows.Forms.DataGridView();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panelListaVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVenta)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +69,10 @@
             // panelListaVenta
             // 
             this.panelListaVenta.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelListaVenta.Controls.Add(this.dateTimePicker1);
+            this.panelListaVenta.Controls.Add(this.filtrarFechas);
+            this.panelListaVenta.Controls.Add(this.hasta);
+            this.panelListaVenta.Controls.Add(this.desde);
             this.panelListaVenta.Controls.Add(this.btnBusacar);
             this.panelListaVenta.Controls.Add(this.label7);
             this.panelListaVenta.Controls.Add(this.txtBuscarC);
@@ -73,6 +81,30 @@
             this.panelListaVenta.Name = "panelListaVenta";
             this.panelListaVenta.Size = new System.Drawing.Size(637, 437);
             this.panelListaVenta.TabIndex = 25;
+            // 
+            // filtrarFechas
+            // 
+            this.filtrarFechas.Location = new System.Drawing.Point(432, 1);
+            this.filtrarFechas.Name = "filtrarFechas";
+            this.filtrarFechas.Size = new System.Drawing.Size(75, 23);
+            this.filtrarFechas.TabIndex = 7;
+            this.filtrarFechas.Text = "filtrar por fechas";
+            this.filtrarFechas.UseVisualStyleBackColor = true;
+            this.filtrarFechas.Click += new System.EventHandler(this.filtrarFechas_Click);
+            // 
+            // hasta
+            // 
+            this.hasta.Location = new System.Drawing.Point(225, 1);
+            this.hasta.Name = "hasta";
+            this.hasta.Size = new System.Drawing.Size(200, 20);
+            this.hasta.TabIndex = 6;
+            // 
+            // desde
+            // 
+            this.desde.Location = new System.Drawing.Point(19, 0);
+            this.desde.Name = "desde";
+            this.desde.Size = new System.Drawing.Size(200, 20);
+            this.desde.TabIndex = 5;
             // 
             // btnBusacar
             // 
@@ -132,6 +164,13 @@
             this.btnMostrar.Visible = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(573, 41);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,5 +200,9 @@
         private System.Windows.Forms.TextBox txtBuscarC;
         public System.Windows.Forms.DataGridView dataVenta;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.DateTimePicker hasta;
+        private System.Windows.Forms.DateTimePicker desde;
+        private System.Windows.Forms.Button filtrarFechas;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

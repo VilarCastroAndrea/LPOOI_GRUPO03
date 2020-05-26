@@ -11,7 +11,7 @@ namespace ClasesBase
     {
         public static DataTable cargarRol()
         {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString1);
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM Rol", cnn);
                       
