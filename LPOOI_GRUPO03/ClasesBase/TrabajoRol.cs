@@ -11,21 +11,18 @@ namespace ClasesBase
     {
         public static DataTable cargarRol()
         {
+
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Rol", cnn);
-                      
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "listaRoles";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet(); 
-          
-            da.Fill(ds);
-            return ds.Tables[0];
 
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
 
-
-
-           
-          
         }
 
     }

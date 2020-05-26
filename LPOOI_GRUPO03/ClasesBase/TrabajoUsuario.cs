@@ -16,20 +16,29 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT";
-            cmd.CommandText += " USU_NombreUsuario as 'Nombre de Usuario', ";
-            cmd.CommandText += " USU_ID as 'ID', ";
-            cmd.CommandText += " USU_Password as 'Contraseña', ";
-            cmd.CommandText += " USU_ApellidoNombre as 'Apellido y Nombre', ";
-            cmd.CommandText += " ROL_Codigo as 'Rol'";
-            cmd.CommandText += " FROM Usuario as U";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "cargarUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
         }
+
+        public static DataTable listaRoles()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "listaRoles";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
 
         public static void AgregarUsuario(Usuario usuario)
         {
@@ -55,7 +64,6 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            //cmd.CommandText = "SELECT * FROM Usuario";
             cmd.CommandText = "SELECT";
             cmd.CommandText += " USU_NombreUsuario as 'Nombre de Usuario', ";
             cmd.CommandText += " USU_ID as 'ID', ";
@@ -95,19 +103,7 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static DataTable listaRoles()
-        {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Rol";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
 
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-        }
 
         public static void modificarUsuario(Usuario usuario)
         {
