@@ -18,23 +18,9 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT";
-            cmd.CommandText += " VEH_Matricula as 'Matricula', ";
-            cmd.CommandText += " VEH_Marca as 'Marca', ";
-            cmd.CommandText += " VEH_Linea as 'Linea', ";
-            cmd.CommandText += " VEH_Modelo as 'Modelo', ";
-            cmd.CommandText += " VEH_Color as 'Color', ";
-            cmd.CommandText += " VEH_Puertas as 'Puertas', ";
-            cmd.CommandText += " VEH_GPS as 'Gps', ";
-            cmd.CommandText += " VEH_TipoVehiculo as 'TipoVehiculo', ";
-            cmd.CommandText += " VEH_ClaseVehiculo as 'ClaseVehiculo', ";
-            cmd.CommandText += " VEH_Precio as 'Precio' ";
-            cmd.CommandText += " FROM Vehiculo as V";
+            cmd.CommandText = "buscarVehiculo";
 
-            cmd.CommandText += " WHERE";
-            cmd.CommandText += " VEH_Matricula LIKE @pattern ";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
@@ -53,31 +39,9 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT";
-            cmd.CommandText += " VEH_Matricula as 'Matricula', ";
-            cmd.CommandText += " VEH_Marca as 'Marca', ";
-            cmd.CommandText += " VEH_Linea as 'Linea', ";
-            cmd.CommandText += " VEH_Modelo as 'Modelo', ";
-            cmd.CommandText += " VEH_Color as 'Color', ";
-            cmd.CommandText += " VEH_Puertas as 'Puertas', ";
-            cmd.CommandText += " VEH_GPS as 'Gps', ";
-            cmd.CommandText += " VEH_TipoVehiculo as 'TipoVehiculo', ";
-            cmd.CommandText += " VEH_ClaseVehiculo as 'ClaseVehiculo', ";
-            cmd.CommandText += " VEH_Precio as 'Precio' ";
-            cmd.CommandText += " FROM Vehiculo as V";
+            cmd.CommandText = "buscarVehiculoAproximado";
 
-            cmd.CommandText += " WHERE";
-            cmd.CommandText += " VEH_Matricula LIKE @pattern";
-            cmd.CommandText += " OR VEH_Marca LIKE @pattern";
-            cmd.CommandText += " OR VEH_Linea LIKE @pattern";
-            cmd.CommandText += " OR VEH_Modelo LIKE @pattern";
-            cmd.CommandText += " OR VEH_Color LIKE @pattern";
-            cmd.CommandText += " OR VEH_Puertas LIKE @pattern";
-            cmd.CommandText += " OR VEH_TipoVehiculo LIKE @pattern";
-            cmd.CommandText += " OR VEH_ClaseVehiculo LIKE @pattern";
-            cmd.CommandText += " OR VEH_Precio LIKE @pattern";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
