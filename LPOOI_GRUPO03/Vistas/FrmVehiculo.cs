@@ -90,16 +90,18 @@ namespace Vistas
         private void btnMostrar_Click(object sender, EventArgs e)
         {
            
-            if (rbtnMarca.Checked==true)
-            {
-                dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporMarca();
-            }
-            else if (rbtnLinea.Checked==true)
-            {
-                dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporLinea();
-            }
+            
         }
 
+        private void rbtnMarca_CheckedChanged(object sender, EventArgs e)
+        {
+            dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporMarca();
         }
+
+        private void rbtnLinea_CheckedChanged(object sender, EventArgs e)
+        {
+            dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporLinea();
+        }
+    }
     }
 
