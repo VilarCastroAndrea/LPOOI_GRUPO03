@@ -45,8 +45,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Usuario(USU_NombreUsuario,USU_Password,USU_ApellidoNombre,ROL_Codigo) values (@nomUsu,@pass,@aynu,@rol)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "agregarUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@nomUsu", usuario.Usu_NombreUsuario);
@@ -64,15 +64,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT";
-            cmd.CommandText += " USU_NombreUsuario as 'Nombre de Usuario', ";
-            cmd.CommandText += " USU_ID as 'ID', ";
-            cmd.CommandText += " USU_Password as 'Contraseña', ";
-            cmd.CommandText += " USU_ApellidoNombre as 'Apellido y Nombre', ";
-            cmd.CommandText += " ROL_Codigo as 'Rol'";
-            cmd.CommandText += " FROM Usuario as U";
-            cmd.CommandText += " WHERE USU_NombreUsuario LIKE @nombreUsuario";
-
+            cmd.CommandText = "buscarUsuario";
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
@@ -92,8 +84,8 @@ namespace ClasesBase
 
            
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM Usuario WHERE USU_Id=@id";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "eliminarUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@id", idUsu);
@@ -109,11 +101,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Usuario SET USU_nombreUsuario = @nomUsu, ";
-            cmd.CommandText += " USU_Password = @pass, USU_ApellidoNombre = @aynu,";
-            cmd.CommandText += " ROL_Codigo = @rol WHERE USU_Id=@idu";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "modificarUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             cmd.Parameters.AddWithValue("@idu", usuario.Usu_ID);
             cmd.Parameters.AddWithValue("@nomUsu", usuario.Usu_NombreUsuario);
