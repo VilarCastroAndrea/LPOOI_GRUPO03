@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAltaVeh = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAPrecio = new System.Windows.Forms.TextBox();
@@ -50,6 +49,8 @@
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.cmbClase = new System.Windows.Forms.ComboBox();
+            this.GPS = new System.Windows.Forms.GroupBox();
+            this.GPS.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtAMatricula
@@ -122,7 +123,7 @@
             this.btnAltaVeh.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.btnAltaVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAltaVeh.ForeColor = System.Drawing.Color.White;
-            this.btnAltaVeh.Location = new System.Drawing.Point(19, 350);
+            this.btnAltaVeh.Location = new System.Drawing.Point(19, 356);
             this.btnAltaVeh.Name = "btnAltaVeh";
             this.btnAltaVeh.Size = new System.Drawing.Size(169, 23);
             this.btnAltaVeh.TabIndex = 10;
@@ -139,16 +140,6 @@
             this.label6.Size = new System.Drawing.Size(103, 13);
             this.label6.TabIndex = 24;
             this.label6.Text = "Cantidad de Puertas";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(17, 290);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "GPS";
             // 
             // label8
             // 
@@ -172,7 +163,7 @@
             // 
             // txtAPrecio
             // 
-            this.txtAPrecio.Location = new System.Drawing.Point(71, 312);
+            this.txtAPrecio.Location = new System.Drawing.Point(71, 330);
             this.txtAPrecio.Name = "txtAPrecio";
             this.txtAPrecio.Size = new System.Drawing.Size(118, 20);
             this.txtAPrecio.TabIndex = 9;
@@ -182,7 +173,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(20, 315);
+            this.label10.Location = new System.Drawing.Point(17, 333);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 32;
@@ -192,7 +183,7 @@
             // 
             this.checkGps.AutoSize = true;
             this.checkGps.ForeColor = System.Drawing.Color.White;
-            this.checkGps.Location = new System.Drawing.Point(68, 289);
+            this.checkGps.Location = new System.Drawing.Point(52, 9);
             this.checkGps.Name = "checkGps";
             this.checkGps.Size = new System.Drawing.Size(35, 17);
             this.checkGps.TabIndex = 8;
@@ -251,7 +242,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(126, 289);
+            this.checkBox1.Location = new System.Drawing.Point(118, 9);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(40, 17);
             this.checkBox1.TabIndex = 33;
@@ -301,25 +292,35 @@
             this.cmbClase.Size = new System.Drawing.Size(169, 21);
             this.cmbClase.TabIndex = 40;
             // 
+            // GPS
+            // 
+            this.GPS.Controls.Add(this.checkGps);
+            this.GPS.Controls.Add(this.checkBox1);
+            this.GPS.ForeColor = System.Drawing.Color.White;
+            this.GPS.Location = new System.Drawing.Point(19, 292);
+            this.GPS.Name = "GPS";
+            this.GPS.Size = new System.Drawing.Size(170, 32);
+            this.GPS.TabIndex = 41;
+            this.GPS.TabStop = false;
+            this.GPS.Text = "GPS";
+            // 
             // FrmAltaVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(207, 415);
+            this.Controls.Add(this.GPS);
             this.Controls.Add(this.cmbClase);
             this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.cmbMarca);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmbModelo);
             this.Controls.Add(this.cmbColor);
             this.Controls.Add(this.cmbCantPuert);
-            this.Controls.Add(this.checkGps);
             this.Controls.Add(this.txtAPrecio);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAMatricula);
             this.Controls.Add(this.label5);
@@ -331,6 +332,8 @@
             this.Controls.Add(this.btnAltaVeh);
             this.Name = "FrmAltaVehiculo";
             this.Text = "FrmAltaVehiculo";
+            this.GPS.ResumeLayout(false);
+            this.GPS.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,7 +350,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAltaVeh;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAPrecio;
@@ -360,5 +362,6 @@
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.ComboBox cmbClase;
+        private System.Windows.Forms.GroupBox GPS;
     }
 }

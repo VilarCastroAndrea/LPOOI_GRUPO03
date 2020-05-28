@@ -51,6 +51,7 @@
             this.cmbClientesDNI.Name = "cmbClientesDNI";
             this.cmbClientesDNI.Size = new System.Drawing.Size(171, 21);
             this.cmbClientesDNI.TabIndex = 0;
+            this.cmbClientesDNI.DropDown += new System.EventHandler(this.cmbClientesDNI_DropDown);
             this.cmbClientesDNI.TextUpdate += new System.EventHandler(this.cmbClientesDNI_TextUpdate);
             // 
             // label1
@@ -83,6 +84,7 @@
             this.cmbVehiculos.Name = "cmbVehiculos";
             this.cmbVehiculos.Size = new System.Drawing.Size(171, 21);
             this.cmbVehiculos.TabIndex = 1;
+            this.cmbVehiculos.DropDown += new System.EventHandler(this.cmbVehiculos_DropDown);
             this.cmbVehiculos.SelectedIndexChanged += new System.EventHandler(this.cmbVehiculos_SelectedIndexChanged);
             this.cmbVehiculos.TextUpdate += new System.EventHandler(this.cmbVehiculos_TextUpdate);
             // 

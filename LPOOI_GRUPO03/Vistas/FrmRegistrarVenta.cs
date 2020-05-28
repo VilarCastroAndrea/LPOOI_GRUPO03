@@ -131,5 +131,14 @@ namespace Vistas
             Validar.soloNumeros(e);
         }
 
+        private void cmbClientesDNI_DropDown(object sender, EventArgs e)
+        {
+            cargarBoxCliente(TrabajarCliente.ListaCliente());
+        }
+
+        private void cmbVehiculos_DropDown(object sender, EventArgs e)
+        {
+            cargarBoxVehiculo(TrabajarVehiculo.ListaVehiculo());
+        }
     }
 }

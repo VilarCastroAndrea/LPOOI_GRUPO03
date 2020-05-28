@@ -34,11 +34,11 @@ namespace Vistas
             Form frmLogin = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmLogin);
             if (frmLogin != null)
             {
-                if (((FrmLogin)frmLogin).user.Rol_Codigo == "Administrador")
+                if (((FrmLogin)frmLogin).user.Rol_Codigo == "1")
                 {
                     btnCliente.Visible = false;
                 }
-                else if (((FrmLogin)frmLogin).user.Rol_Codigo == "Vendedor")
+                else if (((FrmLogin)frmLogin).user.Rol_Codigo == "2")
                 {
                     btnVehiculos.Visible = false;
                 }

@@ -39,7 +39,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtATipo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAMatricula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,13 +50,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEVehiculo = new System.Windows.Forms.Button();
             this.btnMVehiculo = new System.Windows.Forms.Button();
+            this.GPS = new System.Windows.Forms.GroupBox();
+            this.GPS.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(99, 281);
+            this.checkBox1.Location = new System.Drawing.Point(117, 10);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(40, 17);
             this.checkBox1.TabIndex = 55;
@@ -81,7 +82,7 @@
             "2010"});
             this.cmbModelo.Location = new System.Drawing.Point(71, 106);
             this.cmbModelo.Name = "cmbModelo";
-            this.cmbModelo.Size = new System.Drawing.Size(118, 21);
+            this.cmbModelo.Size = new System.Drawing.Size(120, 21);
             this.cmbModelo.TabIndex = 3;
             // 
             // cmbColor
@@ -97,7 +98,7 @@
             "Amarillo"});
             this.cmbColor.Location = new System.Drawing.Point(71, 138);
             this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(118, 21);
+            this.cmbColor.Size = new System.Drawing.Size(120, 21);
             this.cmbColor.TabIndex = 4;
             // 
             // cmbCantPuert
@@ -109,14 +110,14 @@
             "5"});
             this.cmbCantPuert.Location = new System.Drawing.Point(136, 172);
             this.cmbCantPuert.Name = "cmbCantPuert";
-            this.cmbCantPuert.Size = new System.Drawing.Size(51, 21);
+            this.cmbCantPuert.Size = new System.Drawing.Size(55, 21);
             this.cmbCantPuert.TabIndex = 5;
             // 
             // cGps
             // 
             this.cGps.AutoSize = true;
             this.cGps.ForeColor = System.Drawing.Color.White;
-            this.cGps.Location = new System.Drawing.Point(58, 280);
+            this.cGps.Location = new System.Drawing.Point(57, 10);
             this.cGps.Name = "cGps";
             this.cGps.Size = new System.Drawing.Size(35, 17);
             this.cGps.TabIndex = 8;
@@ -125,7 +126,7 @@
             // 
             // txtAPrecio
             // 
-            this.txtAPrecio.Location = new System.Drawing.Point(73, 304);
+            this.txtAPrecio.Location = new System.Drawing.Point(73, 307);
             this.txtAPrecio.Name = "txtAPrecio";
             this.txtAPrecio.Size = new System.Drawing.Size(118, 20);
             this.txtAPrecio.TabIndex = 9;
@@ -142,9 +143,9 @@
             // 
             // txtAClase
             // 
-            this.txtAClase.Location = new System.Drawing.Point(21, 251);
+            this.txtAClase.Location = new System.Drawing.Point(19, 251);
             this.txtAClase.Name = "txtAClase";
-            this.txtAClase.Size = new System.Drawing.Size(166, 20);
+            this.txtAClase.Size = new System.Drawing.Size(172, 20);
             this.txtAClase.TabIndex = 7;
             // 
             // label9
@@ -159,9 +160,9 @@
             // 
             // txtATipo
             // 
-            this.txtATipo.Location = new System.Drawing.Point(21, 212);
+            this.txtATipo.Location = new System.Drawing.Point(19, 212);
             this.txtATipo.Name = "txtATipo";
-            this.txtATipo.Size = new System.Drawing.Size(166, 20);
+            this.txtATipo.Size = new System.Drawing.Size(172, 20);
             this.txtATipo.TabIndex = 6;
             // 
             // label8
@@ -173,16 +174,6 @@
             this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 52;
             this.label8.Text = "Tipo de Vehiculo";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(18, 281);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "GPS";
             // 
             // label6
             // 
@@ -197,9 +188,9 @@
             // txtAMatricula
             // 
             this.txtAMatricula.Enabled = false;
-            this.txtAMatricula.Location = new System.Drawing.Point(83, 12);
+            this.txtAMatricula.Location = new System.Drawing.Point(71, 12);
             this.txtAMatricula.Name = "txtAMatricula";
-            this.txtAMatricula.Size = new System.Drawing.Size(106, 20);
+            this.txtAMatricula.Size = new System.Drawing.Size(120, 20);
             this.txtAMatricula.TabIndex = 0;
             // 
             // label5
@@ -216,14 +207,14 @@
             // 
             this.txtALinea.Location = new System.Drawing.Point(71, 74);
             this.txtALinea.Name = "txtALinea";
-            this.txtALinea.Size = new System.Drawing.Size(118, 20);
+            this.txtALinea.Size = new System.Drawing.Size(120, 20);
             this.txtALinea.TabIndex = 2;
             // 
             // txtAMarca
             // 
             this.txtAMarca.Location = new System.Drawing.Point(71, 42);
             this.txtAMarca.Name = "txtAMarca";
-            this.txtAMarca.Size = new System.Drawing.Size(118, 20);
+            this.txtAMarca.Size = new System.Drawing.Size(120, 20);
             this.txtAMarca.TabIndex = 1;
             // 
             // label4
@@ -294,25 +285,35 @@
             this.btnMVehiculo.UseVisualStyleBackColor = false;
             this.btnMVehiculo.Click += new System.EventHandler(this.btnMVehiculo_Click);
             // 
+            // GPS
+            // 
+            this.GPS.Controls.Add(this.cGps);
+            this.GPS.Controls.Add(this.checkBox1);
+            this.GPS.ForeColor = System.Drawing.Color.White;
+            this.GPS.Location = new System.Drawing.Point(19, 272);
+            this.GPS.Name = "GPS";
+            this.GPS.Size = new System.Drawing.Size(172, 32);
+            this.GPS.TabIndex = 56;
+            this.GPS.TabStop = false;
+            this.GPS.Text = "GPS";
+            // 
             // FrmMostrarVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(207, 389);
+            this.Controls.Add(this.GPS);
             this.Controls.Add(this.btnMVehiculo);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmbModelo);
             this.Controls.Add(this.cmbColor);
             this.Controls.Add(this.cmbCantPuert);
-            this.Controls.Add(this.cGps);
             this.Controls.Add(this.txtAPrecio);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtAClase);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtATipo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAMatricula);
             this.Controls.Add(this.label5);
@@ -325,6 +326,8 @@
             this.Controls.Add(this.btnEVehiculo);
             this.Name = "FrmMostrarVehiculo";
             this.Text = "FrmMostrarVehiculo";
+            this.GPS.ResumeLayout(false);
+            this.GPS.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,7 +339,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -355,5 +357,6 @@
         public System.Windows.Forms.TextBox txtALinea;
         public System.Windows.Forms.TextBox txtAMarca;
         public System.Windows.Forms.CheckBox cGps;
+        private System.Windows.Forms.GroupBox GPS;
     }
 }
