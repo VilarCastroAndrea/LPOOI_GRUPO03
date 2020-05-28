@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
@@ -19,31 +14,20 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void txtAModelo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.soloNumeros(e);
-        }
-
-        private void txtAPuertas_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.soloNumeros(e);
-        }
-
-        private void txtAPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.soloNumeros(e);
-            Validar.numerosDecimales(e);
-        }
-
+        /// <summary>
+        /// Agrega un vehiculo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAltaVeh_Click(object sender, EventArgs e)
         {
             String opcionGPS = "No";
-            if (cmbModelo.Text != "" && cmbCantPuert.Text != "" && cmbColor.Text != "" && txtALinea.Text != "" && txtAMarca.Text != "" && txtAMatricula.Text != "" && txtATipo.Text != "" && txtAPrecio.Text != "" && txtAClase.Text != "")
+            if (cmbModelo.Text != "" && cmbCantPuert.Text != "" && cmbColor.Text != "" && txtALinea.Text != "" && cmbMarca.Text != "" && txtAMatricula.Text != "" && cmbTipo.Text != "" && txtAPrecio.Text != "" && cmbClase.Text != "")
             {
                 int m = Convert.ToInt32(cmbModelo.Text);
                 int p = Convert.ToInt32(cmbCantPuert.Text);
                 Decimal precio = Convert.ToDecimal(txtAPrecio.Text);
-                Vehiculo vehiculo = new Vehiculo(txtAMatricula.Text, txtAMarca.Text, txtALinea.Text, m, cmbColor.Text, p, checkGps.Checked, txtATipo.Text, txtAClase.Text, precio);
+                Vehiculo vehiculo = new Vehiculo(txtAMatricula.Text, cmbMarca.Text, txtALinea.Text, m, cmbColor.Text, p, checkGps.Checked, cmbTipo.Text, cmbClase.Text, precio);
                 if (vehiculo.Veh_GPS == true)
                 {
                     opcionGPS = "Si";
@@ -67,14 +51,14 @@ namespace Vistas
                     TrabajarVehiculo.insertarVehiculoSP(vehiculo);
 
                     txtAMatricula.Text = "";
-                    txtAMarca.Text = "";
+                    cmbMarca.Text = "";
                     txtALinea.Text = "";
                     cmbModelo.Text = "";
                     cmbColor.Text = "";
                     cmbCantPuert.Text = "";
                     checkGps.Checked = false;
-                    txtATipo.Text = "";
-                    txtAClase.Text = "";
+                    cmbTipo.Text = "";
+                    cmbClase.Text = "";
                     txtAPrecio.Text = "";
                     Form frmListaVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVehiculo);
                     if (frmListaVehiculo != null)
@@ -95,6 +79,11 @@ namespace Vistas
             }
         }
 
+        /// <summary>
+        /// Valida campos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtAMarca_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloLetra(e);
@@ -115,14 +104,20 @@ namespace Vistas
             Validar.soloLetra(e);
         }
 
-        private void FrmAltaVehiculo_Load(object sender, EventArgs e)
+        private void txtAModelo_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Validar.soloNumeros(e);
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void txtAPuertas_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Validar.soloNumeros(e);
+        }
 
+        private void txtAPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloNumeros(e);
+            Validar.numerosDecimales(e);
         }
     }
 }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
@@ -18,6 +13,11 @@ namespace Vistas
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Carga de datos y sub formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmVehiculo_Load(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmMostrarVehiculo>().FirstOrDefault();
@@ -27,6 +27,10 @@ namespace Vistas
             dataVehiculo.Refresh();
         }
 
+        /// <summary>
+        /// Llamada a sub formulario
+        /// </summary>
+        /// <param name="fh"></param>
         private void AddFormInPanel(Form fh)
         {
             if (this.panelVehiculo.Controls.Count > 0)
@@ -39,13 +43,23 @@ namespace Vistas
             fh.Show();
         }
 
+        /// <summary>
+        /// Llama al formulario mostar vehiculo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnListaVeh_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmMostrarVehiculo>().FirstOrDefault();
-            FrmMostrarVehiculo frmLista = form ?? new FrmMostrarVehiculo();
-            AddFormInPanel(frmLista);
+            FrmMostrarVehiculo frmMostrar = form ?? new FrmMostrarVehiculo();
+            AddFormInPanel(frmMostrar);
         }
 
+        /// <summary>
+        /// Llama a formulario agregar vehiculo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAVeh_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmAltaVehiculo>().FirstOrDefault();
@@ -53,12 +67,19 @@ namespace Vistas
             AddFormInPanel(frmAltaVehi);
         }
 
+        /// <summary>
+        /// Manda datos del dgv al formulario mostrar vehiculo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataVehiculo_CurrentCellChanged(object sender, EventArgs e)
         {
-            if (this.dataVehiculo.CurrentRow != null) {
+            if (this.dataVehiculo.CurrentRow != null)
+            {
                 FrmMostrarVehiculo frmMosVehiculo = new FrmMostrarVehiculo();
                 Form frmMostrarVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmMostrarVehiculo);
-                if (frmMostrarVehiculo != null) {
+                if (frmMostrarVehiculo != null)
+                {
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).txtAMatricula.Text = dataVehiculo.CurrentRow.Cells[0].Value.ToString();
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).txtAMarca.Text = dataVehiculo.CurrentRow.Cells[1].Value.ToString();
                     ((FrmMostrarVehiculo)frmMostrarVehiculo).txtALinea.Text = dataVehiculo.CurrentRow.Cells[2].Value.ToString();
@@ -73,7 +94,28 @@ namespace Vistas
             }
         }
 
-        private void btnBusacar_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Ordena vehiculos por marca
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rbtnMarca_CheckedChanged(object sender, EventArgs e)
+        {
+            dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporMarca();
+        }
+
+        /// <summary>
+        /// Ordena vehiculos por linea
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rbtnLinea_CheckedChanged(object sender, EventArgs e)
+        {
+            dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporLinea();
+        }
+
+        //Busca un vehiculo por patente
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string buscarvehiculo = txtBuscarVehiculo.Text;
             if (txtBuscarVehiculo.Text != "")
@@ -86,20 +128,5 @@ namespace Vistas
                 dataVehiculo.Refresh();
             }
         }
-
-        private void btnMostrar_Click(object sender, EventArgs e)
-        {
-           
-            if (rbtnMarca.Checked==true)
-            {
-                dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporMarca();
-            }
-            else if (rbtnLinea.Checked==true)
-            {
-                dataVehiculo.DataSource = TrabajarVehiculo.ordenarVporLinea();
-            }
-        }
-
-        }
     }
-
+}

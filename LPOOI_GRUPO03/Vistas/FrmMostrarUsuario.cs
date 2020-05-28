@@ -1,57 +1,60 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
     public partial class FrmMostrarUsuario : Form
     {
-       public String rol = "";
+        string rol = "";
+
         public FrmMostrarUsuario()
         {
             InitializeComponent();
-            cargar();
+            cargarRol();//Se llama al metodo cargar roles
         }
-        public  void cargar()
+
+        private void FrmMostrarUsuario_Load(object sender, EventArgs e)
+        {
+            Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
+        }
+
+        /// <summary>
+        /// Devuelve una lista de los roles
+        /// </summary>
+        public void cargarRol()
         {
             cmbRoles.DisplayMember = "";
-            cmbRoles.ValueMember = "rol_Codigo";
+            cmbRoles.ValueMember = "rol_Descripcion";
             cmbRoles.DataSource = TrabajoUsuario.listaRoles();
         }
 
-      
-
+        /// <summary>
+        /// Elimina un usuario seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
-
             String msj = "Esta seguro que quiere elimnar el Usuario " + this.txtNombreUsuario.Text;
-
-
             int id = Convert.ToInt32(this.txtId.Text);
-
-            DialogResult dialogResult = MessageBox.Show(msj , "Some Title", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show(msj, "Some Title", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-
-            
-
-
-            Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
-            TrabajoUsuario.eliminarUsuario(id);
-           
-            ((FrmUsuario)frmUsuario).cargarListaUsuario();
-            MessageBox.Show("Usuario Eliminado");
+                Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
+                TrabajoUsuario.eliminarUsuario(id);
+                ((FrmUsuario)frmUsuario).listarUsuario();
+                MessageBox.Show("Usuario Eliminado");
             }
-
         }
 
+        /// <summary>
+        /// Modifica al usuario seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
             Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
@@ -60,16 +63,36 @@ namespace Vistas
             usuario.Usu_NombreUsuario = txtNombreUsuario.Text;
             usuario.Usu_Contraseña = txtPass.Text;
             usuario.Usu_ApellidoNombre = txtNombreApellidoUsuario.Text;
-            usuario.Rol_Codigo = cmbRoles.Text;
+            usuario.Rol_Codigo = valorRol();
             TrabajoUsuario.modificarUsuario(usuario);
-            ((FrmUsuario)frmUsuario).cargarListaUsuario();
-            MessageBox.Show("Usuario Modificado");          
+            ((FrmUsuario)frmUsuario).listarUsuario();
+            MessageBox.Show("Usuario Modificado");
         }
 
-        private void FrmMostrarUsuario_Load(object sender, EventArgs e)
+        private string valorRol()
         {
-            Form frmUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmUsuario);
+            string idRol;
+            if (cmbRoles.Text.Equals("Auditor"))
+            {
+                idRol = "3";
+            }
+            else
+            {
+                if (cmbRoles.Text.Equals("Vendedor"))
+                {
+                    idRol = "2";
+                }
+                else
+                {
+                    idRol = "1";
+                }
+            }
+            return idRol;
         }
+
+        /// <summary>
+        /// Validaciones
+        /// </summary>
 
         private void txtPass_KeyDown(object sender, KeyEventArgs e)
         {
@@ -81,18 +104,12 @@ namespace Vistas
             btnActualizarUsuario.Enabled = true;
         }
 
-        private void cmbRoles_MouseCaptureChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (rol != cmbRoles.Text)
             {
                 btnActualizarUsuario.Enabled = true;
             }
-           
         }
     }
 }

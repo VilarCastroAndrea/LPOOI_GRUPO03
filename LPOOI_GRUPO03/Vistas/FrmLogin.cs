@@ -1,27 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
-using System.Data.SqlClient;
 
 namespace Vistas
 {
 
-
-
     public partial class FrmLogin : Form
     {
-
         FrmMain formMain = new FrmMain();
-        FrmSistema frmSistema = new FrmSistema();
         private int intentos;
-       public Usuario user = new Usuario();
+        public Usuario user = new Usuario();
 
         public FrmLogin()
         {
@@ -30,6 +19,9 @@ namespace Vistas
             ocultarCapcha();
         }
 
+        /// <summary>
+        /// Muestra el capcha 
+        /// </summary>
         private void mostrarCapcha()
         {
             imgCapcha.Visible = true;
@@ -38,13 +30,20 @@ namespace Vistas
             lblCapcha.Text = generarCapcha();
         }
 
+        /// <summary>
+        /// Oculta capcha
+        /// </summary>
         private void ocultarCapcha()
         {
             imgCapcha.Visible = false;
             txtResultadoCapcha.Visible = false;
             lblCapcha.Visible = false;
         }
-      
+
+        /// <summary>
+        /// Random de capcha
+        /// </summary>
+        /// <returns></returns>
         public String generarCapcha()
         {
 
@@ -65,17 +64,20 @@ namespace Vistas
             return resultado;
         }
 
-
+        /// <summary>
+        /// Login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
             if (intentos < 5)
             {
                 ingresar();
             }
             else
             {
-                if(lblCapcha.Text== txtResultadoCapcha.Text)
+                if (lblCapcha.Text == txtResultadoCapcha.Text)
                 {
                     ingresar();
                 }
@@ -85,8 +87,6 @@ namespace Vistas
                     lblCapcha.Text = generarCapcha();
                 }
             }
-
-            
         }
 
         private void ingresar()
@@ -111,7 +111,10 @@ namespace Vistas
                 MessageBox.Show("Datos incorrectos");
             }
         }
-      
+
+        /// <summary>
+        /// Mostrara el capcha despues de 4 intentos fallidos
+        /// </summary>
         private void intentosMaximos()
         {
             if (intentos > 4)
@@ -119,16 +122,25 @@ namespace Vistas
                 mostrarCapcha();
             }
         }
+
+        /// <summary>
+        /// Guarda usuario logueado
+        /// </summary>
+        /// <param name="dt"></param>
         private void guardarUser(DataTable dt)
         {
-          
             user.Usu_NombreUsuario = dt.Rows[0]["USU_NombreUsuario"].ToString();
             user.Usu_Contraseña = dt.Rows[0]["USU_Password"].ToString();
             user.Usu_ApellidoNombre = dt.Rows[0]["USU_ApellidoNombre"].ToString();
             user.Rol_Codigo = dt.Rows[0]["ROL_Codigo"].ToString();
             user.Usu_ID = Convert.ToInt32(dt.Rows[0]["USU_ID"].ToString());
         }
-        
+
+        /// <summary>
+        /// MouseHover
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtUsuario_MouseHover(object sender, EventArgs e)
         {
             lblnfoUsu.Text = "Ingresar Usuario";
@@ -149,14 +161,5 @@ namespace Vistas
             lblInfoContra.Text = " ";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCapcha_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
@@ -18,6 +13,11 @@ namespace Vistas
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Llamadas a carga de datos y sub formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmCliente_Load(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmMostrarCliente>().FirstOrDefault();
@@ -27,6 +27,11 @@ namespace Vistas
             cargarCliente();
         }
 
+        /// <summary>
+        /// Llama a formulario alta Cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnACliente_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmAltaCliente>().FirstOrDefault();
@@ -34,6 +39,11 @@ namespace Vistas
             AddFormInPanel(frmAltaCliente);
         }
 
+        /// <summary>
+        /// Llama a formulario mostrar cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmMostrarCliente>().FirstOrDefault();
@@ -41,6 +51,10 @@ namespace Vistas
             AddFormInPanel(frmMostrarCliente);
         }
 
+        /// <summary>
+        /// Llamada a sub frmulario
+        /// </summary>
+        /// <param name="fh"></param>
         private void AddFormInPanel(Form fh)
         {
             if (this.panelCliente.Controls.Count > 0)
@@ -53,26 +67,22 @@ namespace Vistas
             fh.Show();
         }
 
+        /// <summary>
+        /// Carga de clietes
+        /// </summary>
         public void cargarCliente()
         {
             dataCliente.DataSource = TrabajarCliente.ListaCliente();
         }
 
-        private void btnBusacar_Click(object sender, EventArgs e)
-        {
-            if(txtBuscarC.Text != "")
-            {
-                dataCliente.DataSource = TrabajarCliente.buscarCliente(txtBuscarC.Text);
-            }
-            else
-            {
-                cargarCliente();
-            }
-        }
-
+        /// <summary>
+        /// Carga el dgv
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataCliente_CurrentCellChanged(object sender, EventArgs e)
         {
-            if( dataCliente.CurrentRow != null )
+            if (dataCliente.CurrentRow != null)
             {
                 FrmMostrarCliente mc = new FrmMostrarCliente();
                 Form frmMostrarCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmMostrarCliente);
@@ -87,11 +97,32 @@ namespace Vistas
             }
         }
 
+        /// <summary>
+        /// Acomoda la lista cliente por apellido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOrdenApellido_Click(object sender, EventArgs e)
         {
-            
             dataCliente.DataSource = TrabajarCliente.ListaClientesPorApellido();
             dataCliente.Refresh();
+        }
+
+        /// <summary>
+        /// Boton buscar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (txtBuscarC.Text != "")
+            {
+                dataCliente.DataSource = TrabajarCliente.buscarCliente(txtBuscarC.Text);
+            }
+            else
+            {
+                cargarCliente();
+            }
         }
     }
 }

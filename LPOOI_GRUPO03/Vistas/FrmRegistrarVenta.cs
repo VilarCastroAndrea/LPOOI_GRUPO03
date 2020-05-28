@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using ClasesBase;
 
 namespace Vistas
 {
@@ -19,7 +13,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-
         private void FrmRegistrarVenta_Load(object sender, EventArgs e)
         {
             cargarBoxCliente(TrabajarCliente.ListaCliente());
@@ -27,11 +20,10 @@ namespace Vistas
             Form frmLogin = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmLogin);
             if (frmLogin != null)
             {
-                txtDatosVendedor.Text ="Nombre y apellido: "+ ((FrmLogin)frmLogin).user.Usu_ApellidoNombre +" ID: "+ ((FrmLogin)frmLogin).user.Usu_NombreUsuario;
+                txtDatosVendedor.Text = "Nombre y apellido: " + ((FrmLogin)frmLogin).user.Usu_ApellidoNombre + " ID: " + ((FrmLogin)frmLogin).user.Usu_NombreUsuario;
             }
-            
-        }
 
+        }
 
         private void cargarBoxVehiculo(DataTable tablaVehiculo)
         {
@@ -42,11 +34,10 @@ namespace Vistas
                 cmbVehiculos.Items.Add(tablaVehiculo.Rows[i]["Matricula"].ToString() + " | " +
                     tablaVehiculo.Rows[i]["Marca"].ToString() + " | " + tablaVehiculo.Rows[i]["Linea"].ToString()
                     + " | " + tablaVehiculo.Rows[i]["Modelo"].ToString() + " | " + tablaVehiculo.Rows[i]["Color"].ToString()
-                    + " | " + tablaVehiculo.Rows[i]["Puertas"].ToString() + " | " + tablaVehiculo.Rows[i]["TipoVehiculo"].ToString()
-                    + " | " + tablaVehiculo.Rows[i]["ClaseVehiculo"].ToString() + " | " + tablaVehiculo.Rows[i]["Precio"].ToString());
+                    + " | " + tablaVehiculo.Rows[i]["Puertas"].ToString() + " | " + tablaVehiculo.Rows[i]["Tipo"].ToString()
+                    + " | " + tablaVehiculo.Rows[i]["Clase"].ToString() + " | " + tablaVehiculo.Rows[i]["Precio"].ToString());
             }
         }
-
 
         private void cargarBoxCliente(DataTable tablaCliente)
         {
@@ -60,7 +51,7 @@ namespace Vistas
         }
 
         private void cmbClientesDNI_TextUpdate(object sender, EventArgs e)
-        {   
+        {
             cargarBoxCliente(TrabajarCliente.buscarClienteAproximado(cmbClientesDNI.Text));
         }
 
@@ -104,14 +95,14 @@ namespace Vistas
 
         private bool validarCampos()
         {
-            if(cmbClientesDNI.Text!="" && cmbClientesDNI.Text.Split('|').Length == 3)
+            if (cmbClientesDNI.Text != "" && cmbClientesDNI.Text.Split('|').Length == 3)
             {
-                if(cmbVehiculos.Text != "" && cmbVehiculos.Text.Split('|').Length == 9)
+                if (cmbVehiculos.Text != "" && cmbVehiculos.Text.Split('|').Length == 9)
                 {
-                    if (cmbMedioDePago.Text != ""|| cmbMedioDePago.Text=="Tarjeta De Credito"||
-                        cmbMedioDePago.Text == "Efectivo"||cmbMedioDePago.Text == "Credito Personal")
+                    if (cmbMedioDePago.Text != "" || cmbMedioDePago.Text == "Tarjeta De Credito" ||
+                        cmbMedioDePago.Text == "Efectivo" || cmbMedioDePago.Text == "Credito Personal")
                     {
-                        if(txtPrecio.Text != "")
+                        if (txtPrecio.Text != "")
                         {
                             return true;
                         }
@@ -123,7 +114,7 @@ namespace Vistas
 
         private string primerValorCombobox(string textoCombo)
         {
-           return textoCombo.Split('|')[0].TrimEnd();
+            return textoCombo.Split('|')[0].TrimEnd();
         }
 
         private void limpiarCampos()

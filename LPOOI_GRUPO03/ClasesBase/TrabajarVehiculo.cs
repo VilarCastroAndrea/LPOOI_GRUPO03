@@ -1,65 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace ClasesBase
 {
     public class TrabajarVehiculo
     {
- 
-
-
-        public static DataTable buscarVehiculo(string sPattern)
-        {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "buscarVehiculo";
-
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Connection = cnn;
-
-            cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            return dt;
-        }
-
-
-        public static DataTable buscarVehiculoAproximado(string sPattern)
-        {
-            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "buscarVehiculoAproximado";
-
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Connection = cnn;
-
-            cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            return dt;
-        }
-
 
         public static void insertarVehiculoSP(Vehiculo vehiculo)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
             SqlCommand cmd = new SqlCommand();
+
             cmd.CommandText = "insertarVehiculo";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
@@ -83,8 +34,8 @@ namespace ClasesBase
         public static void modificarVehiculoSP(Vehiculo vehiculo)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
             SqlCommand cmd = new SqlCommand();
+
             cmd.CommandText = "modificarVehiculo";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
@@ -121,41 +72,67 @@ namespace ClasesBase
             cnn.Close();
         }
 
+        public static DataTable buscarVehiculo(string sPattern)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
 
+            cmd.CommandText = "buscarVehiculo";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable buscarVehiculoAproximado(string sPattern)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "buscarVehiculoAproximado";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
 
         public static DataTable ListaVehiculo()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "listaVehiculo";
 
-            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SELECT * FROM ListarVehiculo";
+            cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             return dt;
         }
 
         public static DataTable ListaMarca()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "listaMarca";
 
+            cmd.CommandText = "listaMarca";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             return dt;
         }
 
@@ -163,32 +140,32 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
             SqlCommand cmd = new SqlCommand();
+
             cmd.CommandText = "ordenarVehiculoPorMarca";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             return dt;
         }
+
         public static DataTable ordenarVporLinea()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
             SqlCommand cmd = new SqlCommand();
+
             cmd.CommandText = "ordenarVporLinea";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             return dt;
         }
 
     }
+
 }

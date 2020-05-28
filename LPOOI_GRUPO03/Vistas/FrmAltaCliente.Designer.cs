@@ -163,7 +163,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAltaCliente";
             this.Text = "FrmAltaCliente";
-            this.Load += new System.EventHandler(this.FrmAltaCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

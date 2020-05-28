@@ -95,7 +95,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(215, 165);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblnfoUsu
             // 
@@ -153,7 +152,6 @@
             this.lblCapcha.TabIndex = 14;
             this.lblCapcha.Text = "Capcha";
             this.lblCapcha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblCapcha.Click += new System.EventHandler(this.lblCapcha_Click);
             // 
             // txtResultadoCapcha
             // 

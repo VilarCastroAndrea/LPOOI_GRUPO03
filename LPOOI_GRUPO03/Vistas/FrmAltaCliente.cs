@@ -1,30 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
     public partial class FrmAltaCliente : Form
     {
-
         public FrmAltaCliente()
         {
             InitializeComponent();
         }
-        public List<Cliente> listaDeClientes = new List<Cliente>();
 
-        private void FrmAltaCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Agrega un nuevo cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnACliente_Click(object sender, EventArgs e)
         {
             if (txtDni.Text.Length == 8)
@@ -47,16 +40,13 @@ namespace Vistas
                     dtCliente = TrabajarCliente.buscarCliente(aCliente.Cli_DNI);
                     if (dtCliente.Rows.Count == 0)
                     {
-
-
-
                         DialogResult result = MessageBox.Show("Los Datos ingresados son correctos? " + "\n" +
-                                                           "DNI: " + aCliente.Cli_DNI + "\n" +
-                                                           "Nombre: " + aCliente.Cli_Nombre + "\n" +
-                                                           "Apellido: " + aCliente.Cli_Apellido + "\n" +
-                                                           "Direccion: " + aCliente.Cli_Direccion + "\n" +
-                                                           "Telefono: " + aCliente.Cli_Telefono,
-                                                          "Agregar Cliente", MessageBoxButtons.OKCancel);
+                                                              "DNI: " + aCliente.Cli_DNI + "\n" +
+                                                              "Nombre: " + aCliente.Cli_Nombre + "\n" +
+                                                              "Apellido: " + aCliente.Cli_Apellido + "\n" +
+                                                              "Direccion: " + aCliente.Cli_Direccion + "\n" +
+                                                              "Telefono: " + aCliente.Cli_Telefono,
+                                                              "Agregar Cliente", MessageBoxButtons.OKCancel);
                         if (result == DialogResult.OK)
                         {
                             Form frmCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmCliente);
@@ -67,25 +57,41 @@ namespace Vistas
                                 ((FrmCliente)frmCliente).cargarCliente();
                             }
                         }
-                    
+                        else
+                        {
+                            MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
+                            result = new DialogResult();
+                        }
+                    }
                     else
                     {
-                        MessageBox.Show("Se cancelo el alta del cliente", "Cancelado");
-                        result = new DialogResult();
+                        MessageBox.Show("El Cliente ya existe");
                     }
-                }else
-                {
-                    MessageBox.Show("El Cliente ya existe");
-                }
                 }
             }
-
             else
             {
                 MessageBox.Show("Ingrese un DNI valido");
             }
         }
 
+        /// <summary>
+        /// Limpia los campos cargados
+        /// </summary>
+        private void limpiarCampos()
+        {
+            txtDni.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
+        }
+
+        /// <summary>
+        /// Valida campos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public Boolean validarCamposCliente(Cliente xCliente)
         {
             bool respuesta = false;
@@ -94,15 +100,6 @@ namespace Vistas
                 respuesta = true;
             }
             return respuesta;
-        }
-
-        private void limpiarCampos()
-        {
-            txtDni.Text = "";
-            txtNombre.Text = "";
-            txtApellido.Text = "";
-            txtDireccion.Text = "";
-            txtTelefono.Text = "";
         }
 
         private void txtDni_KeyPress_1(object sender, KeyPressEventArgs e)

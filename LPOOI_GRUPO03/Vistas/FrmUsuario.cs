@@ -18,6 +18,24 @@ namespace Vistas
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Muestra los datos necesarios
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+            var form = Application.OpenForms.OfType<FrmMostrarUsuario>().FirstOrDefault();
+            FrmMostrarUsuario frmMostrarUsuario = form ?? new FrmMostrarUsuario();
+            AddFormInPanel(frmMostrarUsuario);
+
+            listarUsuario();//Llama al metodo listar usuario
+        }
+
+        /// <summary>
+        /// Llama a sub formulario
+        /// </summary>
+        /// <param name="fh"></param>
         private void AddFormInPanel(Form fh)
         {
             if (this.panelUsuario.Controls.Count > 0)
@@ -28,39 +46,22 @@ namespace Vistas
             this.panelUsuario.Controls.Add(fh);
             this.panelUsuario.Tag = fh;
             fh.Show();
-        }
+        }       
 
-        private void FrmUsuario_Load(object sender, EventArgs e)
+        /// <summary>
+        /// Lista los usuario
+        /// </summary>
+        public void listarUsuario()
         {
-            var form = Application.OpenForms.OfType<FrmMostrarUsuario>().FirstOrDefault();
-            FrmMostrarUsuario frmMostrarUsuario = form ?? new FrmMostrarUsuario();
-            AddFormInPanel(frmMostrarUsuario);
-
-           cargarListaUsuario();
-        }
-
-        public void cargarListaUsuario()
-        {
-
-            dgvListaUsuarios.DataSource = TrabajoUsuario.cargarUsuario();
+            dgvListaUsuarios.DataSource = TrabajoUsuario.listarUsuario();
             dgvListaUsuarios.Refresh();
         }
 
-        private void btnBusacarUsuario_Click(object sender, EventArgs e)
-        {
-            string buscarUsuario = txtBuscarUsuario.Text ;
-
-
-            if (txtBuscarUsuario.Text != "")
-            {
-                dgvListaUsuarios.DataSource = TrabajoUsuario.buscarUsuario(txtBuscarUsuario.Text);
-            }
-            else
-            {
-                cargarListaUsuario();
-            }
-        }
-
+        /// <summary>
+        /// Llama al formulario AltaUsuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmAltaUsuario>().FirstOrDefault();
@@ -68,6 +69,11 @@ namespace Vistas
             AddFormInPanel(frmAltaUsuario);
         }
 
+        /// <summary>
+        /// Llamada al formulario mostrarUsuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMostrarUsuario_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmMostrarUsuario>().FirstOrDefault();
@@ -75,22 +81,20 @@ namespace Vistas
             AddFormInPanel(frmMostrarUsuario);
         }
 
-        private void dgvListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Envia datos del dgv al formulario mostrarUsuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvListaUsuarios_CurrentCellChanged(object sender, EventArgs e)
         {
             if (dgvListaUsuarios.CurrentRow != null)
             {
-               
                 FrmMostrarUsuario mu = new FrmMostrarUsuario();
                 Form frmMostrarUsuario = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmMostrarUsuario);
                 if (frmMostrarUsuario != null)
                 {
                     ((FrmMostrarUsuario)frmMostrarUsuario).btnActualizarUsuario.Enabled = false;
-                    ((FrmMostrarUsuario)frmMostrarUsuario).rol= dgvListaUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
                     ((FrmMostrarUsuario)frmMostrarUsuario).txtId.Text = dgvListaUsuarios.CurrentRow.Cells["ID"].Value.ToString();
                     ((FrmMostrarUsuario)frmMostrarUsuario).txtNombreUsuario.Text = dgvListaUsuarios.CurrentRow.Cells["Nombre de Usuario"].Value.ToString();
                     ((FrmMostrarUsuario)frmMostrarUsuario).txtPass.Text = dgvListaUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
@@ -101,6 +105,11 @@ namespace Vistas
             }
         }
 
+        /// <summary>
+        /// Formatea la contraseña
+        /// </summary>
+        /// <param name="contraseña"></param>
+        /// <returns></returns>
         private string reemplazoContraseña(string contraseña)
         {
             string devolucion="";
@@ -109,6 +118,23 @@ namespace Vistas
                 devolucion = devolucion + "*";
             }
             return devolucion;
+        }
+
+        /// <summary>
+        /// Busca a un usuario por nombre de usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscarUsuario.Text != "")
+            {
+                dgvListaUsuarios.DataSource = TrabajoUsuario.buscarUsuario(txtBuscarUsuario.Text);
+            }
+            else
+            {
+                listarUsuario();
+            }
         }
     }
 }

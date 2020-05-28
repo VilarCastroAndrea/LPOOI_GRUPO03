@@ -1,24 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
     public partial class FrmMostrarCliente : Form
     {
-       
+
         public FrmMostrarCliente()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// MOdifica al cliente seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMCliente_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente();
@@ -38,6 +38,11 @@ namespace Vistas
 
         }
 
+        /// <summary>
+        /// Elimina al cliente seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnECliente_Click(object sender, EventArgs e)
         {
             Form frmCliente = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmCliente);
@@ -49,6 +54,12 @@ namespace Vistas
             }
         }
 
+
+        /// <summary>
+        /// Validaciones de campo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloLetra(e);

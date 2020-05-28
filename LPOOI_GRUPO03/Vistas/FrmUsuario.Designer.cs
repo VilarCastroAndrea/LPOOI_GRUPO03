@@ -32,11 +32,12 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.panelListaCliente = new System.Windows.Forms.Panel();
-            this.btnBusacarUsuario = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Buscar = new System.Windows.Forms.GroupBox();
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelListaCliente.SuspendLayout();
+            this.Buscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,45 +82,30 @@
             // panelListaCliente
             // 
             this.panelListaCliente.BackColor = System.Drawing.Color.Teal;
-            this.panelListaCliente.Controls.Add(this.btnBusacarUsuario);
-            this.panelListaCliente.Controls.Add(this.label7);
-            this.panelListaCliente.Controls.Add(this.txtBuscarUsuario);
+            this.panelListaCliente.Controls.Add(this.Buscar);
             this.panelListaCliente.Controls.Add(this.dgvListaUsuarios);
             this.panelListaCliente.Location = new System.Drawing.Point(13, 18);
             this.panelListaCliente.Name = "panelListaCliente";
             this.panelListaCliente.Size = new System.Drawing.Size(637, 437);
             this.panelListaCliente.TabIndex = 25;
             // 
-            // btnBusacarUsuario
+            // Buscar
             // 
-            this.btnBusacarUsuario.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnBusacarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnBusacarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusacarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnBusacarUsuario.Location = new System.Drawing.Point(427, 23);
-            this.btnBusacarUsuario.Name = "btnBusacarUsuario";
-            this.btnBusacarUsuario.Size = new System.Drawing.Size(85, 22);
-            this.btnBusacarUsuario.TabIndex = 4;
-            this.btnBusacarUsuario.Text = "Buscar";
-            this.btnBusacarUsuario.UseVisualStyleBackColor = false;
-            this.btnBusacarUsuario.Click += new System.EventHandler(this.btnBusacarUsuario_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(16, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 17);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Buscar";
+            this.Buscar.Controls.Add(this.btnBuscar);
+            this.Buscar.Controls.Add(this.txtBuscarUsuario);
+            this.Buscar.ForeColor = System.Drawing.Color.White;
+            this.Buscar.Location = new System.Drawing.Point(19, 13);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(239, 45);
+            this.Buscar.TabIndex = 7;
+            this.Buscar.TabStop = false;
+            this.Buscar.Text = "Buscar";
             // 
             // txtBuscarUsuario
             // 
-            this.txtBuscarUsuario.Location = new System.Drawing.Point(80, 25);
+            this.txtBuscarUsuario.Location = new System.Drawing.Point(6, 17);
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
-            this.txtBuscarUsuario.Size = new System.Drawing.Size(331, 20);
+            this.txtBuscarUsuario.Size = new System.Drawing.Size(204, 20);
             this.txtBuscarUsuario.TabIndex = 2;
             // 
             // dgvListaUsuarios
@@ -133,8 +119,23 @@
             this.dgvListaUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaUsuarios.Size = new System.Drawing.Size(598, 355);
             this.dgvListaUsuarios.TabIndex = 1;
-            this.dgvListaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaUsuarios_CellContentClick);
             this.dgvListaUsuarios.CurrentCellChanged += new System.EventHandler(this.dgvListaUsuarios_CurrentCellChanged);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconSize = 16;
+            this.btnBuscar.Location = new System.Drawing.Point(208, 16);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Rotation = 0D;
+            this.btnBuscar.Size = new System.Drawing.Size(25, 23);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FrmUsuario
             // 
@@ -150,7 +151,8 @@
             this.Text = "FrmUsuario";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.panelListaCliente.ResumeLayout(false);
-            this.panelListaCliente.PerformLayout();
+            this.Buscar.ResumeLayout(false);
+            this.Buscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).EndInit();
             this.ResumeLayout(false);
 
@@ -162,9 +164,9 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panelUsuario;
         private System.Windows.Forms.Panel panelListaCliente;
-        private System.Windows.Forms.Button btnBusacarUsuario;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBuscarUsuario;
         public System.Windows.Forms.DataGridView dgvListaUsuarios;
+        private System.Windows.Forms.GroupBox Buscar;
+        private FontAwesome.Sharp.IconButton btnBuscar;
     }
 }

@@ -49,7 +49,6 @@
             this.cmbRoles.Size = new System.Drawing.Size(171, 21);
             this.cmbRoles.TabIndex = 3;
             this.cmbRoles.SelectedIndexChanged += new System.EventHandler(this.cmbRoles_SelectedIndexChanged);
-            this.cmbRoles.MouseCaptureChanged += new System.EventHandler(this.cmbRoles_MouseCaptureChanged);
             // 
             // lblRolUsuario
             // 

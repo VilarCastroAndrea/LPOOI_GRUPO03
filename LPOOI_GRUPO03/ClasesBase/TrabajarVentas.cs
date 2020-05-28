@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace ClasesBase
 {
@@ -39,34 +34,28 @@ namespace ClasesBase
         public static DataTable listaVenta()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "ListaVentas";
 
-            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SELECT * FROM ListarVenta";
+            cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             return dt;
         }
 
-        public static DataTable buscarVenta(string sPattern,string dni, DateTime desde, DateTime hasta)
+        public static DataTable buscarVenta(string sPattern, string dni, DateTime desde, DateTime hasta)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
-
             SqlCommand cmd = new SqlCommand();
+
             cmd.CommandText = "buscarVenta";
-
             cmd.CommandType = CommandType.StoredProcedure;
-
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             SqlParameter param;
             param = new SqlParameter("@pattern", SqlDbType.VarChar);
             param.Direction = ParameterDirection.Input;
@@ -94,7 +83,6 @@ namespace ClasesBase
 
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             return dt;
         }
     }

@@ -31,7 +31,6 @@
             this.txtAMatricula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtALinea = new System.Windows.Forms.TextBox();
-            this.txtAMarca = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,8 +47,9 @@
             this.cmbColor = new System.Windows.Forms.ComboBox();
             this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txtATipo = new System.Windows.Forms.TextBox();
-            this.txtAClase = new System.Windows.Forms.TextBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.cmbClase = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtAMatricula
@@ -71,24 +71,16 @@
             // 
             // txtALinea
             // 
-            this.txtALinea.Location = new System.Drawing.Point(19, 105);
+            this.txtALinea.Location = new System.Drawing.Point(19, 104);
             this.txtALinea.Name = "txtALinea";
             this.txtALinea.Size = new System.Drawing.Size(169, 20);
             this.txtALinea.TabIndex = 2;
-            // 
-            // txtAMarca
-            // 
-            this.txtAMarca.Location = new System.Drawing.Point(18, 65);
-            this.txtAMarca.Name = "txtAMarca";
-            this.txtAMarca.Size = new System.Drawing.Size(169, 20);
-            this.txtAMarca.TabIndex = 1;
-            this.txtAMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAMarca_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(18, 174);
+            this.label4.Location = new System.Drawing.Point(20, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 16;
@@ -98,7 +90,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 89);
+            this.label3.Location = new System.Drawing.Point(18, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 15;
@@ -108,7 +100,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(17, 142);
+            this.label2.Location = new System.Drawing.Point(18, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 14;
@@ -118,7 +110,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 49);
+            this.label1.Location = new System.Drawing.Point(18, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 13;
@@ -130,9 +122,9 @@
             this.btnAltaVeh.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.btnAltaVeh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAltaVeh.ForeColor = System.Drawing.Color.White;
-            this.btnAltaVeh.Location = new System.Drawing.Point(18, 363);
+            this.btnAltaVeh.Location = new System.Drawing.Point(19, 350);
             this.btnAltaVeh.Name = "btnAltaVeh";
-            this.btnAltaVeh.Size = new System.Drawing.Size(172, 23);
+            this.btnAltaVeh.Size = new System.Drawing.Size(169, 23);
             this.btnAltaVeh.TabIndex = 10;
             this.btnAltaVeh.Text = "Agregar";
             this.btnAltaVeh.UseVisualStyleBackColor = false;
@@ -142,7 +134,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(17, 208);
+            this.label6.Location = new System.Drawing.Point(18, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 13);
             this.label6.TabIndex = 24;
@@ -152,7 +144,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(17, 314);
+            this.label7.Location = new System.Drawing.Point(17, 290);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 26;
@@ -162,7 +154,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(15, 229);
+            this.label8.Location = new System.Drawing.Point(16, 210);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 28;
@@ -172,7 +164,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(17, 268);
+            this.label9.Location = new System.Drawing.Point(17, 250);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 13);
             this.label9.TabIndex = 30;
@@ -180,7 +172,7 @@
             // 
             // txtAPrecio
             // 
-            this.txtAPrecio.Location = new System.Drawing.Point(72, 337);
+            this.txtAPrecio.Location = new System.Drawing.Point(71, 312);
             this.txtAPrecio.Name = "txtAPrecio";
             this.txtAPrecio.Size = new System.Drawing.Size(118, 20);
             this.txtAPrecio.TabIndex = 9;
@@ -190,18 +182,17 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(18, 340);
+            this.label10.Location = new System.Drawing.Point(20, 315);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 32;
             this.label10.Text = "Precio";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // checkGps
             // 
             this.checkGps.AutoSize = true;
             this.checkGps.ForeColor = System.Drawing.Color.White;
-            this.checkGps.Location = new System.Drawing.Point(57, 313);
+            this.checkGps.Location = new System.Drawing.Point(68, 289);
             this.checkGps.Name = "checkGps";
             this.checkGps.Size = new System.Drawing.Size(35, 17);
             this.checkGps.TabIndex = 8;
@@ -215,7 +206,7 @@
             "3",
             "4",
             "5"});
-            this.cmbCantPuert.Location = new System.Drawing.Point(135, 205);
+            this.cmbCantPuert.Location = new System.Drawing.Point(137, 184);
             this.cmbCantPuert.Name = "cmbCantPuert";
             this.cmbCantPuert.Size = new System.Drawing.Size(51, 21);
             this.cmbCantPuert.TabIndex = 5;
@@ -231,7 +222,7 @@
             "Gris",
             "Blanco",
             "Amarillo"});
-            this.cmbColor.Location = new System.Drawing.Point(70, 171);
+            this.cmbColor.Location = new System.Drawing.Point(70, 157);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(118, 21);
             this.cmbColor.TabIndex = 4;
@@ -251,7 +242,7 @@
             "2012",
             "2011",
             "2010"});
-            this.cmbModelo.Location = new System.Drawing.Point(70, 139);
+            this.cmbModelo.Location = new System.Drawing.Point(70, 130);
             this.cmbModelo.Name = "cmbModelo";
             this.cmbModelo.Size = new System.Drawing.Size(118, 21);
             this.cmbModelo.TabIndex = 3;
@@ -260,26 +251,55 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(98, 314);
+            this.checkBox1.Location = new System.Drawing.Point(126, 289);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(40, 17);
             this.checkBox1.TabIndex = 33;
             this.checkBox1.Text = "No";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // txtATipo
+            // cmbMarca
             // 
-            this.txtATipo.Location = new System.Drawing.Point(18, 245);
-            this.txtATipo.Name = "txtATipo";
-            this.txtATipo.Size = new System.Drawing.Size(166, 20);
-            this.txtATipo.TabIndex = 36;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Items.AddRange(new object[] {
+            "Audi",
+            "BMW",
+            "Chevrolet",
+            "Fiat",
+            "Ford",
+            "Peugeot",
+            "Renault",
+            "Toyota",
+            "Volkswagen"});
+            this.cmbMarca.Location = new System.Drawing.Point(19, 64);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(169, 21);
+            this.cmbMarca.TabIndex = 38;
             // 
-            // txtAClase
+            // cmbTipo
             // 
-            this.txtAClase.Location = new System.Drawing.Point(18, 291);
-            this.txtAClase.Name = "txtAClase";
-            this.txtAClase.Size = new System.Drawing.Size(168, 20);
-            this.txtAClase.TabIndex = 37;
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "Automovil",
+            "Camioneta",
+            "Monovolumen",
+            "Utilitario"});
+            this.cmbTipo.Location = new System.Drawing.Point(20, 226);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(167, 21);
+            this.cmbTipo.TabIndex = 39;
+            // 
+            // cmbClase
+            // 
+            this.cmbClase.FormattingEnabled = true;
+            this.cmbClase.Items.AddRange(new object[] {
+            "Carga",
+            "Pasajero",
+            "Deportivo"});
+            this.cmbClase.Location = new System.Drawing.Point(19, 266);
+            this.cmbClase.Name = "cmbClase";
+            this.cmbClase.Size = new System.Drawing.Size(169, 21);
+            this.cmbClase.TabIndex = 40;
             // 
             // FrmAltaVehiculo
             // 
@@ -287,8 +307,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(207, 415);
-            this.Controls.Add(this.txtAClase);
-            this.Controls.Add(this.txtATipo);
+            this.Controls.Add(this.cmbClase);
+            this.Controls.Add(this.cmbTipo);
+            this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmbModelo);
             this.Controls.Add(this.cmbColor);
@@ -303,7 +324,6 @@
             this.Controls.Add(this.txtAMatricula);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtALinea);
-            this.Controls.Add(this.txtAMarca);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -311,7 +331,6 @@
             this.Controls.Add(this.btnAltaVeh);
             this.Name = "FrmAltaVehiculo";
             this.Text = "FrmAltaVehiculo";
-            this.Load += new System.EventHandler(this.FrmAltaVehiculo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,7 +341,6 @@
         private System.Windows.Forms.TextBox txtAMatricula;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtALinea;
-        private System.Windows.Forms.TextBox txtAMarca;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -339,7 +357,8 @@
         private System.Windows.Forms.ComboBox cmbColor;
         private System.Windows.Forms.ComboBox cmbModelo;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox txtATipo;
-        private System.Windows.Forms.TextBox txtAClase;
+        private System.Windows.Forms.ComboBox cmbMarca;
+        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.ComboBox cmbClase;
     }
 }

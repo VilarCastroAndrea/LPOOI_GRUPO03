@@ -79,12 +79,6 @@
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmListaVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmListaVenta.Designer.cs">
-      <DependentUpon>FrmListaVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,23 +109,11 @@
     <Compile Include="FrmMostrarVehiculo.Designer.cs">
       <DependentUpon>FrmMostrarVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMostrarVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMostrarVenta.Designer.cs">
-      <DependentUpon>FrmMostrarVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmRegistrarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmRegistrarVenta.Designer.cs">
       <DependentUpon>FrmRegistrarVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSistema.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSistema.Designer.cs">
-      <DependentUpon>FrmSistema.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuario.cs">
       <SubType>Form</SubType>
@@ -174,9 +156,6 @@
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmListaVenta.resx">
-      <DependentUpon>FrmListaVenta.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,14 +171,8 @@
     <EmbeddedResource Include="FrmMostrarVehiculo.resx">
       <DependentUpon>FrmMostrarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMostrarVenta.resx">
-      <DependentUpon>FrmMostrarVenta.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarVenta.resx">
       <DependentUpon>FrmRegistrarVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSistema.resx">
-      <DependentUpon>FrmSistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>

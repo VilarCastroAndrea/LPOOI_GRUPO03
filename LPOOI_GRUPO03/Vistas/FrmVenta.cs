@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
@@ -18,6 +13,11 @@ namespace Vistas
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Carga las ventas y sub formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmVenta_Load(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmRegistrarVenta>().FirstOrDefault();
@@ -33,11 +33,18 @@ namespace Vistas
             dtpHasta.MaxDate = DateTime.Today;
         }
 
+        /// <summary>
+        /// Carga dgv con una lista de ventas
+        /// </summary>
         public void cargarVentas()
         {
             dataVenta.DataSource = TrabajarVentas.listaVenta();
         }
 
+        /// <summary>
+        /// Llama a sub formulario
+        /// </summary>
+        /// <param name="fh"></param>
         private void AddFormInPanel(Form fh)
         {
             if (this.panelVenta.Controls.Count > 0)
@@ -48,24 +55,37 @@ namespace Vistas
             this.panelVenta.Controls.Add(fh);
             this.panelVenta.Tag = fh;
             fh.Show();
-         
+
         }
-        
+
+        /// <summary>
+        /// Llama al formulario registrar venta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRegistrarVenta_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmRegistrarVenta>().FirstOrDefault();
             FrmRegistrarVenta frmRegistrarVenta = form ?? new FrmRegistrarVenta();
             AddFormInPanel(frmRegistrarVenta);
         }
-        
-        private void btnMostrar_Click(object sender, EventArgs e)
+
+        /// <summary>
+        /// Llama al formulario mostrar venta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /*private void btnMostrar_Click(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmMostrarVenta>().FirstOrDefault();
             FrmMostrarVenta frmVenta = form ?? new FrmMostrarVenta();
             AddFormInPanel(frmVenta);
-        }
+        }*/
 
-
+        /// <summary>
+        /// Carga una lista con clientes
+        /// </summary>
+        /// <param name="tablaCliente"></param>
         private void cargarBoxCliente(DataTable tablaCliente)
         {
             cmbClientes.Items.Clear();
@@ -77,6 +97,10 @@ namespace Vistas
             }
         }
 
+        /// <summary>
+        /// Carga una lisra de marca
+        /// </summary>
+        /// <param name="tablaVehiculo"></param>
         private void cargarBoxMarca(DataTable tablaVehiculo)
         {
             cmbMarca.Items.Clear();
@@ -95,15 +119,14 @@ namespace Vistas
 
         private void btnBusacar_Click(object sender, EventArgs e)
         {
-
-                dataVenta.DataSource = TrabajarVentas.buscarVenta(cmbMarca.Text, primerValorCombobox(cmbClientes.Text),dtpDesde.Value, dtpHasta.Value);
+            dataVenta.DataSource = TrabajarVentas.buscarVenta(cmbMarca.Text, primerValorCombobox(cmbClientes.Text), dtpDesde.Value, dtpHasta.Value);
         }
 
         private string primerValorCombobox(string textoCombo)
         {
             return textoCombo.Split('|')[0].TrimEnd();
         }
-    }
 
+    }
 
 }

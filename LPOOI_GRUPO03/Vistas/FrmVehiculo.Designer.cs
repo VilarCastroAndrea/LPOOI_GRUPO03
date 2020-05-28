@@ -32,17 +32,17 @@
             this.btnAVeh = new System.Windows.Forms.Button();
             this.panelVehiculo = new System.Windows.Forms.Panel();
             this.panelListaVehiculo = new System.Windows.Forms.Panel();
-            this.btnBusacar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBuscarVehiculo = new System.Windows.Forms.TextBox();
-            this.dataVehiculo = new System.Windows.Forms.DataGridView();
-            this.rbtnLinea = new System.Windows.Forms.RadioButton();
-            this.rbtnMarca = new System.Windows.Forms.RadioButton();
-            this.btnMostrar = new System.Windows.Forms.Button();
             this.gBox = new System.Windows.Forms.GroupBox();
+            this.rbtnMarca = new System.Windows.Forms.RadioButton();
+            this.rbtnLinea = new System.Windows.Forms.RadioButton();
+            this.dataVehiculo = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelListaVehiculo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVehiculo)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.gBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVehiculo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnListaVeh
@@ -84,73 +84,44 @@
             // panelListaVehiculo
             // 
             this.panelListaVehiculo.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelListaVehiculo.Controls.Add(this.groupBox1);
             this.panelListaVehiculo.Controls.Add(this.gBox);
-            this.panelListaVehiculo.Controls.Add(this.btnMostrar);
-            this.panelListaVehiculo.Controls.Add(this.btnBusacar);
-            this.panelListaVehiculo.Controls.Add(this.label7);
-            this.panelListaVehiculo.Controls.Add(this.txtBuscarVehiculo);
             this.panelListaVehiculo.Controls.Add(this.dataVehiculo);
             this.panelListaVehiculo.Location = new System.Drawing.Point(13, 18);
             this.panelListaVehiculo.Name = "panelListaVehiculo";
             this.panelListaVehiculo.Size = new System.Drawing.Size(637, 437);
             this.panelListaVehiculo.TabIndex = 25;
             // 
-            // btnBusacar
+            // groupBox1
             // 
-            this.btnBusacar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnBusacar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnBusacar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusacar.ForeColor = System.Drawing.Color.White;
-            this.btnBusacar.Location = new System.Drawing.Point(427, 23);
-            this.btnBusacar.Name = "btnBusacar";
-            this.btnBusacar.Size = new System.Drawing.Size(85, 22);
-            this.btnBusacar.TabIndex = 4;
-            this.btnBusacar.Text = "Buscar";
-            this.btnBusacar.UseVisualStyleBackColor = false;
-            this.btnBusacar.Click += new System.EventHandler(this.btnBusacar_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(16, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 17);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Buscar";
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.txtBuscarVehiculo);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(19, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(218, 52);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Buscar";
             // 
             // txtBuscarVehiculo
             // 
-            this.txtBuscarVehiculo.Location = new System.Drawing.Point(80, 25);
+            this.txtBuscarVehiculo.Location = new System.Drawing.Point(6, 19);
             this.txtBuscarVehiculo.Name = "txtBuscarVehiculo";
-            this.txtBuscarVehiculo.Size = new System.Drawing.Size(331, 20);
+            this.txtBuscarVehiculo.Size = new System.Drawing.Size(180, 20);
             this.txtBuscarVehiculo.TabIndex = 2;
             // 
-            // dataVehiculo
+            // gBox
             // 
-            this.dataVehiculo.BackgroundColor = System.Drawing.Color.White;
-            this.dataVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataVehiculo.Location = new System.Drawing.Point(19, 108);
-            this.dataVehiculo.Margin = new System.Windows.Forms.Padding(2);
-            this.dataVehiculo.Name = "dataVehiculo";
-            this.dataVehiculo.RowTemplate.Height = 24;
-            this.dataVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataVehiculo.Size = new System.Drawing.Size(575, 310);
-            this.dataVehiculo.TabIndex = 1;
-            this.dataVehiculo.CurrentCellChanged += new System.EventHandler(this.dataVehiculo_CurrentCellChanged);
-            // 
-            // rbtnLinea
-            // 
-            this.rbtnLinea.AutoSize = true;
-            this.rbtnLinea.ForeColor = System.Drawing.SystemColors.Control;
-            this.rbtnLinea.Location = new System.Drawing.Point(115, 19);
-            this.rbtnLinea.Name = "rbtnLinea";
-            this.rbtnLinea.Size = new System.Drawing.Size(51, 17);
-            this.rbtnLinea.TabIndex = 6;
-            this.rbtnLinea.TabStop = true;
-            this.rbtnLinea.Text = "Linea";
-            this.rbtnLinea.UseVisualStyleBackColor = true;
+            this.gBox.Controls.Add(this.rbtnMarca);
+            this.gBox.Controls.Add(this.rbtnLinea);
+            this.gBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.gBox.Location = new System.Drawing.Point(243, 12);
+            this.gBox.Name = "gBox";
+            this.gBox.Size = new System.Drawing.Size(181, 52);
+            this.gBox.TabIndex = 9;
+            this.gBox.TabStop = false;
+            this.gBox.Text = "Ordenar segun:";
             // 
             // rbtnMarca
             // 
@@ -163,32 +134,49 @@
             this.rbtnMarca.TabStop = true;
             this.rbtnMarca.Text = "Marca";
             this.rbtnMarca.UseVisualStyleBackColor = true;
+            this.rbtnMarca.CheckedChanged += new System.EventHandler(this.rbtnMarca_CheckedChanged);
             // 
-            // btnMostrar
+            // rbtnLinea
             // 
-            this.btnMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMostrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrar.ForeColor = System.Drawing.Color.White;
-            this.btnMostrar.Location = new System.Drawing.Point(427, 74);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(85, 22);
-            this.btnMostrar.TabIndex = 8;
-            this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = false;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            this.rbtnLinea.AutoSize = true;
+            this.rbtnLinea.ForeColor = System.Drawing.SystemColors.Control;
+            this.rbtnLinea.Location = new System.Drawing.Point(115, 19);
+            this.rbtnLinea.Name = "rbtnLinea";
+            this.rbtnLinea.Size = new System.Drawing.Size(51, 17);
+            this.rbtnLinea.TabIndex = 6;
+            this.rbtnLinea.TabStop = true;
+            this.rbtnLinea.Text = "Linea";
+            this.rbtnLinea.UseVisualStyleBackColor = true;
+            this.rbtnLinea.CheckedChanged += new System.EventHandler(this.rbtnLinea_CheckedChanged);
             // 
-            // gBox
+            // dataVehiculo
             // 
-            this.gBox.Controls.Add(this.rbtnMarca);
-            this.gBox.Controls.Add(this.rbtnLinea);
-            this.gBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.gBox.Location = new System.Drawing.Point(200, 51);
-            this.gBox.Name = "gBox";
-            this.gBox.Size = new System.Drawing.Size(211, 52);
-            this.gBox.TabIndex = 9;
-            this.gBox.TabStop = false;
-            this.gBox.Text = "Ordenar segun:";
+            this.dataVehiculo.BackgroundColor = System.Drawing.Color.White;
+            this.dataVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataVehiculo.Location = new System.Drawing.Point(19, 69);
+            this.dataVehiculo.Margin = new System.Windows.Forms.Padding(2);
+            this.dataVehiculo.Name = "dataVehiculo";
+            this.dataVehiculo.RowTemplate.Height = 24;
+            this.dataVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataVehiculo.Size = new System.Drawing.Size(599, 349);
+            this.dataVehiculo.TabIndex = 1;
+            this.dataVehiculo.CurrentCellChanged += new System.EventHandler(this.dataVehiculo_CurrentCellChanged);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscar.IconColor = System.Drawing.Color.White;
+            this.btnBuscar.IconSize = 16;
+            this.btnBuscar.Location = new System.Drawing.Point(185, 18);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Rotation = 0D;
+            this.btnBuscar.Size = new System.Drawing.Size(25, 23);
+            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FrmVehiculo
             // 
@@ -204,10 +192,11 @@
             this.Text = "FrmVehiculo";
             this.Load += new System.EventHandler(this.FrmVehiculo_Load);
             this.panelListaVehiculo.ResumeLayout(false);
-            this.panelListaVehiculo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataVehiculo)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.gBox.ResumeLayout(false);
             this.gBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVehiculo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,13 +206,12 @@
         private System.Windows.Forms.Button btnAVeh;
         private System.Windows.Forms.Panel panelVehiculo;
         private System.Windows.Forms.Panel panelListaVehiculo;
-        private System.Windows.Forms.Button btnBusacar;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBuscarVehiculo;
         public System.Windows.Forms.DataGridView dataVehiculo;
         private System.Windows.Forms.GroupBox gBox;
         private System.Windows.Forms.RadioButton rbtnMarca;
         private System.Windows.Forms.RadioButton rbtnLinea;
-        private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private FontAwesome.Sharp.IconButton btnBuscar;
     }
 }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ClasesBase;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
 
 namespace Vistas
 {
@@ -18,6 +13,11 @@ namespace Vistas
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Modifique seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMVehiculo_Click(object sender, EventArgs e)
         {
             Vehiculo v = new Vehiculo();
@@ -44,6 +44,11 @@ namespace Vistas
             }
         }
 
+        /// <summary>
+        /// Elimina al vehiculo seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEVehiculo_Click(object sender, EventArgs e)
         {
             Form frmVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVehiculo);

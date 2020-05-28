@@ -1,38 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClasesBase;
-using System.Data.SqlClient;
 
 namespace Vistas
 {
     public partial class FrmMain : Form
     {
-           
-      
-          public FrmMain()
+        public FrmMain()
         {
             InitializeComponent();
         }
 
-
-
+        /// <summary>
+        /// Llamada a sub formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
             var form = Application.OpenForms.OfType<FrmUsuario>().FirstOrDefault();
             FrmUsuario frmUsuario = form ?? new FrmUsuario();
             AddFormInPanel(frmUsuario);
 
             restringirAcceso();
-
         }
+
+        /// <summary>
+        /// Validacion de usuario
+        /// </summary>
         public void restringirAcceso()
         {
             Form frmLogin = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmLogin);
@@ -47,14 +43,25 @@ namespace Vistas
                     btnVehiculos.Visible = false;
                 }
             }
-            
+
         }
+
+        /// <summary>
+        /// Muestra fecha y hora
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
         }
 
+        /// <summary>
+        /// Llamadas a formularios
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSistema_Click_1(object sender, EventArgs e)
         {
             var form = Application.OpenForms.OfType<FrmUsuario>().FirstOrDefault();
@@ -83,10 +90,14 @@ namespace Vistas
             AddFormInPanel(fventa);
         }
 
+        /// <summary>
+        /// Llamada a formulario
+        /// </summary>
+        /// <param name="fh"></param>
         private void AddFormInPanel(Form fh)
         {
             if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);            
+                this.panelContenedor.Controls.RemoveAt(0);
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
@@ -95,6 +106,11 @@ namespace Vistas
             fh.Show();
         }
 
+        /// <summary>
+        /// Boton para deloguearse
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             DialogResult respuesta;
@@ -105,6 +121,5 @@ namespace Vistas
             }
         }
 
-        
     }
 }
