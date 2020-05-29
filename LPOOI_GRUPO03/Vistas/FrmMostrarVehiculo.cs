@@ -54,11 +54,20 @@ namespace Vistas
             Form frmVehiculo = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmVehiculo);
             if (frmVehiculo != null)
             {
-                //TrabajarVehiculo.eliminarVehiculo(txtAMatricula.Text);
-                TrabajarVehiculo.eliminarVehiculoSP(txtAMatricula.Text);
+                DataTable dt = new DataTable();
+                dt = TrabajarVehiculo.buscarVehiculoVendido(txtAMatricula.Text);
+                if (dt.Rows.Count !=0)
+                {
+                    MessageBox.Show("Vehiculo Ya Vendido");
+                } else
+                {
+                    TrabajarVehiculo.eliminarVehiculoSP(txtAMatricula.Text);
 
-                MessageBox.Show("Vehiculo Eliminado");
-                ((FrmVehiculo)frmVehiculo).dataVehiculo.DataSource = TrabajarVehiculo.ListaVehiculo();
+                    MessageBox.Show("Vehiculo Eliminado");
+                    ((FrmVehiculo)frmVehiculo).dataVehiculo.DataSource = TrabajarVehiculo.ListaVehiculo();
+                }
+              
+               
             }
         }
     }

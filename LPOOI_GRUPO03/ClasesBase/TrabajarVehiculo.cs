@@ -88,6 +88,22 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+        public static DataTable buscarVehiculoVendido(string sPattern)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "buscarVehiculoVendido";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
 
         public static DataTable buscarVehiculoAproximado(string sPattern)
         {
