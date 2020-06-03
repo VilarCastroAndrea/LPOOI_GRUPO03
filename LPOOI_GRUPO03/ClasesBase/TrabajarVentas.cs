@@ -36,7 +36,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT * FROM ListarVenta";
+            cmd.CommandText = "listaVentas";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 

@@ -9,8 +9,8 @@ namespace ClasesBase
 
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECR * FROM ListarRol";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "listaRoles";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
