@@ -4,7 +4,7 @@ namespace ClasesBase
 {
     public class TrabajoRol
     {
-        public static DataTable cargarRol()
+        public static DataTable CargarRol()
         {
 
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
