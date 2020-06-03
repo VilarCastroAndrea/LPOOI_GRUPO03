@@ -92,7 +92,7 @@ namespace Vistas
         private void ingresar()
         {
             DataTable dataTable = new DataTable();
-            dataTable = ConectionLog.ingresar(txtUsuario.Text, txtContra.Text);
+            dataTable = TrabajoUsuario.ingresar(txtUsuario.Text, txtContra.Text);
             if (dataTable.Rows.Count != 0)
             {
                 guardarUser(dataTable);
@@ -129,11 +129,11 @@ namespace Vistas
         /// <param name="dt"></param>
         private void guardarUser(DataTable dt)
         {
-            user.Usu_NombreUsuario = dt.Rows[0]["USU_NombreUsuario"].ToString();
-            user.Usu_Contraseña = dt.Rows[0]["USU_Password"].ToString();
-            user.Usu_ApellidoNombre = dt.Rows[0]["USU_ApellidoNombre"].ToString();
-            user.Rol_Codigo = dt.Rows[0]["ROL_Codigo"].ToString();
-            user.Usu_ID = Convert.ToInt32(dt.Rows[0]["USU_ID"].ToString());
+            user.Usu_NombreUsuario = dt.Rows[0]["Nombre de Usuario"].ToString();
+            user.Usu_Contraseña = dt.Rows[0]["Contraseña"].ToString();
+            user.Usu_ApellidoNombre = dt.Rows[0]["Apellido y Nombre"].ToString();
+            user.Rol_Codigo = dt.Rows[0]["Rol"].ToString();
+            user.Usu_ID = Convert.ToInt32(dt.Rows[0]["ID"].ToString());
         }
 
         /// <summary>

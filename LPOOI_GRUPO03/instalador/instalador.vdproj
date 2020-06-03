@@ -16,43 +16,43 @@
         "Entry"
         {
         "MsmKey" = "8:_2C748CAA66E5922880A291281F4040B3"
-        "OwnerKey" = "8:_6AA61F3627694BE9BE87A2F39B79F6D5"
+        "OwnerKey" = "8:_ECCFDC14D44E40E4A4D6D80CDF5003EF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_2C748CAA66E5922880A291281F4040B3"
-        "OwnerKey" = "8:_41FAF405649B423697A6172155BA5505"
+        "OwnerKey" = "8:_643D21B1B25042A092C6F6BC66F203E9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_41FAF405649B423697A6172155BA5505"
+        "MsmKey" = "8:_643D21B1B25042A092C6F6BC66F203E9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_650DA41C386DCEAB90A944C21A238B9E"
-        "OwnerKey" = "8:_6AA61F3627694BE9BE87A2F39B79F6D5"
+        "OwnerKey" = "8:_ECCFDC14D44E40E4A4D6D80CDF5003EF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_650DA41C386DCEAB90A944C21A238B9E"
-        "OwnerKey" = "8:_41FAF405649B423697A6172155BA5505"
+        "OwnerKey" = "8:_643D21B1B25042A092C6F6BC66F203E9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6AA61F3627694BE9BE87A2F39B79F6D5"
+        "MsmKey" = "8:_7DAACAE09C81FDF2A7846B27E9A340DA"
+        "OwnerKey" = "8:_643D21B1B25042A092C6F6BC66F203E9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_ECCFDC14D44E40E4A4D6D80CDF5003EF"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A018AAD2DF2353BA69B610015CB57DA2"
-        "OwnerKey" = "8:_41FAF405649B423697A6172155BA5505"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,19 +64,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_41FAF405649B423697A6172155BA5505"
+        "OwnerKey" = "8:_643D21B1B25042A092C6F6BC66F203E9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A018AAD2DF2353BA69B610015CB57DA2"
+        "OwnerKey" = "8:_7DAACAE09C81FDF2A7846B27E9A340DA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6AA61F3627694BE9BE87A2F39B79F6D5"
+        "OwnerKey" = "8:_ECCFDC14D44E40E4A4D6D80CDF5003EF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -103,6 +103,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -119,6 +135,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -210,14 +234,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A018AAD2DF2353BA69B610015CB57DA2"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7DAACAE09C81FDF2A7846B27E9A340DA"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ClasesBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A018AAD2DF2353BA69B610015CB57DA2"
+                    "_7DAACAE09C81FDF2A7846B27E9A340DA"
                     {
                     "Name" = "8:ClasesBase.dll"
                     "Attributes" = "3:512"
@@ -296,9 +320,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:instalador"
+        "ProductName" = "8:Gestor de Ventas de Vehiculos"
         "ProductCode" = "8:{36CC6377-580B-487F-98DE-C5D141DD5992}"
-        "PackageCode" = "8:{6502FAC5-96E0-48A4-8313-7886E1ED707A}"
+        "PackageCode" = "8:{A982923F-8204-4372-BB10-FBD31F5E07C6}"
         "UpgradeCode" = "8:{C27DFF83-8B80-4893-8B32-AC029F849F19}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -309,7 +333,7 @@
         "Manufacturer" = "8:Default Company Name"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:instalador"
+        "Title" = "8:Gestor de Ventas de Vehiculos"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Default Company Name"
         "Keywords" = "8:"
@@ -418,21 +442,21 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_34F975548E274819BFF19846F5A2DED0"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6B37FE383E414BE7BCD112161E7D57A8"
             {
-            "Name" = "8:Shortcut to Resultado principal from Vistas (Release Any CPU)"
+            "Name" = "8:Gestor de Vehiculos"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_41FAF405649B423697A6172155BA5505"
-            "Folder" = "8:_29FE6B546DA341F9B38E008E82C7737F"
+            "Target" = "8:_643D21B1B25042A092C6F6BC66F203E9"
+            "Folder" = "8:_625545BAE3344A8B96F135E58C7225A8"
             "WorkingFolder" = "8:_5F74748A54DF4EBCB1F75CBA8023A245"
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E87FAF354EBB47AB9744E8C3190220A2"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F4739DD480764DF5A83462671F1885F2"
             {
             "Name" = "8:Shortcut to Resultado principal from Vistas (Release Any CPU)"
             "Arguments" = "8:"
@@ -440,8 +464,8 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_41FAF405649B423697A6172155BA5505"
-            "Folder" = "8:_625545BAE3344A8B96F135E58C7225A8"
+            "Target" = "8:_643D21B1B25042A092C6F6BC66F203E9"
+            "Folder" = "8:_29FE6B546DA341F9B38E008E82C7737F"
             "WorkingFolder" = "8:_5F74748A54DF4EBCB1F75CBA8023A245"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -845,7 +869,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_41FAF405649B423697A6172155BA5505"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_643D21B1B25042A092C6F6BC66F203E9"
             {
             "SourcePath" = "8:..\\Vistas\\obj\\Release\\Vistas.exe"
             "TargetName" = "8:"
@@ -873,7 +897,7 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6AA61F3627694BE9BE87A2F39B79F6D5"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ECCFDC14D44E40E4A4D6D80CDF5003EF"
             {
             "SourcePath" = "8:..\\ClasesBase\\obj\\Debug\\ClasesBase.dll"
             "TargetName" = "8:"

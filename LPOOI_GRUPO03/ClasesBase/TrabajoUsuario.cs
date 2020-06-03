@@ -7,6 +7,28 @@ namespace ClasesBase
     public class TrabajoUsuario
     {
 
+        public static DataTable ingresar(string user, string pswd)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
+
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ingresoUsuario";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@nombreUsuario",  user );
+            cmd.Parameters.AddWithValue("@pasword", pswd);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+
+            return dt;
+
+
+        }
+
         public static void AgregarUsuario(Usuario usuario)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.AgenciaDBConnectionString);
