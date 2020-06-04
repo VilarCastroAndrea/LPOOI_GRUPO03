@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="TrabajarFormaPago.cs" />
+    <Compile Include="FormaDePago.cs" />
     <Compile Include="TrabajoRol.cs" />
     <Compile Include="TrabajoUsuario.cs" />
     <Compile Include="Cliente.cs" />
